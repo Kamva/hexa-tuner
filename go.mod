@@ -1,4 +1,4 @@
-module github.com/Kamva/kitty-tunner
+module github.com/Kamva/kitty-tuner
 
 go 1.13
 
