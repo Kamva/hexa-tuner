@@ -3,6 +3,7 @@ package ktuner
 import (
 	"github.com/Kamva/kitty"
 	"github.com/Kamva/logrus-kit"
+	_ "github.com/Kamva/logrus-kit/logrusbase"
 	"github.com/sirupsen/logrus"
 )
 
