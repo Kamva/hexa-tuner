@@ -11,9 +11,9 @@ go get github.com/Kamva/kitty-tuner
 translate.files (optional) : []string translation files.
 translate.fallback.langs (optional,default:en): []string fallback langues
 
-e.g environtment variable in viper driver of cofig:
-TRANSLATE.FILES=en,fa,...
-TRANSLATE.FALLBACK.LANGS=en,fa,...
+e.g environtment variable list in viper driver of cofig:
+TRANSLATE.FILES="fa en"
+TRANSLATE.FALLBACK.LANGS="en fa"
 ```
 
 #### Todo:
