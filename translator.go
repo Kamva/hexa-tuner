@@ -33,7 +33,7 @@ func NewTranslator(pathPrefix string, config kitty.Config) kitty.Translator {
 
 	localizer := i18n.NewLocalizer(bundle, fallbackLangs...)
 
-	return kittytranslator.NewI18nDriver(bundle, localizer)
+	return kittytranslator.NewI18nDriver(bundle, localizer, fallbackLangs)
 }
 
 func loadLangFiles(bundle *i18n.Bundle, prefix string, files []string) {
