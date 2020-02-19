@@ -10,11 +10,19 @@ import (
 
 // NewLogger return new instance of kitty logger service.
 func NewLogger(config kitty.Config) (kitty.Logger, error) {
-	logger := logrus.New()
+	logger, err := tuneLogrus(config)
 
-	if err := logruskit.Tune(logger, logruskit.Config(config)); err != nil {
+	if err != nil {
 		return nil, err
 	}
 
 	return kittylogger.NewLogrusDriver(logger.WithFields(nil)), nil
+}
+
+func tuneLogrus(config kitty.Config) (*logrus.Logger, error) {
+	logger := logrus.New()
+
+	err := logruskit.Tune(logger, logruskit.Config(config))
+
+	return logger, err
 }
