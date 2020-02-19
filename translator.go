@@ -1,6 +1,7 @@
 package ktuner
 
 import (
+	"fmt"
 	"github.com/Kamva/kitty"
 	"github.com/Kamva/kitty/kittytranslator"
 	"github.com/nicksnyder/go-i18n/v2/i18n"
@@ -35,6 +36,7 @@ func NewTranslator(pathPrefix string, config kitty.Config) kitty.Translator {
 
 func loadLangFiles(bundle *i18n.Bundle, prefix string, files []string) {
 	for _, file := range files {
-		bundle.MustLoadMessageFile(strings.TrimRight(prefix, "/") + "/" + strings.Trim(file, "/"))
+		f := fmt.Sprintf("%s/%s.toml", strings.TrimRight(prefix, "/"), strings.Trim(file, "/"))
+		bundle.MustLoadMessageFile(f)
 	}
 }
