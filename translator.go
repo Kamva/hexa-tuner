@@ -2,6 +2,7 @@ package ktuner
 
 import (
 	"fmt"
+	"github.com/BurntSushi/toml"
 	"github.com/Kamva/kitty"
 	"github.com/Kamva/kitty/kittytranslator"
 	"github.com/nicksnyder/go-i18n/v2/i18n"
@@ -26,6 +27,7 @@ func NewTranslator(pathPrefix string, config kitty.Config) kitty.Translator {
 	}
 
 	bundle := i18n.NewBundle(defaultLang)
+	bundle.RegisterUnmarshalFunc("toml", toml.Unmarshal)
 
 	loadLangFiles(bundle, pathPrefix, files)
 
