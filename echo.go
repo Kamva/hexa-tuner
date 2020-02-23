@@ -8,7 +8,7 @@ import (
 )
 
 // TuneEcho tune echo framework.
-func TuneEcho(e *echo.Echo, config kitty.Config, logger kitty.Logger, t kitty.Translator, userFinder kecho.UserFinder) {
+func TuneEcho(e *echo.Echo, config kitty.Config, logger kitty.Logger, t kitty.Translator, uf kecho.UserFinderByJwtSub) {
 	// Set echo logger
 	e.Logger = kecho.KittyLoggerToEchoLogger(logger)
 
@@ -29,7 +29,7 @@ func TuneEcho(e *echo.Echo, config kitty.Config, logger kitty.Logger, t kitty.Tr
 	e.Use(kecho.JWT(config.GetString("SECRET")))
 
 	// Set user in each request context.
-	e.Use(kecho.CurrentUser(userFinder))
+	e.Use(kecho.CurrentUser(uf))
 
 	// KittyContext set kitty context on each request.
 	e.Use(kecho.KittyContext(logger, t))
