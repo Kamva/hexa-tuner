@@ -12,6 +12,8 @@ github.com/Kamva/gutil v0.0.0-20200219153748-25f12f88e345 h1:Tlhr0gj7+qC7jPHvFyr
 github.com/Kamva/gutil v0.0.0-20200219153748-25f12f88e345/go.mod h1:YT1t6WMVNyhTWa7/KUGKUXMxBffvws0g27bU4DL3s30=
 github.com/Kamva/gutil v0.0.0-20200220090603-f3d8cdcee96d h1:DAZVM0irbYsl20Fn2fz5CXTQpF0nMHKi1Z2l0tl5kN0=
 github.com/Kamva/gutil v0.0.0-20200220090603-f3d8cdcee96d/go.mod h1:YT1t6WMVNyhTWa7/KUGKUXMxBffvws0g27bU4DL3s30=
+github.com/Kamva/gutil v0.0.0-20200223213106-083cc09e3b52 h1:dflulaQzHMAzCiopT8N1oxJCpXyC2IA3hfGC8jSaO0Q=
+github.com/Kamva/gutil v0.0.0-20200223213106-083cc09e3b52/go.mod h1:KvaAPqUTtjac/70L9pCuNEJX0FSH7+WrTo6sariE4FM=
 github.com/Kamva/kitty v0.0.0-20200218211952-1c4d123f20a7 h1:pTowHV2UxcEZxI+rhQNWuXq6YNLJmeu36cpIhqnGMeM=
 github.com/Kamva/kitty v0.0.0-20200218211952-1c4d123f20a7/go.mod h1:pfa7WoRW2oFGDtAISxaSHuo8fLgj4EFxo/KrwjvhnJc=
 github.com/Kamva/kitty v0.0.0-20200219113856-b4f3f14ac26a h1:k2fyqBX1bgjR85ax1GJC23sz/JTCTRyH8IQbhDuqH6M=
@@ -30,6 +32,10 @@ github.com/Kamva/kitty v0.0.0-20200222222920-4d6f19472261 h1:1AvgKuFyI//DyLduQCq
 github.com/Kamva/kitty v0.0.0-20200222222920-4d6f19472261/go.mod h1:KtQw+TewkCdYXreXA1T19ZTCxd3hjJhqS/uU/mrdkFM=
 github.com/Kamva/kitty v0.0.0-20200223151335-a2d8a6c6bd99 h1:nmu0mekN2hu14pwRhnWCw33R58vl6d3iW/U51OrWpH0=
 github.com/Kamva/kitty v0.0.0-20200223151335-a2d8a6c6bd99/go.mod h1:KtQw+TewkCdYXreXA1T19ZTCxd3hjJhqS/uU/mrdkFM=
+github.com/Kamva/kitty v0.0.0-20200223203916-b6a9896fa3ef h1:gj3S5TLv6+z5/cOqgYeq/Dniu5G3Abfm6v8K902sPMo=
+github.com/Kamva/kitty v0.0.0-20200223203916-b6a9896fa3ef/go.mod h1:KtQw+TewkCdYXreXA1T19ZTCxd3hjJhqS/uU/mrdkFM=
+github.com/Kamva/kitty v0.0.0-20200224150856-77961702aa63 h1:mGrIxR99oMspZIE+E/JDomC6WKHPrtX4pWfI4P86VN8=
+github.com/Kamva/kitty v0.0.0-20200224150856-77961702aa63/go.mod h1:RhIoKkwI8iei3aKPEOKAZNzHssP0uPWnyFMsxeWVWTM=
 github.com/Kamva/kitty-echo v0.0.0-20200222151511-917daa1fb98c h1:CylttHS39f3BZhbsUVFDYVlh7i57tUUBTw9HrUkNTBQ=
 github.com/Kamva/kitty-echo v0.0.0-20200222151511-917daa1fb98c/go.mod h1:kxu6sLS9O4S76ef/HGNwoTXZbp64UuiIXMzA4YMoj7w=
 github.com/Kamva/kitty-echo v0.0.0-20200222180201-84f3e9367432 h1:uUJQb6rEAdlGwAyD3zD3EcxanGaw/5pSq4emNgcDKCQ=
@@ -50,6 +56,12 @@ github.com/Kamva/kitty-echo v0.0.0-20200223154255-ce52723061ef h1:f4yu4/c4umdTi8
 github.com/Kamva/kitty-echo v0.0.0-20200223154255-ce52723061ef/go.mod h1:Wc/dlE1K1xJIsauO3qUzUTFyJTp8FgoBMItAMY6ofBU=
 github.com/Kamva/kitty-echo v0.0.0-20200223155610-ca2a8f4aa2f0 h1:gXvKpizpmZwqNq5c8K0hLMvsj1a+Mdo28Fx4BpJ3Fdw=
 github.com/Kamva/kitty-echo v0.0.0-20200223155610-ca2a8f4aa2f0/go.mod h1:Wc/dlE1K1xJIsauO3qUzUTFyJTp8FgoBMItAMY6ofBU=
+github.com/Kamva/kitty-echo v0.0.0-20200223194342-c8348325c765 h1:YXPVxJwDZU5ZXdE+yKETpRpAU4n1bTOF7WjNf0cophc=
+github.com/Kamva/kitty-echo v0.0.0-20200223194342-c8348325c765/go.mod h1:d2MVx5k39LS55F1UdfDpQvodwTQUqkIsV/HLYWttziY=
+github.com/Kamva/kitty-echo v0.0.0-20200223204139-1d31fc0f6d5d h1:tpJ9winvqNPzuD+DHgjxHvAVdJJcHEbHClyMxDWVxcM=
+github.com/Kamva/kitty-echo v0.0.0-20200223204139-1d31fc0f6d5d/go.mod h1:FL/fHe9ObJiVAUAixgozM5jYs+LRUWzDljfdJ2RlrhM=
+github.com/Kamva/kitty-echo v0.0.0-20200224151901-012a95a0a81c h1:i6ZgWrLYxDIiSrjW02Kf1eNGGtVxYtNflIk+xRB6gK4=
+github.com/Kamva/kitty-echo v0.0.0-20200224151901-012a95a0a81c/go.mod h1:i1DASRiNL8D6mjY4i6gQ/IK6PriywmGLTTI1mWFFDjM=
 github.com/Kamva/logrus-kit v0.0.0-20200218181028-1d56103db75d h1:pI2cf5PS0TRi+jy61Wt831gZALcNrFs5RMlEJgp8uyI=
 github.com/Kamva/logrus-kit v0.0.0-20200218181028-1d56103db75d/go.mod h1:jpFRtJdGbl9d3+LHd/8CFw/CE+L4fN6biHPKg57eFCk=
 github.com/Kamva/mgm/v2 v2.0.0/go.mod h1:DgcNZxH74WB3FMcxV6e/MKNdNzu3EI1vuStdOjkasTE=
@@ -89,6 +101,8 @@ github.com/golang/snappy v0.0.1/go.mod h1:/XxbfmMg8lxefKM7IXC3fBNl/7bRcc72aCRzEW
 github.com/google/btree v1.0.0/go.mod h1:lNA+9X1NB3Zf8V7Ke586lFgjr2dZNuvo3lPJSGZ5JPQ=
 github.com/google/go-cmp v0.2.0/go.mod h1:oXzfMopK8JAjlY9xF4vHSVASa0yLyX7SntLO5aqRK0M=
 github.com/google/go-cmp v0.3.1/go.mod h1:8QqcDgzrUqlUb/G2PQTWiueGozuR1884gddMywk6iLU=
+github.com/google/uuid v1.1.1 h1:Gkbcsh/GbpXz7lPftLA3P6TYMwjCLYm83jiFQZF/3gY=
+github.com/google/uuid v1.1.1/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/gopherjs/gopherjs v0.0.0-20181017120253-0766667cb4d1/go.mod h1:wJfORRmW1u3UXTncJ5qlYoELFm8eSnnEO6hX4iZ3EWY=
 github.com/gorilla/websocket v1.4.0/go.mod h1:E7qHFY5m1UJ88s3WnNqhKjPHQ0heANvMoAMk2YaljkQ=
 github.com/grpc-ecosystem/go-grpc-middleware v1.0.0/go.mod h1:FiyG127CGDf3tlThmgyCl78X/SZQqEOJBCDaAfeWzPs=
@@ -169,6 +183,7 @@ github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+
 github.com/stretchr/objx v0.1.1/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.2.2/go.mod h1:a8OnRcib4nhh0OaRAV+Yts87kKdq0PP7pXfy6kDkUVs=
 github.com/stretchr/testify v1.4.0/go.mod h1:j7eGeouHqKxXV5pUuKE4zz7dFj8WfuZ+81PSLYec5m4=
+github.com/stretchr/testify v1.5.1/go.mod h1:5W2xD1RspED5o8YsWQXVCued0rvSQ+mT+I5cxcmMvtA=
 github.com/subosito/gotenv v1.2.0 h1:Slr1R9HxAlEKefgq5jn9U+DnETlIUa6HfgEzj0g5d7s=
 github.com/subosito/gotenv v1.2.0/go.mod h1:N0PQaV/YGNqwC0u51sEeR/aUtSLEXKX9iv69rRypqCw=
 github.com/tidwall/pretty v1.0.0/go.mod h1:XNkn88O1ChpSDQmQeStsy+sBenx6DDtFZJxhVysOjyk=

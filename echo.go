@@ -24,6 +24,9 @@ func TuneEcho(e *echo.Echo, config kitty.Config, logger kitty.Logger, t kitty.Tr
 	// RequestID set requestID on each request that has blank request id.
 	e.Use(middleware.RequestID())
 
+	// CorrelationID set X-Correlation-ID value.
+	e.Use(kecho.CorrelationID())
+
 	// Optional JWT checker : check if exists
 	//header => verify, otherwise skip it.
 	e.Use(kecho.JWT(config.GetString("SECRET")))
