@@ -8,12 +8,12 @@ import (
 )
 
 // TuneEcho tune echo framework.
-func TuneEcho(e *echo.Echo, config kitty.Config, logger kitty.Logger, t kitty.Translator, uf kecho.UserFinderByJwtSub) {
+func TuneEcho(e *echo.Echo, config kitty.Config, l kitty.Logger, t kitty.Translator, uf kecho.UserFinderByJwtSub) {
 	// Set echo logger
-	e.Logger = kecho.KittyLoggerToEchoLogger(logger)
+	e.Logger = kecho.KittyLoggerToEchoLogger(l)
 
 	// Set the error handler.
-	e.HTTPErrorHandler = kecho.HTTPErrorHandler
+	e.HTTPErrorHandler = kecho.HTTPErrorHandler(l, t)
 
 	// Logger each request
 	e.Use(middleware.Logger())
@@ -35,6 +35,6 @@ func TuneEcho(e *echo.Echo, config kitty.Config, logger kitty.Logger, t kitty.Tr
 	e.Use(kecho.CurrentUser(uf))
 
 	// KittyContext set kitty context on each request.
-	e.Use(kecho.KittyContext(logger, t))
+	e.Use(kecho.KittyContext(l, t))
 
 }
