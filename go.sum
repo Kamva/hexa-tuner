@@ -37,6 +37,8 @@ github.com/Kamva/kitty v0.0.0-20200223203916-b6a9896fa3ef h1:gj3S5TLv6+z5/cOqgYe
 github.com/Kamva/kitty v0.0.0-20200223203916-b6a9896fa3ef/go.mod h1:KtQw+TewkCdYXreXA1T19ZTCxd3hjJhqS/uU/mrdkFM=
 github.com/Kamva/kitty v0.0.0-20200224150856-77961702aa63 h1:mGrIxR99oMspZIE+E/JDomC6WKHPrtX4pWfI4P86VN8=
 github.com/Kamva/kitty v0.0.0-20200224150856-77961702aa63/go.mod h1:RhIoKkwI8iei3aKPEOKAZNzHssP0uPWnyFMsxeWVWTM=
+github.com/Kamva/kitty v0.0.0-20200225091732-7b6994ad14bd h1:p80ygemTqyknFialxjFYeUgM1E5pImN6axz1k2OF6LM=
+github.com/Kamva/kitty v0.0.0-20200225091732-7b6994ad14bd/go.mod h1:RhIoKkwI8iei3aKPEOKAZNzHssP0uPWnyFMsxeWVWTM=
 github.com/Kamva/kitty-echo v0.0.0-20200222151511-917daa1fb98c h1:CylttHS39f3BZhbsUVFDYVlh7i57tUUBTw9HrUkNTBQ=
 github.com/Kamva/kitty-echo v0.0.0-20200222151511-917daa1fb98c/go.mod h1:kxu6sLS9O4S76ef/HGNwoTXZbp64UuiIXMzA4YMoj7w=
 github.com/Kamva/kitty-echo v0.0.0-20200222180201-84f3e9367432 h1:uUJQb6rEAdlGwAyD3zD3EcxanGaw/5pSq4emNgcDKCQ=
@@ -75,6 +77,8 @@ github.com/Kamva/kitty-echo v0.0.0-20200225083116-52012b5fa314 h1:NM2mnWBycUVY25
 github.com/Kamva/kitty-echo v0.0.0-20200225083116-52012b5fa314/go.mod h1:i1DASRiNL8D6mjY4i6gQ/IK6PriywmGLTTI1mWFFDjM=
 github.com/Kamva/kitty-echo v0.0.0-20200225085729-585e730a817c h1:LgGJxoqh7CvyfGUY9rikAepNNhFlpkZCTwCDi/nk1HA=
 github.com/Kamva/kitty-echo v0.0.0-20200225085729-585e730a817c/go.mod h1:i1DASRiNL8D6mjY4i6gQ/IK6PriywmGLTTI1mWFFDjM=
+github.com/Kamva/kitty-echo v0.0.0-20200225100314-78102217c4ad h1:ErPBC+28TuitmiJqHK89U1X1HtF7DQsLeI+/jyhdThk=
+github.com/Kamva/kitty-echo v0.0.0-20200225100314-78102217c4ad/go.mod h1:6hFyrF4+RzhJaR35oOD/pwBeZQvSSBsScHI5wsyIHFc=
 github.com/Kamva/logrus-kit v0.0.0-20200218181028-1d56103db75d h1:pI2cf5PS0TRi+jy61Wt831gZALcNrFs5RMlEJgp8uyI=
 github.com/Kamva/logrus-kit v0.0.0-20200218181028-1d56103db75d/go.mod h1:jpFRtJdGbl9d3+LHd/8CFw/CE+L4fN6biHPKg57eFCk=
 github.com/Kamva/mgm/v2 v2.0.0/go.mod h1:DgcNZxH74WB3FMcxV6e/MKNdNzu3EI1vuStdOjkasTE=
