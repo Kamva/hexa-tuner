@@ -6,7 +6,7 @@ require (
 	github.com/BurntSushi/toml v0.3.1
 	github.com/Kamva/gutil v0.0.0-20200223213106-083cc09e3b52
 	github.com/Kamva/kitty v0.0.0-20200224150856-77961702aa63
-	github.com/Kamva/kitty-echo v0.0.0-20200225080847-51b4bc13ae42
+	github.com/Kamva/kitty-echo v0.0.0-20200225081943-1bb3719ee76b
 	github.com/Kamva/logrus-kit v0.0.0-20200218181028-1d56103db75d
 	github.com/labstack/echo/v4 v4.1.14
 	github.com/nicksnyder/go-i18n/v2 v2.0.3
