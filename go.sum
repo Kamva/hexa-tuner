@@ -1,5 +1,6 @@
 cloud.google.com/go v0.26.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
 github.com/BurntSushi/toml v0.3.0/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
+github.com/BurntSushi/toml v0.3.1 h1:WXkYYl6Yr3qBf1K79EBnL4mak0OimBfB0XUf9Vl28OQ=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/Kamva/elogrus/v4 v4.0.0 h1:tt0O3gBBa1b/1InV9nJXJ77nuDd4olBKCDHKTNd8/Jc=
 github.com/Kamva/elogrus/v4 v4.0.0/go.mod h1:SUtLT126xeK4fXYv1EPggfk2bXe+cY5uE4e5r1jBgxU=
@@ -66,6 +67,8 @@ github.com/Kamva/kitty-echo v0.0.0-20200225074704-dcbda6c860b1 h1:ulQjiWGa5+GfFC
 github.com/Kamva/kitty-echo v0.0.0-20200225074704-dcbda6c860b1/go.mod h1:i1DASRiNL8D6mjY4i6gQ/IK6PriywmGLTTI1mWFFDjM=
 github.com/Kamva/kitty-echo v0.0.0-20200225080257-e9a82c22798e h1:Gf9SyUjAkWuwD9gYAZmj9pJLKKvRSZzLO6SXgUtXSgE=
 github.com/Kamva/kitty-echo v0.0.0-20200225080257-e9a82c22798e/go.mod h1:i1DASRiNL8D6mjY4i6gQ/IK6PriywmGLTTI1mWFFDjM=
+github.com/Kamva/kitty-echo v0.0.0-20200225080847-51b4bc13ae42 h1:QGCaG+BYhO7iCvNf+d6Js6fg7KMErc8PhHsG78VKExI=
+github.com/Kamva/kitty-echo v0.0.0-20200225080847-51b4bc13ae42/go.mod h1:i1DASRiNL8D6mjY4i6gQ/IK6PriywmGLTTI1mWFFDjM=
 github.com/Kamva/logrus-kit v0.0.0-20200218181028-1d56103db75d h1:pI2cf5PS0TRi+jy61Wt831gZALcNrFs5RMlEJgp8uyI=
 github.com/Kamva/logrus-kit v0.0.0-20200218181028-1d56103db75d/go.mod h1:jpFRtJdGbl9d3+LHd/8CFw/CE+L4fN6biHPKg57eFCk=
 github.com/Kamva/mgm/v2 v2.0.0/go.mod h1:DgcNZxH74WB3FMcxV6e/MKNdNzu3EI1vuStdOjkasTE=
@@ -115,7 +118,9 @@ github.com/grpc-ecosystem/grpc-gateway v1.9.0/go.mod h1:vNeuVxBJEsws4ogUvrchl83t
 github.com/hashicorp/hcl v1.0.0 h1:0Anlzjpi4vEasTeNFn2mLJgTSwt0+6sfsiTG8qcWGx4=
 github.com/hashicorp/hcl v1.0.0/go.mod h1:E5yfLk+7swimpb2L/Alb/PJmXilQ/rhwaUYs4T20WEQ=
 github.com/jinzhu/inflection v1.0.0/go.mod h1:h+uFLlag+Qp1Va5pdKtLDYj+kHp5pxUVkryuEj+Srlc=
+github.com/johntdyer/slack-go v0.0.0-20180213144715-95fac1160b22 h1:jKUP9TQ0c7X3w6+IPyMit07RE42MtTWNd77sN2cHngQ=
 github.com/johntdyer/slack-go v0.0.0-20180213144715-95fac1160b22/go.mod h1:u0Jo4f2dNlTJeeOywkM6bLwxq6gC3pZ9rEFHn3AhTdk=
+github.com/johntdyer/slackrus v0.0.0-20180518184837-f7aae3243a07 h1:+kBG/8rjCa6vxJZbUjAiE4MQmBEBYc8nLEb51frnvBY=
 github.com/johntdyer/slackrus v0.0.0-20180518184837-f7aae3243a07/go.mod h1:j1kV/8f3jowErEq4XyeypkCdvg5EeHkf0YCKCcq5Ybo=
 github.com/jonboulle/clockwork v0.1.0/go.mod h1:Ii8DK3G1RaLaWxj9trq07+26W01tbo22gdxWY5EU2bo=
 github.com/jtolds/gls v4.20.0+incompatible/go.mod h1:QJZ7F/aHp+rZTRtaJ1ow/lLfFfVYBRgL+9YlvaHOwJU=
@@ -150,6 +155,7 @@ github.com/matttproud/golang_protobuf_extensions v1.0.1/go.mod h1:D8He9yQNgCq6Z5
 github.com/mitchellh/mapstructure v1.1.2 h1:fmNYVwqnSfB9mZU6OS2O6GsXM+wcskZDuKQzvN1EDeE=
 github.com/mitchellh/mapstructure v1.1.2/go.mod h1:FVVH3fgwuzCH5S8UJGiWEs2h04kUh9fWfEaFds41c1Y=
 github.com/mwitkow/go-conntrack v0.0.0-20161129095857-cc309e4a2223/go.mod h1:qRWi+5nqEBWmkhHvq77mSJWrCKwh8bxhgT7d/eI7P4U=
+github.com/nicksnyder/go-i18n/v2 v2.0.3 h1:ks/JkQiOEhhuF6jpNvx+Wih1NIiXzUnZeZVnJuI8R8M=
 github.com/nicksnyder/go-i18n/v2 v2.0.3/go.mod h1:oDab7q8XCYMRlcrBnaY/7B1eOectbvj6B1UPBT+p5jo=
 github.com/oklog/ulid v1.3.1/go.mod h1:CirwcVhetQ6Lv90oh/F+FBtV6XMibvdAFo93nm5qn4U=
 github.com/pelletier/go-toml v1.2.0 h1:T5zMGML61Wp+FlcbWjRDT7yAxhJNAiPPLOFECq181zc=
