@@ -12,8 +12,10 @@ func TuneEcho(e *echo.Echo, config kitty.Config, l kitty.Logger, t kitty.Transla
 	// Set echo logger
 	e.Logger = kecho.KittyLoggerToEchoLogger(l)
 
+	e.Debug = config.GetBool("debug")
+
 	// Set the error handler.
-	e.HTTPErrorHandler = kecho.HTTPErrorHandler(l, t)
+	e.HTTPErrorHandler = kecho.HTTPErrorHandler(l, t, e.Debug)
 
 	// Logger each request
 	e.Use(middleware.Logger())
