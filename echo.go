@@ -22,7 +22,7 @@ func TuneEcho(e *echo.Echo, config kitty.Config, l kitty.Logger, t kitty.Transla
 	e.Use(middleware.Recover())
 
 	// RequestID set requestID on each request that has blank request id.
-	e.Use(middleware.RequestID())
+	e.Use(kecho.RequestID())
 
 	// CorrelationID set X-Correlation-ID value.
 	e.Use(kecho.CorrelationID())
