@@ -31,7 +31,7 @@ func TuneEcho(e *echo.Echo, config kitty.Config, l kitty.Logger, t kitty.Transla
 
 	// Optional JWT checker : check if exists
 	//header => verify, otherwise skip it.
-	e.Use(kecho.JWT(config.GetString("SECRET")))
+	e.Use(kecho.JWT(kitty.Secret(config.GetString("SECRET"))))
 
 	// Set user in each request context.
 	e.Use(kecho.CurrentUser(uf))
