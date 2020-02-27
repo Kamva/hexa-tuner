@@ -62,6 +62,9 @@ github.com/Kamva/kitty v0.0.0-20200226110853-0bd576c94bf5 h1:IVxLx85QUd6kPzBrJbW
 github.com/Kamva/kitty v0.0.0-20200226110853-0bd576c94bf5/go.mod h1:aUo5OPrU0RyyDFTuX7CBequqycA7xWb4DtOrzTsVEso=
 github.com/Kamva/kitty v0.0.0-20200227163612-21ff3fbae240 h1:WtRoLXHL20Z1mAgUKqIBJu1Dxa0NwkRSxbGF85bggHc=
 github.com/Kamva/kitty v0.0.0-20200227163612-21ff3fbae240/go.mod h1:eTbJM4CmI4zjjiGJWrqet/4baqXc44k4739kmEGK0QA=
+github.com/Kamva/kitty v0.0.0-20200227181646-5f27dfd1ead0/go.mod h1:eTbJM4CmI4zjjiGJWrqet/4baqXc44k4739kmEGK0QA=
+github.com/Kamva/kitty v0.0.0-20200227182145-73305c1c9040 h1:YPp5jAsWiUG+l9ykz5fnQ08S2R8c1Q6aiQ1uVD5Wq4g=
+github.com/Kamva/kitty v0.0.0-20200227182145-73305c1c9040/go.mod h1:eTbJM4CmI4zjjiGJWrqet/4baqXc44k4739kmEGK0QA=
 github.com/Kamva/kitty-echo v0.0.0-20200222151511-917daa1fb98c h1:CylttHS39f3BZhbsUVFDYVlh7i57tUUBTw9HrUkNTBQ=
 github.com/Kamva/kitty-echo v0.0.0-20200222151511-917daa1fb98c/go.mod h1:kxu6sLS9O4S76ef/HGNwoTXZbp64UuiIXMzA4YMoj7w=
 github.com/Kamva/kitty-echo v0.0.0-20200222180201-84f3e9367432 h1:uUJQb6rEAdlGwAyD3zD3EcxanGaw/5pSq4emNgcDKCQ=
@@ -138,6 +141,10 @@ github.com/Kamva/kitty-echo v0.0.0-20200226121137-f8824c70a2a3 h1:efjsJL4bWZTkH5
 github.com/Kamva/kitty-echo v0.0.0-20200226121137-f8824c70a2a3/go.mod h1:Q/JHZPEoMlM55NO0sNZq0Ym5AIzdsZW1g8QZH1Uk8VI=
 github.com/Kamva/kitty-echo v0.0.0-20200227164452-9aa804c9b272 h1:Exa9DRh4K70a+C7BqjKXypiZaUa9hZkAqKIsQylr1kg=
 github.com/Kamva/kitty-echo v0.0.0-20200227164452-9aa804c9b272/go.mod h1:dfZe/Tz663WOpx62bsDjP3Q3QZBrlTEO3DsiLhTjaHU=
+github.com/Kamva/kitty-echo v0.0.0-20200227185531-5105164a020d h1:6M8Pg/YSkwA2n99OVz1ibw504WrwHbL5z0dCFJ/t1ak=
+github.com/Kamva/kitty-echo v0.0.0-20200227185531-5105164a020d/go.mod h1:RrrscMQ81H7l2e0tOn2IKbciraLpWuSFyKcpwDWQ49Q=
+github.com/Kamva/kitty-echo v0.0.0-20200227185806-a57ed18d30b6 h1:cqeTypuvg9E5VPu/PC2a5MaLz+mseqMFDyeCCZ0MNtY=
+github.com/Kamva/kitty-echo v0.0.0-20200227185806-a57ed18d30b6/go.mod h1:RrrscMQ81H7l2e0tOn2IKbciraLpWuSFyKcpwDWQ49Q=
 github.com/Kamva/logrus-kit v0.0.0-20200218181028-1d56103db75d h1:pI2cf5PS0TRi+jy61Wt831gZALcNrFs5RMlEJgp8uyI=
 github.com/Kamva/logrus-kit v0.0.0-20200218181028-1d56103db75d/go.mod h1:jpFRtJdGbl9d3+LHd/8CFw/CE+L4fN6biHPKg57eFCk=
 github.com/Kamva/mgm/v2 v2.0.0/go.mod h1:DgcNZxH74WB3FMcxV6e/MKNdNzu3EI1vuStdOjkasTE=
