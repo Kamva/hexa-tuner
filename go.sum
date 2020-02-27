@@ -60,6 +60,8 @@ github.com/Kamva/kitty v0.0.0-20200225222107-a370f38bc379/go.mod h1:slx3Y1/aZ5ec
 github.com/Kamva/kitty v0.0.0-20200226075925-3eb254fd38e5/go.mod h1:slx3Y1/aZ5ecPT8OW1GUEuWx0s+sZUQ3XGrPv3fvzkk=
 github.com/Kamva/kitty v0.0.0-20200226110853-0bd576c94bf5 h1:IVxLx85QUd6kPzBrJbWb8/q0tecRpCktp9LFEiaAvUo=
 github.com/Kamva/kitty v0.0.0-20200226110853-0bd576c94bf5/go.mod h1:aUo5OPrU0RyyDFTuX7CBequqycA7xWb4DtOrzTsVEso=
+github.com/Kamva/kitty v0.0.0-20200227163612-21ff3fbae240 h1:WtRoLXHL20Z1mAgUKqIBJu1Dxa0NwkRSxbGF85bggHc=
+github.com/Kamva/kitty v0.0.0-20200227163612-21ff3fbae240/go.mod h1:eTbJM4CmI4zjjiGJWrqet/4baqXc44k4739kmEGK0QA=
 github.com/Kamva/kitty-echo v0.0.0-20200222151511-917daa1fb98c h1:CylttHS39f3BZhbsUVFDYVlh7i57tUUBTw9HrUkNTBQ=
 github.com/Kamva/kitty-echo v0.0.0-20200222151511-917daa1fb98c/go.mod h1:kxu6sLS9O4S76ef/HGNwoTXZbp64UuiIXMzA4YMoj7w=
 github.com/Kamva/kitty-echo v0.0.0-20200222180201-84f3e9367432 h1:uUJQb6rEAdlGwAyD3zD3EcxanGaw/5pSq4emNgcDKCQ=
@@ -134,9 +136,13 @@ github.com/Kamva/kitty-echo v0.0.0-20200226115652-9828badd717b h1:zqNi5FWjNSoYXR
 github.com/Kamva/kitty-echo v0.0.0-20200226115652-9828badd717b/go.mod h1:Q/JHZPEoMlM55NO0sNZq0Ym5AIzdsZW1g8QZH1Uk8VI=
 github.com/Kamva/kitty-echo v0.0.0-20200226121137-f8824c70a2a3 h1:efjsJL4bWZTkH5uUMvrwLmGaWnlOe9ltrbn0pn5LU90=
 github.com/Kamva/kitty-echo v0.0.0-20200226121137-f8824c70a2a3/go.mod h1:Q/JHZPEoMlM55NO0sNZq0Ym5AIzdsZW1g8QZH1Uk8VI=
+github.com/Kamva/kitty-echo v0.0.0-20200227164452-9aa804c9b272 h1:Exa9DRh4K70a+C7BqjKXypiZaUa9hZkAqKIsQylr1kg=
+github.com/Kamva/kitty-echo v0.0.0-20200227164452-9aa804c9b272/go.mod h1:dfZe/Tz663WOpx62bsDjP3Q3QZBrlTEO3DsiLhTjaHU=
 github.com/Kamva/logrus-kit v0.0.0-20200218181028-1d56103db75d h1:pI2cf5PS0TRi+jy61Wt831gZALcNrFs5RMlEJgp8uyI=
 github.com/Kamva/logrus-kit v0.0.0-20200218181028-1d56103db75d/go.mod h1:jpFRtJdGbl9d3+LHd/8CFw/CE+L4fN6biHPKg57eFCk=
 github.com/Kamva/mgm/v2 v2.0.0/go.mod h1:DgcNZxH74WB3FMcxV6e/MKNdNzu3EI1vuStdOjkasTE=
+github.com/Kamva/tracer v0.0.0-20200227162224-920933aaf959 h1:+6bGfrCfOsv0sHhgWpKXAWeqnDMs/mX1YXcox5cUS9o=
+github.com/Kamva/tracer v0.0.0-20200227162224-920933aaf959/go.mod h1:TZysvqISbPaePrjsUJpmJKhH1IJ+feQIZMHFoTenCuc=
 github.com/OneOfOne/xxhash v1.2.2/go.mod h1:HSdplMjZKSmBqAxg5vPj2TmRDmfkzw+cTzAElWljhcU=
 github.com/alecthomas/template v0.0.0-20160405071501-a0175ee3bccc/go.mod h1:LOuyumcjzFXgccqObfd/Ljyb9UuFJ6TxHnclSeseNhc=
 github.com/alecthomas/units v0.0.0-20151022065526-2efee857e7cf/go.mod h1:ybxpYRFXyAe+OPACYpWeL0wqObRcbAqCMya13uyzqw0=
@@ -261,6 +267,8 @@ github.com/pelletier/go-toml v1.2.0/go.mod h1:5z9KED0ma1S8pY6P1sdut58dfprrGBbd/9
 github.com/pelletier/go-toml v1.4.0/go.mod h1:PN7xzY2wHTK0K9p34ErDQMlFxa51Fk0OUruD3k1mMwo=
 github.com/pkg/errors v0.8.0/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pkg/errors v0.8.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
+github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
+github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/prometheus/client_golang v0.9.1/go.mod h1:7SWBe2y4D6OKWSNQJUaRYU/AaXPKyh/dDVn+NZz0KFw=
 github.com/prometheus/client_golang v0.9.3/go.mod h1:/TN21ttK/J9q6uSwhBd54HahCDft0ttaMvbicHlPoso=

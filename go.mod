@@ -5,8 +5,8 @@ go 1.13
 require (
 	github.com/BurntSushi/toml v0.3.1
 	github.com/Kamva/gutil v0.0.0-20200225211319-e2d1e50b2724
-	github.com/Kamva/kitty v0.0.0-20200226110853-0bd576c94bf5
-	github.com/Kamva/kitty-echo v0.0.0-20200226121137-f8824c70a2a3
+	github.com/Kamva/kitty v0.0.0-20200227163612-21ff3fbae240
+	github.com/Kamva/kitty-echo v0.0.0-20200227164452-9aa804c9b272
 	github.com/Kamva/logrus-kit v0.0.0-20200218181028-1d56103db75d
 	github.com/labstack/echo/v4 v4.1.14
 	github.com/nicksnyder/go-i18n/v2 v2.0.3
