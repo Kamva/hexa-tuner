@@ -5,6 +5,7 @@ import (
 	"github.com/Kamva/kitty/kittylogger"
 	"github.com/Kamva/logrus-kit"
 	_ "github.com/Kamva/logrus-kit/logrusbase"
+	"github.com/Kamva/tracer"
 	"github.com/sirupsen/logrus"
 )
 
@@ -13,7 +14,7 @@ func NewLogger(config kitty.Config) (kitty.Logger, error) {
 	logger, err := tuneLogrus(config)
 
 	if err != nil {
-		return nil, err
+		return nil, tracer.Trace(err)
 	}
 
 	return kittylogger.NewLogrusDriver(logger.WithFields(nil)), nil
@@ -24,5 +25,5 @@ func tuneLogrus(config kitty.Config) (*logrus.Logger, error) {
 
 	err := logruskit.Tune(logger, logruskit.Config(config))
 
-	return logger, err
+	return logger, tracer.Trace(err)
 }

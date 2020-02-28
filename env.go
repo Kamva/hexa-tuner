@@ -2,13 +2,14 @@ package ktuner
 
 import (
 	"github.com/Kamva/gutil"
+	"github.com/Kamva/tracer"
 	"github.com/spf13/viper"
 )
 
 func bindStructTagsValueAsEnv(v *viper.Viper, configObject interface{}, tagName string) error {
 	tagsValue, err := gutil.StructTags(configObject)
 	if err != nil {
-		return err
+		return tracer.Trace(err)
 	}
 
 	for _, tag := range tagsValue {
@@ -19,7 +20,7 @@ func bindStructTagsValueAsEnv(v *viper.Viper, configObject interface{}, tagName 
 		}
 
 		if err := v.BindEnv(tagVal); err != nil {
-			return err
+			return tracer.Trace(err)
 		}
 	}
 
@@ -36,7 +37,7 @@ func EnvViper(configStruct interface{}, envPrefix string, file string) (*viper.V
 	v.SetEnvPrefix(envPrefix)
 
 	if err := bindStructTagsValueAsEnv(v, configStruct, "mapstructure"); err != nil {
-		return nil, err
+		return nil, tracer.Trace(err)
 	}
 
 	// Read config file.
@@ -44,7 +45,7 @@ func EnvViper(configStruct interface{}, envPrefix string, file string) (*viper.V
 	v.SetConfigType("env")
 
 	if err := v.ReadInConfig(); err != nil {
-		return nil, err
+		return nil, tracer.Trace(err)
 	}
 
 	return v, nil
