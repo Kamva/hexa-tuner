@@ -9,11 +9,12 @@ import (
 
 // TuneEcho tune echo framework.
 func TuneEcho(e *echo.Echo, config kitty.Config, l kitty.Logger, t kitty.Translator, uf kecho.UserFinderByJwtSub) {
-	// Set echo logger
+
+	e.HideBanner = true
+
 	e.Logger = kecho.KittyLoggerToEchoLogger(l)
 
 	e.Debug = config.GetBool("debug")
-
 	// Set the error handler.
 	e.HTTPErrorHandler = kecho.HTTPErrorHandler(l, t, e.Debug)
 
