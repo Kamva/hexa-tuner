@@ -1,22 +1,22 @@
-package ktuner
+package huner
 
 import (
-	"github.com/Kamva/kitty"
-	kecho "github.com/Kamva/kitty-echo"
+	"github.com/Kamva/hexa"
+	"github.com/Kamva/hexa-echo"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 )
 
 // TuneEcho tune echo framework.
-func TuneEcho(e *echo.Echo, config kitty.Config, l kitty.Logger, t kitty.Translator, uf kecho.UserFinderByJwtSub) {
+func TuneEcho(e *echo.Echo, config hexa.Config, l hexa.Logger, t hexa.Translator, uf hecho.UserFinderByJwtSub) {
 
 	e.HideBanner = true
 
-	e.Logger = kecho.KittyLoggerToEchoLogger(l)
+	e.Logger = hecho.HexaToEchoLogger(l)
 
 	e.Debug = config.GetBool("debug")
 	// Set the error handler.
-	e.HTTPErrorHandler = kecho.HTTPErrorHandler(l, t, e.Debug)
+	e.HTTPErrorHandler = hecho.HTTPErrorHandler(l, t, e.Debug)
 
 	// Logger each request
 	e.Use(middleware.Logger())
@@ -25,19 +25,19 @@ func TuneEcho(e *echo.Echo, config kitty.Config, l kitty.Logger, t kitty.Transla
 	e.Use(middleware.Recover())
 
 	// RequestID set requestID on each request that has blank request id.
-	e.Use(kecho.RequestID())
+	e.Use(hecho.RequestID())
 
 	// CorrelationID set X-Correlation-ID value.
-	e.Use(kecho.CorrelationID())
+	e.Use(hecho.CorrelationID())
 
 	// Optional JWT checker : check if exists
 	//header => verify, otherwise skip it.
-	e.Use(kecho.JWT(kitty.Secret(config.GetString("SECRET"))))
+	e.Use(hecho.JWT(hexa.Secret(config.GetString("SECRET"))))
 
 	// Set user in each request context.
-	e.Use(kecho.CurrentUser(uf))
+	e.Use(hecho.CurrentUser(uf))
 
-	// KittyContext set kitty context on each request.
-	e.Use(kecho.KittyContext(l, t))
+	// HexaContext set hexa context on each request.
+	e.Use(hecho.HexaContext(l, t))
 
 }

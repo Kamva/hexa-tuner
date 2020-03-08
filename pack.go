@@ -1,10 +1,10 @@
-package ktuner
+package huner
 
 import (
 	"errors"
 	"github.com/Kamva/gutil"
-	"github.com/Kamva/kitty"
-	"github.com/Kamva/kitty-job"
+	"github.com/Kamva/hexa"
+	"github.com/Kamva/hexa-job"
 )
 
 var (
@@ -21,55 +21,55 @@ type Pack struct {
 	//returns nil.
 	must bool
 
-	config     kitty.Config
-	log        kitty.Logger
-	translator kitty.Translator
-	jobs       kjob.Jobs
+	config     hexa.Config
+	log        hexa.Logger
+	translator hexa.Translator
+	jobs       hjob.Jobs
 }
 
 // SetConfig sets the config service.
-func (p *Pack) SetConfig(config kitty.Config) {
+func (p *Pack) SetConfig(config hexa.Config) {
 	p.config = config
 }
 
 // SetLogger sets the logger service.
-func (p *Pack) SetLogger(logger kitty.Logger) {
+func (p *Pack) SetLogger(logger hexa.Logger) {
 	p.log = logger
 }
 
 // SetTranslator sets the translator service.
-func (p *Pack) SetTranslator(translator kitty.Translator) {
+func (p *Pack) SetTranslator(translator hexa.Translator) {
 	p.translator = translator
 }
 
 // SetJobs sets the Jobs service.
-func (p *Pack) SetJobs(jobs kjob.Jobs) {
+func (p *Pack) SetJobs(jobs hjob.Jobs) {
 	p.jobs = jobs
 }
 
 // Config returns the config service.
-func (p *Pack) Config() kitty.Config {
+func (p *Pack) Config() hexa.Config {
 	gutil.PanicNil(p.config, errNilConfig)
 
 	return p.config
 }
 
 // Logger returns the logger service.
-func (p *Pack) Log() kitty.Logger {
+func (p *Pack) Log() hexa.Logger {
 	gutil.PanicNil(p.log, errNilLogger)
 
 	return p.log
 }
 
 // Translator returns the translator service.
-func (p *Pack) Translator() kitty.Translator {
+func (p *Pack) Translator() hexa.Translator {
 	gutil.PanicNil(p.translator, errNilTranslator)
 
 	return p.translator
 }
 
 // Jobs returns the jobs service.
-func (p *Pack) Jobs() kjob.Jobs {
+func (p *Pack) Jobs() hjob.Jobs {
 	gutil.PanicNil(p.jobs, errNilJobs)
 
 	return p.jobs

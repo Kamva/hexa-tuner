@@ -1,10 +1,10 @@
-package ktuner
+package huner
 
 import (
 	"fmt"
 	"github.com/BurntSushi/toml"
-	"github.com/Kamva/kitty"
-	"github.com/Kamva/kitty/kittytranslator"
+	 "github.com/Kamva/hexa"
+	"github.com/Kamva/hexa/hexatranslator"
 	"github.com/nicksnyder/go-i18n/v2/i18n"
 	"golang.org/x/text/language"
 	"strings"
@@ -16,7 +16,7 @@ const (
 )
 
 // return new translator service.
-func NewTranslator(pathPrefix string, config kitty.Config) kitty.Translator {
+func NewTranslator(pathPrefix string, config hexa.Config) hexa.Translator {
 	files := config.GetList(filesKey)
 	fallbackLangs := config.GetList(fallbackLangsKey)
 
@@ -33,7 +33,7 @@ func NewTranslator(pathPrefix string, config kitty.Config) kitty.Translator {
 
 	localizer := i18n.NewLocalizer(bundle, fallbackLangs...)
 
-	return kittytranslator.NewI18nDriver(bundle, localizer, fallbackLangs)
+	return hexatranslator.NewI18nDriver(bundle, localizer, fallbackLangs)
 }
 
 func loadLangFiles(bundle *i18n.Bundle, prefix string, files []string) {

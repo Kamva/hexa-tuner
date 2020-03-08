@@ -1,4 +1,4 @@
-package ktuner
+package huner
 
-// Version is kitty current version.
+// Version is the package current version.
 const Version = "v1.0.0"

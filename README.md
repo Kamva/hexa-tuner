@@ -1,8 +1,8 @@
-#### kitty-tuner tune kitty services.
+#### hexa-tuner tune Hexa services.
 
 #### Install
 ```
-go get github.com/Kamva/kitty-tuner
+go get github.com/Kamva/hexa-tuner
 ```
 
 #### Used config variables:

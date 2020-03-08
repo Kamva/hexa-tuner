@@ -1,13 +1,13 @@
-module github.com/Kamva/kitty-tuner
+module github.com/Kamva/hexa-tuner
 
 go 1.13
 
 require (
 	github.com/BurntSushi/toml v0.3.1
-	github.com/Kamva/gutil v0.0.0-20200228120620-7f3374a9b2db
-	github.com/Kamva/kitty v0.0.0-20200305151725-c8f683178f92
-	github.com/Kamva/kitty-echo v0.0.0-20200303164532-fa5849dafc54
-	github.com/Kamva/kitty-job v0.0.0-20200305153511-ae4a5f1b5893
+	github.com/Kamva/gutil v0.0.0-20200306092721-d1590e417824
+	github.com/Kamva/hexa v0.0.0-20200308110738-38a8ce43b158
+	github.com/Kamva/hexa-echo v0.0.0-20200308121555-da8bb93bdb0e
+	github.com/Kamva/hexa-job v0.0.0-20200308121121-5ba1aabd3d84
 	github.com/Kamva/logrus-kit v0.0.0-20200218181028-1d56103db75d
 	github.com/Kamva/tracer v0.0.0-20200227202933-3d5974771f25
 	github.com/contribsys/faktory v1.2.0-1
