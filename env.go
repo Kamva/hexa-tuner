@@ -30,6 +30,10 @@ func bindStructTagsValueAsEnv(v *viper.Viper, configObject interface{}, tagName 
 // defaultViper make new instance of viper with viperDriver to read from .env file.
 // file is absolute string path of file. e.g `gutil.SourcePath()+"../.env"`
 func EnvViper(configStruct interface{}, envPrefix string, file string) (*viper.Viper, error) {
+	fileType := "env"
+	if file == "" {
+		fileType = ""
+	}
 	v := viper.New()
 
 	v.AutomaticEnv()
@@ -42,7 +46,7 @@ func EnvViper(configStruct interface{}, envPrefix string, file string) (*viper.V
 
 	// Read config file.
 	v.SetConfigFile(file)
-	v.SetConfigType("env")
+	v.SetConfigType(fileType)
 
 	if err := v.ReadInConfig(); err != nil {
 		return nil, tracer.Trace(err)
