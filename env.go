@@ -44,7 +44,7 @@ func EnvViper(configStruct interface{}, envPrefix string, file string) (*viper.V
 	v.SetConfigFile(file)
 	v.SetConfigType("env")
 	err := v.ReadInConfig()
-	if _, ok := err.(viper.ConfigFileNotFoundError); !ok {
+	if _, ok := err.(viper.ConfigFileNotFoundError); err != nil && !ok {
 		return nil, tracer.Trace(err)
 	}
 
