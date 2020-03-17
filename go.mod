@@ -4,9 +4,9 @@ go 1.13
 
 require (
 	github.com/BurntSushi/toml v0.3.1
-	github.com/Kamva/gutil v0.0.0-20200306092721-d1590e417824
-	github.com/Kamva/hexa v0.0.0-20200308110738-38a8ce43b158
-	github.com/Kamva/hexa-echo v0.0.0-20200317080451-e146dbda3f2e
+	github.com/Kamva/gutil v0.0.0-20200317165435-549980514a84
+	github.com/Kamva/hexa v0.0.0-20200317191201-39fea044886f
+	github.com/Kamva/hexa-echo v0.0.0-20200317192620-d31c68b5315f
 	github.com/Kamva/hexa-job v0.0.0-20200308121121-5ba1aabd3d84
 	github.com/Kamva/logrus-kit v0.0.0-20200218181028-1d56103db75d
 	github.com/Kamva/tracer v0.0.0-20200227202933-3d5974771f25
