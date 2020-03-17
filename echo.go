@@ -25,7 +25,7 @@ func TuneEcho(e *echo.Echo, cfg hexa.Config, l hexa.Logger, t hexa.Translator, u
 	e.Use(middleware.Logger())
 
 	// Recover recover each panic and pass to the cho error handler
-	e.Use(middleware.Recover())
+	e.Use(hecho.Recover())
 
 	// RequestID set requestID on each request that has blank request id.
 	e.Use(hecho.RequestID())
