@@ -14,6 +14,8 @@ github.com/Kamva/hexa-echo v0.0.0-20200308115923-22cc121388e9 h1:39b2lZXCpzCtXzX
 github.com/Kamva/hexa-echo v0.0.0-20200308115923-22cc121388e9/go.mod h1:Rt+P49KV3gk8995zQdy79709BRcFwLL0aboHwDaTrEk=
 github.com/Kamva/hexa-echo v0.0.0-20200308121555-da8bb93bdb0e h1:CDecdJBXXSTX9vWw/GCqanD3uGvw8EA1qTNZyfgC8gQ=
 github.com/Kamva/hexa-echo v0.0.0-20200308121555-da8bb93bdb0e/go.mod h1:Rt+P49KV3gk8995zQdy79709BRcFwLL0aboHwDaTrEk=
+github.com/Kamva/hexa-echo v0.0.0-20200317080451-e146dbda3f2e h1:+mgJ7jK8YTfBxaJsN4TFEGvRhX/SRGwBgztJmoXbddw=
+github.com/Kamva/hexa-echo v0.0.0-20200317080451-e146dbda3f2e/go.mod h1:Rt+P49KV3gk8995zQdy79709BRcFwLL0aboHwDaTrEk=
 github.com/Kamva/hexa-job v0.0.0-20200308121121-5ba1aabd3d84 h1:54xOuf+vOH3IRQv7/GvhBPCJKZ+9WJKpYrfa1JcjfYY=
 github.com/Kamva/hexa-job v0.0.0-20200308121121-5ba1aabd3d84/go.mod h1:3QWASIIgIWeRjHUL23n3eubPbnMNKrImQqFT9k5lCBg=
 github.com/Kamva/logrus-kit v0.0.0-20200218181028-1d56103db75d h1:pI2cf5PS0TRi+jy61Wt831gZALcNrFs5RMlEJgp8uyI=

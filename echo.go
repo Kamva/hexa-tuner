@@ -18,6 +18,9 @@ func TuneEcho(e *echo.Echo, config hexa.Config, l hexa.Logger, t hexa.Translator
 	// Set the error handler.
 	e.HTTPErrorHandler = hecho.HTTPErrorHandler(l, t, e.Debug)
 
+	// CORS HEADERS
+	e.Use(middleware.CORSWithConfig(hecho.CorsConfig(config)))
+
 	// Logger each request
 	e.Use(middleware.Logger())
 

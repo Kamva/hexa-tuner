@@ -6,7 +6,7 @@ require (
 	github.com/BurntSushi/toml v0.3.1
 	github.com/Kamva/gutil v0.0.0-20200306092721-d1590e417824
 	github.com/Kamva/hexa v0.0.0-20200308110738-38a8ce43b158
-	github.com/Kamva/hexa-echo v0.0.0-20200308121555-da8bb93bdb0e
+	github.com/Kamva/hexa-echo v0.0.0-20200317080451-e146dbda3f2e
 	github.com/Kamva/hexa-job v0.0.0-20200308121121-5ba1aabd3d84
 	github.com/Kamva/logrus-kit v0.0.0-20200218181028-1d56103db75d
 	github.com/Kamva/tracer v0.0.0-20200227202933-3d5974771f25
