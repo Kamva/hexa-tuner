@@ -44,6 +44,6 @@ func TuneEcho(e *echo.Echo, cfg hexa.Config, l hexa.Logger, t hexa.Translator, u
 	e.Use(hecho.HexaContext(l, t))
 
 	// SetContextLogger set the echo logger on each echo's context.
-	e.Use(hecho.SetContextLogger(cfg, l))
+	e.Use(hecho.SetContextLogger(cfg))
 
 }

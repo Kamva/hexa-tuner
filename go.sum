@@ -20,6 +20,8 @@ github.com/Kamva/hexa v0.0.0-20200308110738-38a8ce43b158/go.mod h1:XCpu0jU6ypvEa
 github.com/Kamva/hexa v0.0.0-20200317183152-e61a2a028556/go.mod h1:r0WnyruM3sExBGUbuUMxiQbRiglgBmKCl65UwQHcm3w=
 github.com/Kamva/hexa v0.0.0-20200317191201-39fea044886f h1:WMoIBGBl1lwKXWBmlDJK+z5Fe5n3gKB2KBn6qKAfxSw=
 github.com/Kamva/hexa v0.0.0-20200317191201-39fea044886f/go.mod h1:r0WnyruM3sExBGUbuUMxiQbRiglgBmKCl65UwQHcm3w=
+github.com/Kamva/hexa v0.0.0-20200317203829-936935574508 h1:kQsGawbXCUIaMoIB6x4ut/2FCEt63cBlmUXPbkw4Whw=
+github.com/Kamva/hexa v0.0.0-20200317203829-936935574508/go.mod h1:r0WnyruM3sExBGUbuUMxiQbRiglgBmKCl65UwQHcm3w=
 github.com/Kamva/hexa-echo v0.0.0-20200308115923-22cc121388e9 h1:39b2lZXCpzCtXzXmDTZw+uReR955MAuR5LwGDZVY18s=
 github.com/Kamva/hexa-echo v0.0.0-20200308115923-22cc121388e9/go.mod h1:Rt+P49KV3gk8995zQdy79709BRcFwLL0aboHwDaTrEk=
 github.com/Kamva/hexa-echo v0.0.0-20200308121555-da8bb93bdb0e h1:CDecdJBXXSTX9vWw/GCqanD3uGvw8EA1qTNZyfgC8gQ=
@@ -28,6 +30,8 @@ github.com/Kamva/hexa-echo v0.0.0-20200317080451-e146dbda3f2e h1:+mgJ7jK8YTfBxaJ
 github.com/Kamva/hexa-echo v0.0.0-20200317080451-e146dbda3f2e/go.mod h1:Rt+P49KV3gk8995zQdy79709BRcFwLL0aboHwDaTrEk=
 github.com/Kamva/hexa-echo v0.0.0-20200317192620-d31c68b5315f h1:OCrB2X20/GiWALZikiYHOTxCpyfjndByaRUnm9JGf8g=
 github.com/Kamva/hexa-echo v0.0.0-20200317192620-d31c68b5315f/go.mod h1:Isn8FSmuCK9c5TjBLGl1zVh0XM25ZWiD46yt7zaP5ME=
+github.com/Kamva/hexa-echo v0.0.0-20200317204006-b29f96101958 h1:n85ja3Pn/8YZhT/5lXQb8xv9Jv9/oNy+qTvvLr1RnI4=
+github.com/Kamva/hexa-echo v0.0.0-20200317204006-b29f96101958/go.mod h1:ie7z290NtCj2T6ejNBzphHocXR1Nxs63i9HmTMFGEHo=
 github.com/Kamva/hexa-job v0.0.0-20200308121121-5ba1aabd3d84 h1:54xOuf+vOH3IRQv7/GvhBPCJKZ+9WJKpYrfa1JcjfYY=
 github.com/Kamva/hexa-job v0.0.0-20200308121121-5ba1aabd3d84/go.mod h1:3QWASIIgIWeRjHUL23n3eubPbnMNKrImQqFT9k5lCBg=
 github.com/Kamva/logrus-kit v0.0.0-20200218181028-1d56103db75d h1:pI2cf5PS0TRi+jy61Wt831gZALcNrFs5RMlEJgp8uyI=
