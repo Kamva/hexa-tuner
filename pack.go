@@ -55,7 +55,7 @@ func (p *Pack) Config() hexa.Config {
 }
 
 // Logger returns the logger service.
-func (p *Pack) Log() hexa.Logger {
+func (p *Pack) Logger() hexa.Logger {
 	gutil.PanicNil(p.log, errNilLogger)
 
 	return p.log
