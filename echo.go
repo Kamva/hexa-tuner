@@ -8,7 +8,8 @@ import (
 )
 
 // TuneEcho tune echo framework.
-func TuneEcho(e *echo.Echo, cfg hexa.Config, l hexa.Logger, t hexa.Translator, uf hecho.UserFinderByJwtSub) {
+func TuneEcho(e *echo.Echo, cfg hexa.Config, l hexa.Logger, t hexa.Translator,
+	je hecho.JWTExtender, ug hecho.UserGeneratorByExtendedJWT, ) {
 
 	e.HideBanner = true
 
@@ -17,6 +18,13 @@ func TuneEcho(e *echo.Echo, cfg hexa.Config, l hexa.Logger, t hexa.Translator, u
 	e.Debug = cfg.GetBool("debug")
 	// Set the error handler.
 	e.HTTPErrorHandler = hecho.HTTPErrorHandler(l, t, e.Debug)
+
+	var currentUserMiddleware echo.MiddlewareFunc
+	if je == nil {
+		currentUserMiddleware = hecho.CurrentUserWithoutExtender(ug)
+	} else {
+		currentUserMiddleware = hecho.CurrentUser(je, ug)
+	}
 
 	// CORS HEADERS
 	e.Use(middleware.CORSWithConfig(hecho.CorsConfig(cfg)))
@@ -38,12 +46,11 @@ func TuneEcho(e *echo.Echo, cfg hexa.Config, l hexa.Logger, t hexa.Translator, u
 	e.Use(hecho.JWT(hexa.Secret(cfg.GetString("SECRET"))))
 
 	// Set user in each request context.
-	e.Use(hecho.CurrentUser(uf))
+	e.Use(currentUserMiddleware)
 
 	// HexaContext set hexa context on each request.
 	e.Use(hecho.HexaContext(l, t))
 
 	// SetContextLogger set the echo logger on each echo's context.
 	e.Use(hecho.SetContextLogger(cfg))
-
 }

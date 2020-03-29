@@ -15,6 +15,8 @@ github.com/Kamva/gutil v0.0.0-20200306092721-d1590e417824 h1:Op8cMC7Oe6SJMjKg2gd
 github.com/Kamva/gutil v0.0.0-20200306092721-d1590e417824/go.mod h1:KvaAPqUTtjac/70L9pCuNEJX0FSH7+WrTo6sariE4FM=
 github.com/Kamva/gutil v0.0.0-20200317165435-549980514a84 h1:DzH+sK4nCsHe6B6uslsT359znIFa7fMsVRgoePjB6/0=
 github.com/Kamva/gutil v0.0.0-20200317165435-549980514a84/go.mod h1:KvaAPqUTtjac/70L9pCuNEJX0FSH7+WrTo6sariE4FM=
+github.com/Kamva/gutil v0.0.0-20200329114904-c3f6b07357cc h1:LzTgV6OtOK/a8GtDG0IueeCAsRfJjMxQq9jnD0yvFCY=
+github.com/Kamva/gutil v0.0.0-20200329114904-c3f6b07357cc/go.mod h1:KvaAPqUTtjac/70L9pCuNEJX0FSH7+WrTo6sariE4FM=
 github.com/Kamva/hexa v0.0.0-20200308110738-38a8ce43b158 h1:sU0v7TQdH5GRvW1aWZ+iR0U5JdlWcCjTX9yYkhW+NlA=
 github.com/Kamva/hexa v0.0.0-20200308110738-38a8ce43b158/go.mod h1:XCpu0jU6ypvEa0DPMHGDIX7JL8J+8mGjuUR8B7Hhfac=
 github.com/Kamva/hexa v0.0.0-20200317183152-e61a2a028556/go.mod h1:r0WnyruM3sExBGUbuUMxiQbRiglgBmKCl65UwQHcm3w=
@@ -40,6 +42,10 @@ github.com/Kamva/hexa-echo v0.0.0-20200317220824-0ebd16c04371 h1:mgVerecQlWsZMAn
 github.com/Kamva/hexa-echo v0.0.0-20200317220824-0ebd16c04371/go.mod h1:+01oJhlgX/uBbADPe9LUWVCoZ/9FhL6lbNr1cG3D1d8=
 github.com/Kamva/hexa-echo v0.0.0-20200317221706-449c1325e04b h1:6UaxwjL/6KS4UfJX3TCuUjPbM+SKb8no7mQ8f/NQpXo=
 github.com/Kamva/hexa-echo v0.0.0-20200317221706-449c1325e04b/go.mod h1:+01oJhlgX/uBbADPe9LUWVCoZ/9FhL6lbNr1cG3D1d8=
+github.com/Kamva/hexa-echo v0.0.0-20200329115223-a2e07de76daf h1:e7PHuQAR0i0OusGlL9eFKb37xCG2JEYlfwX49ZHHoVA=
+github.com/Kamva/hexa-echo v0.0.0-20200329115223-a2e07de76daf/go.mod h1:8B/tl7ifkA0MEKNFPGztQRmeum5ovyrFyY63xyd0bvU=
+github.com/Kamva/hexa-echo v0.0.0-20200329120108-8e3fc3b54578 h1:BwE86ZfgVw4qeGxH/mErjUBnCi2LgQ4A0o03V1S/jyY=
+github.com/Kamva/hexa-echo v0.0.0-20200329120108-8e3fc3b54578/go.mod h1:8B/tl7ifkA0MEKNFPGztQRmeum5ovyrFyY63xyd0bvU=
 github.com/Kamva/hexa-job v0.0.0-20200308121121-5ba1aabd3d84 h1:54xOuf+vOH3IRQv7/GvhBPCJKZ+9WJKpYrfa1JcjfYY=
 github.com/Kamva/hexa-job v0.0.0-20200308121121-5ba1aabd3d84/go.mod h1:3QWASIIgIWeRjHUL23n3eubPbnMNKrImQqFT9k5lCBg=
 github.com/Kamva/logrus-kit v0.0.0-20200218181028-1d56103db75d h1:pI2cf5PS0TRi+jy61Wt831gZALcNrFs5RMlEJgp8uyI=
