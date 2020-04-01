@@ -59,6 +59,8 @@ github.com/Kamva/hexa-echo v0.0.0-20200401110136-34aca570c955 h1:oNlyb2GTwHzsV97
 github.com/Kamva/hexa-echo v0.0.0-20200401110136-34aca570c955/go.mod h1:YRN7RDxzMOmr12PBHTddzL2xGBjaP9T1RXDpWGJImQU=
 github.com/Kamva/hexa-echo v0.0.0-20200401112024-6f3e7dcdfbe0 h1:whHPlt2nZTHZ2VCajBoQAVL/Oh/5GEJ+qOOPDd9PzQI=
 github.com/Kamva/hexa-echo v0.0.0-20200401112024-6f3e7dcdfbe0/go.mod h1:YRN7RDxzMOmr12PBHTddzL2xGBjaP9T1RXDpWGJImQU=
+github.com/Kamva/hexa-echo v0.0.0-20200401121417-5211797cf025 h1:IU0PVY085bLU2hDFauvfbTie7HaMg65PAnmgKO8XLkU=
+github.com/Kamva/hexa-echo v0.0.0-20200401121417-5211797cf025/go.mod h1:YRN7RDxzMOmr12PBHTddzL2xGBjaP9T1RXDpWGJImQU=
 github.com/Kamva/hexa-job v0.0.0-20200308121121-5ba1aabd3d84 h1:54xOuf+vOH3IRQv7/GvhBPCJKZ+9WJKpYrfa1JcjfYY=
 github.com/Kamva/hexa-job v0.0.0-20200308121121-5ba1aabd3d84/go.mod h1:3QWASIIgIWeRjHUL23n3eubPbnMNKrImQqFT9k5lCBg=
 github.com/Kamva/hexa-job v0.0.0-20200401115611-361cab934429 h1:JjC3IObzYo91hwhzZJ7h/FHbBAimYoFlC3fiRtlCEl0=
