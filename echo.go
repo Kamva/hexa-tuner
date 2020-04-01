@@ -8,7 +8,6 @@ import (
 )
 
 type EchoTunerOptions struct {
-	cfg        hexa.Config
 	l          hexa.Logger
 	t          hexa.Translator
 	uf         hecho.UserFinderBySub
