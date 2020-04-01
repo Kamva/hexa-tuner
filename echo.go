@@ -8,11 +8,11 @@ import (
 )
 
 type EchoTunerOptions struct {
-	l          hexa.Logger
-	t          hexa.Translator
-	uf         hecho.UserFinderBySub
-	userSDK    hexa.UserSDK
-	ctxCreator hecho.CtxCreator
+	Logger     hexa.Logger
+	Translator hexa.Translator
+	UserFinder hecho.UserFinderBySub
+	UserSDK    hexa.UserSDK
+	CtxCreator hecho.CtxCreator
 }
 
 // TuneEcho tune echo framework.
@@ -20,17 +20,17 @@ func TuneEcho(e *echo.Echo, cfg hexa.Config, options EchoTunerOptions) {
 
 	e.HideBanner = true
 
-	e.Logger = hecho.HexaToEchoLogger(cfg, options.l)
+	e.Logger = hecho.HexaToEchoLogger(cfg, options.Logger)
 
 	e.Debug = cfg.GetBool("debug")
 	// Set the error handler.
-	e.HTTPErrorHandler = hecho.HTTPErrorHandler(options.l, options.t, e.Debug)
+	e.HTTPErrorHandler = hecho.HTTPErrorHandler(options.Logger, options.Translator, e.Debug)
 
 	var currentUserMiddleware echo.MiddlewareFunc
-	if options.uf == nil {
-		currentUserMiddleware = hecho.CurrentUserWithoutFetch(options.userSDK)
+	if options.UserFinder == nil {
+		currentUserMiddleware = hecho.CurrentUserWithoutFetch(options.UserSDK)
 	} else {
-		currentUserMiddleware = hecho.CurrentUser(options.uf, options.userSDK)
+		currentUserMiddleware = hecho.CurrentUser(options.UserFinder, options.UserSDK)
 	}
 
 	// CORS HEADERS
@@ -56,7 +56,7 @@ func TuneEcho(e *echo.Echo, cfg hexa.Config, options EchoTunerOptions) {
 	e.Use(currentUserMiddleware)
 
 	// HexaContext set hexa context on each request.
-	e.Use(hecho.HexaContext(options.ctxCreator, options.l, options.t))
+	e.Use(hecho.HexaContext(options.CtxCreator, options.Logger, options.Translator))
 
 	// SetContextLogger set the echo logger on each echo's context.
 	e.Use(hecho.SetContextLogger(cfg))
