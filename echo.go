@@ -8,7 +8,7 @@ import (
 )
 
 // TuneEcho tune echo framework.
-func TuneEcho(e *echo.Echo, cfg hexa.Config, l hexa.Logger, t hexa.Translator, uf hecho.UserFinder, userSDK hexa.UserSDK) {
+func TuneEcho(e *echo.Echo, cfg hexa.Config, l hexa.Logger, t hexa.Translator, uf hecho.UserFinderBySub, userSDK hexa.UserSDK) {
 
 	e.HideBanner = true
 
