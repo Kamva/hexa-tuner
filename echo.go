@@ -8,8 +8,7 @@ import (
 )
 
 // TuneEcho tune echo framework.
-func TuneEcho(e *echo.Echo, cfg hexa.Config, l hexa.Logger, t hexa.Translator,
-	je hecho.JWTExtender, ug hecho.UserGeneratorByExtendedJWT, ) {
+func TuneEcho(e *echo.Echo, cfg hexa.Config, l hexa.Logger, t hexa.Translator, uf hecho.UserFinder, userSDK hexa.UserSDK) {
 
 	e.HideBanner = true
 
@@ -20,10 +19,10 @@ func TuneEcho(e *echo.Echo, cfg hexa.Config, l hexa.Logger, t hexa.Translator,
 	e.HTTPErrorHandler = hecho.HTTPErrorHandler(l, t, e.Debug)
 
 	var currentUserMiddleware echo.MiddlewareFunc
-	if je == nil {
-		currentUserMiddleware = hecho.CurrentUserWithoutExtender(ug)
+	if uf == nil {
+		currentUserMiddleware = hecho.CurrentUserWithoutFetch(userSDK)
 	} else {
-		currentUserMiddleware = hecho.CurrentUser(je, ug)
+		currentUserMiddleware = hecho.CurrentUser(uf, userSDK)
 	}
 
 	// CORS HEADERS
