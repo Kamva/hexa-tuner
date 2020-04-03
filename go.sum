@@ -33,6 +33,8 @@ github.com/Kamva/hexa v0.0.0-20200401104712-c4b4a2760c92 h1:xnZzmhegEVEGcJfuSeOc
 github.com/Kamva/hexa v0.0.0-20200401104712-c4b4a2760c92/go.mod h1:mzg8tzvIhQfVMWXpVCApxl2f+VA6M08rkSLPLVKrdNE=
 github.com/Kamva/hexa v0.0.0-20200401111121-8d5bd989f5d2 h1:L0O/gPq7WiCDfMcjSwuMvPn8y3CDPxR1bobF8ZOKbnQ=
 github.com/Kamva/hexa v0.0.0-20200401111121-8d5bd989f5d2/go.mod h1:mzg8tzvIhQfVMWXpVCApxl2f+VA6M08rkSLPLVKrdNE=
+github.com/Kamva/hexa v0.0.0-20200403134402-8698cb821901 h1:HoLetA5gWUNx4ZKaqrYAHlV8L07ibOW72N3hnyAtkbY=
+github.com/Kamva/hexa v0.0.0-20200403134402-8698cb821901/go.mod h1:z7ephW4Dqw+xPOPUZDqR+kb4qT3/9KnNGcg7gKfjD20=
 github.com/Kamva/hexa-echo v0.0.0-20200308115923-22cc121388e9 h1:39b2lZXCpzCtXzXmDTZw+uReR955MAuR5LwGDZVY18s=
 github.com/Kamva/hexa-echo v0.0.0-20200308115923-22cc121388e9/go.mod h1:Rt+P49KV3gk8995zQdy79709BRcFwLL0aboHwDaTrEk=
 github.com/Kamva/hexa-echo v0.0.0-20200308121555-da8bb93bdb0e h1:CDecdJBXXSTX9vWw/GCqanD3uGvw8EA1qTNZyfgC8gQ=
