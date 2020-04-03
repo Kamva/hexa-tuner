@@ -4,6 +4,7 @@ import (
 	"errors"
 	"github.com/Kamva/gutil"
 	"github.com/Kamva/hexa"
+	hevent "github.com/Kamva/hexa-event"
 	"github.com/Kamva/hexa-job"
 )
 
@@ -26,6 +27,7 @@ type Pack struct {
 	translator hexa.Translator
 	jobs       hjob.Jobs
 	gate       hexa.Gate
+	emitter    hevent.Emitter
 }
 
 // SetConfig sets the config service.
@@ -51,6 +53,11 @@ func (p *Pack) SetJobs(jobs hjob.Jobs) {
 // SetGate sets the Gate service.
 func (p *Pack) SetGate(gate hexa.Gate) {
 	p.gate = gate
+}
+
+// SetGate sets the event emitter service.
+func (p *Pack) SetEmitter(emitter hevent.Emitter) {
+	p.emitter = emitter
 }
 
 // Config returns the config service.
@@ -95,6 +102,15 @@ func (p *Pack) Gate() hexa.Gate {
 	}
 
 	return p.gate
+}
+
+// Emitter returns the gate service.
+func (p *Pack) Emitter() hevent.Emitter {
+	if p.must {
+		gutil.PanicNil(p.emitter, errNilGate)
+	}
+
+	return p.emitter
 }
 
 // NewPack returns new instance of the pack.
