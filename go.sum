@@ -66,6 +66,8 @@ github.com/Kamva/hexa-echo v0.0.0-20200401121417-5211797cf025 h1:IU0PVY085bLU2hD
 github.com/Kamva/hexa-echo v0.0.0-20200401121417-5211797cf025/go.mod h1:YRN7RDxzMOmr12PBHTddzL2xGBjaP9T1RXDpWGJImQU=
 github.com/Kamva/hexa-event v0.0.0-20200403172840-5ab3358c1d8b h1:0DiYG/qg6cE0JR4x1khhDVwZ//K8Vp1CUkYifDSLa+4=
 github.com/Kamva/hexa-event v0.0.0-20200403172840-5ab3358c1d8b/go.mod h1:wk28/9G32RcsQlAhKaTEr7/vTxLoNddijmxeNO4hr5g=
+github.com/Kamva/hexa-grpc v0.0.0-20200409173443-51d1f019046a h1:OkdY76e/TTkIoLkq3w3rYT842czJ7udH3wd7XK3/qDU=
+github.com/Kamva/hexa-grpc v0.0.0-20200409173443-51d1f019046a/go.mod h1:CcE4Q9Z7srpLnWKIJ5HNeAzD1nT++X0IfWofDOYKP44=
 github.com/Kamva/hexa-job v0.0.0-20200308121121-5ba1aabd3d84 h1:54xOuf+vOH3IRQv7/GvhBPCJKZ+9WJKpYrfa1JcjfYY=
 github.com/Kamva/hexa-job v0.0.0-20200308121121-5ba1aabd3d84/go.mod h1:3QWASIIgIWeRjHUL23n3eubPbnMNKrImQqFT9k5lCBg=
 github.com/Kamva/hexa-job v0.0.0-20200401115611-361cab934429 h1:JjC3IObzYo91hwhzZJ7h/FHbBAimYoFlC3fiRtlCEl0=
@@ -473,8 +475,10 @@ golang.org/x/tools v0.0.0-20191029190741-b9c20aec41a5/go.mod h1:b+2E5dAYhXwXZwtn
 golang.org/x/xerrors v0.0.0-20190717185122-a985d3407aa7/go.mod h1:I/5z698sn9Ka8TeJc9MKroUUfqBBauWjQqLJ2OPfmY0=
 golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543/go.mod h1:I/5z698sn9Ka8TeJc9MKroUUfqBBauWjQqLJ2OPfmY0=
 google.golang.org/appengine v1.1.0/go.mod h1:EbEs0AVv82hx2wNQdGPgUI5lhzA/G0D9YwlJXL52JkM=
+google.golang.org/genproto v0.0.0-20180817151627-c66870c02cf8 h1:Nw54tB0rB7hY/N0NQvRW8DG4Yk3Q6T9cu9RcFQDu1tc=
 google.golang.org/genproto v0.0.0-20180817151627-c66870c02cf8/go.mod h1:JiN7NxoALGmiZfu7CAH4rXhgtRTLTxftemlI0sWmxmc=
 google.golang.org/grpc v1.19.0/go.mod h1:mqu4LbDTu4XGKhr4mRzUsmM4RtVoemTSY81AxZiDr8c=
+google.golang.org/grpc v1.21.0 h1:G+97AoqBnmZIT91cLG/EkCoK9NSelj64P8bOHHNmGn0=
 google.golang.org/grpc v1.21.0/go.mod h1:oYelfM1adQP15Ek0mdvEgi9Df8B9CZIaU1084ijfRaM=
 gopkg.in/alecthomas/kingpin.v2 v2.2.6/go.mod h1:FMv+mEhP44yOT+4EoQTLFTRgOQ1FBLkstjWtayDeSgw=
 gopkg.in/asaskevich/govalidator.v9 v9.0.0-20180315120708-ccb8e960c48f/go.mod h1:+MTrBL6wlsxv1uFXT6b9LWG7PJdrvUJEjl8tXOlk9OU=

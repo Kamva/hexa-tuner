@@ -16,35 +16,37 @@ var (
 	errNilGate       = errors.New("gate is nil in the pack")
 )
 
-// BaseServiceContainer is the base service container to use in each microservice.
-type BaseServiceContainer interface {
-	SetConfig(config hexa.Config)
-	SetLogger(logger hexa.Logger)
-	SetTranslator(translator hexa.Translator)
-	SetJobs(jobs hjob.Jobs)
-	SetGate(gate hexa.Gate)
-	SetEmitter(emitter hevent.Emitter)
-	Config() hexa.Config
-	Logger() hexa.Logger
-	Translator() hexa.Translator
-	Jobs() hjob.Jobs
-	Gate() hexa.Gate
-	Emitter() hevent.Emitter
-}
+type (
+	// BaseServiceContainer is the base service container to use in each microservice.
+	BaseServiceContainer interface {
+		SetConfig(config hexa.Config)
+		SetLogger(logger hexa.Logger)
+		SetTranslator(translator hexa.Translator)
+		SetJobs(jobs hjob.Jobs)
+		SetGate(gate hexa.Gate)
+		SetEmitter(emitter hevent.Emitter)
+		Config() hexa.Config
+		Logger() hexa.Logger
+		Translator() hexa.Translator
+		Jobs() hjob.Jobs
+		Gate() hexa.Gate
+		Emitter() hevent.Emitter
+	}
 
-// baseServiceContainer contains all of services in one place to manage our services.
-type baseServiceContainer struct {
-	// must specify that should panic when user request
-	// to get a nil service or just return nil value.
-	must bool
+	// baseServiceContainer contains all of services in one place to manage our services.
+	baseServiceContainer struct {
+		// must specify that should panic when user request
+		// to get a nil service or just return nil value.
+		must bool
 
-	config     hexa.Config
-	log        hexa.Logger
-	translator hexa.Translator
-	jobs       hjob.Jobs
-	gate       hexa.Gate
-	emitter    hevent.Emitter
-}
+		config     hexa.Config
+		log        hexa.Logger
+		translator hexa.Translator
+		jobs       hjob.Jobs
+		gate       hexa.Gate
+		emitter    hevent.Emitter
+	}
+)
 
 // SetConfig sets the config service.
 func (p *baseServiceContainer) SetConfig(config hexa.Config) {

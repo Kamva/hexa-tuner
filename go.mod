@@ -8,6 +8,7 @@ require (
 	github.com/Kamva/hexa v0.0.0-20200403134402-8698cb821901
 	github.com/Kamva/hexa-echo v0.0.0-20200401121417-5211797cf025
 	github.com/Kamva/hexa-event v0.0.0-20200403172840-5ab3358c1d8b
+	github.com/Kamva/hexa-grpc v0.0.0-20200409173443-51d1f019046a
 	github.com/Kamva/hexa-job v0.0.0-20200401115611-361cab934429
 	github.com/Kamva/logrus-kit v0.0.0-20200218181028-1d56103db75d
 	github.com/Kamva/tracer v0.0.0-20200227202933-3d5974771f25
@@ -18,4 +19,5 @@ require (
 	github.com/sirupsen/logrus v1.4.2
 	github.com/spf13/viper v1.6.2
 	golang.org/x/text v0.3.2
+	google.golang.org/grpc v1.21.0
 )
