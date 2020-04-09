@@ -49,7 +49,7 @@ func TuneEcho(e *echo.Echo, cfg hexa.Config, options EchoTunerOptions) {
 	e.Use(hecho.CorrelationID())
 
 	// Optional JWT checker : check if exists
-	//header => verify, otherwise skip it.
+	// header, so verify it, otherwise skip.
 	e.Use(hecho.JWT(hexa.Secret(cfg.GetString("SECRET"))))
 
 	// Set user in each request context.
