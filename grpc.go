@@ -8,11 +8,12 @@ import (
 	"google.golang.org/grpc/grpclog"
 )
 
+// GRPCServerTunerOptions contains options needed to tune a gRPC server
 type GRPCServerTunerOptions struct {
-	cei hexa.ContextExporterImporter
-	cfg hexa.Config
-	l   hexa.Logger
-	t   hexa.Translator
+	ContextEI  hexa.ContextExporterImporter
+	Config     hexa.Config
+	Logger     hexa.Logger
+	Translator hexa.Translator
 }
 
 // GRPCConn returns new instance of the gRPC connection with your config to use in client
@@ -30,20 +31,20 @@ func GRPCConn(serverAddr string, cei hexa.ContextExporterImporter) (*grpc.Client
 
 // TuneGRPCServer returns new instance of the tuned gRPC Server to server requests to services
 func TuneGRPCServer(o GRPCServerTunerOptions) (*grpc.Server, error) {
-	loggerOptions := hrpc.DefaultLoggerOptions(o.cfg.GetBool("DEBUG"))
+	loggerOptions := hrpc.DefaultLoggerOptions(o.Config.GetBool("DEBUG"))
 
 	// Replace gRPC logger with hexa logger
-	grpclog.SetLoggerV2(hrpc.NewLogger(o.l, o.cfg))
+	grpclog.SetLoggerV2(hrpc.NewLogger(o.Logger, o.Config))
 
 	intChain := grpc_middleware.ChainUnaryServer(
 		// Hexa context interceptor
-		hrpc.NewHexaContextInterceptor(o.cei).UnaryServerInterceptor,
+		hrpc.NewHexaContextInterceptor(o.ContextEI).UnaryServerInterceptor,
 
 		// Request logger
-		hrpc.NewRequestLogger(o.l).UnaryServerInterceptor(loggerOptions),
+		hrpc.NewRequestLogger(o.Logger).UnaryServerInterceptor(loggerOptions),
 
 		// Hexa error interceptor (Must be last interceptor)
-		hrpc.NewErrorInterceptor().UnaryServerInterceptor(o.t),
+		hrpc.NewErrorInterceptor().UnaryServerInterceptor(o.Translator),
 	)
 	return grpc.NewServer(grpc.UnaryInterceptor(intChain)), nil
 }
