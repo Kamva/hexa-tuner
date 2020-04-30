@@ -4,6 +4,7 @@ import (
 	"github.com/Kamva/hexa"
 	"github.com/Kamva/hexa-rpc"
 	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
+	grpc_recovery "github.com/grpc-ecosystem/go-grpc-middleware/recovery"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/grpclog"
 )
@@ -43,8 +44,9 @@ func TuneGRPCServer(o GRPCServerTunerOptions) (*grpc.Server, error) {
 		// Request logger
 		hrpc.NewRequestLogger(o.Logger).UnaryServerInterceptor(loggerOptions),
 
-		// Hexa error interceptor (Must be last interceptor)
+		// Hexa error interceptor
 		hrpc.NewErrorInterceptor().UnaryServerInterceptor(o.Translator),
+		grpc_recovery.UnaryServerInterceptor(grpc_recovery.WithRecoveryHandler(hrpc.RecoverHandler)),
 	)
 	return grpc.NewServer(grpc.UnaryInterceptor(intChain)), nil
 }

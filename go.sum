@@ -90,6 +90,8 @@ github.com/Kamva/hexa-rpc v0.0.0-20200428132249-cc9ea918f316 h1:9TpZVCEBtTq5uzKN
 github.com/Kamva/hexa-rpc v0.0.0-20200428132249-cc9ea918f316/go.mod h1:TSvFY9sJ6LQ5xAGd0XsPkUayjgJn3BcUnU/KyWG1olw=
 github.com/Kamva/hexa-rpc v0.0.0-20200428180723-264b8259fb5b h1:y+D9ODgk/veGKkduLaFC+AFTM4QyRgsOkt8Ly3e4988=
 github.com/Kamva/hexa-rpc v0.0.0-20200428180723-264b8259fb5b/go.mod h1:vE/+5v8m+8jDu7x6f/4NSLSksGO7tDxswHSMu6lMjBk=
+github.com/Kamva/hexa-rpc v0.0.0-20200430202718-34a26643ecfc h1:XW5iAESwc31nPu91m4+1UUNXib8GLNSNT7rcubSXNkI=
+github.com/Kamva/hexa-rpc v0.0.0-20200430202718-34a26643ecfc/go.mod h1:vE/+5v8m+8jDu7x6f/4NSLSksGO7tDxswHSMu6lMjBk=
 github.com/Kamva/logrus-kit v0.0.0-20200218181028-1d56103db75d h1:pI2cf5PS0TRi+jy61Wt831gZALcNrFs5RMlEJgp8uyI=
 github.com/Kamva/logrus-kit v0.0.0-20200218181028-1d56103db75d/go.mod h1:jpFRtJdGbl9d3+LHd/8CFw/CE+L4fN6biHPKg57eFCk=
 github.com/Kamva/mgm-relation v0.0.0-20200324113035-730a602d7654/go.mod h1:0gVcrgpfQe4vkz05+96xB3BdJYZaOuXXB06eL+d08W8=
