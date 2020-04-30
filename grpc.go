@@ -34,18 +34,22 @@ func GRPCConn(serverAddr string, cei hexa.ContextExporterImporter) (*grpc.Client
 func TuneGRPCServer(o GRPCServerTunerOptions) (*grpc.Server, error) {
 	loggerOptions := hrpc.DefaultLoggerOptions(o.Config.GetBool("DEBUG"))
 
+	errOptions := hrpc.ErrInterceptorOptions{
+		Logger:       o.Logger,
+		Translator:   o.Translator,
+		ReportErrors: true,
+	}
+
 	// Replace gRPC logger with hexa logger
 	grpclog.SetLoggerV2(hrpc.NewLogger(o.Logger, o.Config))
 
 	intChain := grpc_middleware.ChainUnaryServer(
 		// Hexa context interceptor
 		hrpc.NewHexaContextInterceptor(o.ContextEI).UnaryServerInterceptor,
-
 		// Request logger
 		hrpc.NewRequestLogger(o.Logger).UnaryServerInterceptor(loggerOptions),
-
 		// Hexa error interceptor
-		hrpc.NewErrorInterceptor().UnaryServerInterceptor(o.Translator),
+		hrpc.NewErrorInterceptor().UnaryServerInterceptor(errOptions),
 		grpc_recovery.UnaryServerInterceptor(grpc_recovery.WithRecoveryHandler(hrpc.RecoverHandler)),
 	)
 	return grpc.NewServer(grpc.UnaryInterceptor(intChain)), nil
