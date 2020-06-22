@@ -1,6 +1,7 @@
 package huner
 
 import (
+	"github.com/Kamva/gutil"
 	"github.com/Kamva/hexa"
 	"github.com/Kamva/hexa-rpc"
 	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
@@ -15,6 +16,12 @@ type GRPCServerTunerOptions struct {
 	Config     hexa.Config
 	Logger     hexa.Logger
 	Translator hexa.Translator
+}
+
+// Must returns new instance of the gRPC connection with your config to use in client
+// it will panic any error.
+func MustGRPCConn(serverAddr string, cei hexa.ContextExporterImporter) *grpc.ClientConn {
+	return gutil.Must(GRPCConn(serverAddr, cei)).(*grpc.ClientConn)
 }
 
 // GRPCConn returns new instance of the gRPC connection with your config to use in client

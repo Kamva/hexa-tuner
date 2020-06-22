@@ -4,7 +4,7 @@ go 1.13
 
 require (
 	github.com/BurntSushi/toml v0.3.1
-	github.com/Kamva/gutil v0.0.0-20200410105054-7e8534aaefbe
+	github.com/Kamva/gutil v0.0.0-20200619195459-0cfb3805c7a6
 	github.com/Kamva/hexa v0.0.0-20200428175836-8c1507eacf26
 	github.com/Kamva/hexa-echo v0.0.0-20200423182552-737413bd7a13
 	github.com/Kamva/hexa-event v0.0.0-20200403172840-5ab3358c1d8b
