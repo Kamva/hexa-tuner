@@ -8,6 +8,7 @@ github.com/CloudyKit/jet v2.1.3-0.20180809161101-62edd43e4f88+incompatible/go.mo
 github.com/Joker/hpp v1.0.0/go.mod h1:8x5n+M1Hp5hC0g8okX3sR3vFQwynaX/UgSOM9MeBKzY=
 github.com/Joker/jade v1.0.1-0.20190614124447-d475f43051e7/go.mod h1:6E6s8o2AE4KhCrqr6GRJjdC/gNfTdxkIXvuGZZda2VM=
 github.com/Kamva/gutil v0.0.0-20200324095634-85a18fb4a696/go.mod h1:KvaAPqUTtjac/70L9pCuNEJX0FSH7+WrTo6sariE4FM=
+github.com/Kamva/gutil v0.0.0-20200329114904-c3f6b07357cc/go.mod h1:KvaAPqUTtjac/70L9pCuNEJX0FSH7+WrTo6sariE4FM=
 github.com/Kamva/gutil v0.0.0-20200410105054-7e8534aaefbe h1:XKy6BMy00l+sUe9W2fxQn07WCCjQJJkTtJ1iixdyunU=
 github.com/Kamva/gutil v0.0.0-20200410105054-7e8534aaefbe/go.mod h1:KvaAPqUTtjac/70L9pCuNEJX0FSH7+WrTo6sariE4FM=
 github.com/Kamva/gutil v0.0.0-20200608074725-cf979b960383/go.mod h1:KvaAPqUTtjac/70L9pCuNEJX0FSH7+WrTo6sariE4FM=
@@ -16,6 +17,7 @@ github.com/Kamva/gutil v0.0.0-20200619195459-0cfb3805c7a6 h1:EImcTI+YAkhbDpejmvP
 github.com/Kamva/gutil v0.0.0-20200619195459-0cfb3805c7a6/go.mod h1:V8Vj5t0oS0W1yuwRqmtAACIKD6Xqynp8Kaw9FKfBx4E=
 github.com/Kamva/hexa v0.0.0-20200401111121-8d5bd989f5d2 h1:L0O/gPq7WiCDfMcjSwuMvPn8y3CDPxR1bobF8ZOKbnQ=
 github.com/Kamva/hexa v0.0.0-20200401111121-8d5bd989f5d2/go.mod h1:mzg8tzvIhQfVMWXpVCApxl2f+VA6M08rkSLPLVKrdNE=
+github.com/Kamva/hexa v0.0.0-20200403134402-8698cb821901/go.mod h1:z7ephW4Dqw+xPOPUZDqR+kb4qT3/9KnNGcg7gKfjD20=
 github.com/Kamva/hexa v0.0.0-20200423181746-ed22ebd8dbcc h1:6DcBMJvdKRL4hkJTMcR2uNn6h02zP6k7ih/GjKIw4OA=
 github.com/Kamva/hexa v0.0.0-20200423181746-ed22ebd8dbcc/go.mod h1:QEZGetNIQZW9SkUXc3ev5STjd0XRTZqCtmC4Dsg9RGs=
 github.com/Kamva/hexa v0.0.0-20200423200657-4b7b40c8face/go.mod h1:QEZGetNIQZW9SkUXc3ev5STjd0XRTZqCtmC4Dsg9RGs=
@@ -29,6 +31,8 @@ github.com/Kamva/hexa-event v0.0.0-20200521123451-049968848854 h1:0w0yjCn6kwck16
 github.com/Kamva/hexa-event v0.0.0-20200521123451-049968848854/go.mod h1:8S5e9dbtKrQdDRLF/jMGcAeIFEiULq6OrleaCAaesbc=
 github.com/Kamva/hexa-job v0.0.0-20200401115611-361cab934429 h1:JjC3IObzYo91hwhzZJ7h/FHbBAimYoFlC3fiRtlCEl0=
 github.com/Kamva/hexa-job v0.0.0-20200401115611-361cab934429/go.mod h1:PjXNt/SUfkvVQWtSmDYNGG2wgjL0/iQCEzVD2zBw4/0=
+github.com/Kamva/hexa-job v0.0.0-20200406211551-007a7a0b75fb h1:3QPgQ+QOABOM93GCuLz0vg6wL/+4CyHevBWJb1pvx68=
+github.com/Kamva/hexa-job v0.0.0-20200406211551-007a7a0b75fb/go.mod h1:Jr00dVRWxD0hWKv/IJhFlwTxD85V3d5b8oIHa6vV4iU=
 github.com/Kamva/hexa-rpc v0.0.0-20200430215327-0d730ae2bdd6 h1:35laBZ2nZQ3DlIEgqncc7N7ogkrRsKP4bUiPKnpEkKs=
 github.com/Kamva/hexa-rpc v0.0.0-20200430215327-0d730ae2bdd6/go.mod h1:vE/+5v8m+8jDu7x6f/4NSLSksGO7tDxswHSMu6lMjBk=
 github.com/Kamva/mgm-relation v0.0.0-20200324113035-730a602d7654/go.mod h1:0gVcrgpfQe4vkz05+96xB3BdJYZaOuXXB06eL+d08W8=
@@ -280,6 +284,7 @@ github.com/prometheus/common v0.4.0/go.mod h1:TNfzLD0ON7rHzMJeJkieUDPYmFC7Snx/y8
 github.com/prometheus/procfs v0.0.0-20181005140218-185b4288413d/go.mod h1:c3At6R/oaqEKCNdg8wHV1ftS6bRYblBhIjjI8uT2IGk=
 github.com/prometheus/procfs v0.0.0-20190507164030-5867b95ac084/go.mod h1:TjEm7ze935MbeOT/UhFTIMYKhuLP4wbCsTZCD3I8kEA=
 github.com/prometheus/tsdb v0.7.1/go.mod h1:qhTCs0VvXwvX/y3TZrWD7rabWM+ijKTux40TwIPHuXU=
+github.com/robfig/cron/v3 v3.0.0/go.mod h1:eQICP3HwyT7UooqI/z+Ov+PtYAWygg1TEWWzGIFLtro=
 github.com/rogpeppe/fastuuid v0.0.0-20150106093220-6724a57986af/go.mod h1:XWv6SoW27p1b0cqNHllgS5HIMJraePCO15w5zCzIWYg=
 github.com/rogpeppe/go-internal v1.1.0/go.mod h1:M8bDsm7K2OlrFYOpmOWEs/qY81heoFRclV5y23lUDJ4=
 github.com/rogpeppe/go-internal v1.2.2/go.mod h1:M8bDsm7K2OlrFYOpmOWEs/qY81heoFRclV5y23lUDJ4=

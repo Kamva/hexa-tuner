@@ -8,7 +8,7 @@ require (
 	github.com/Kamva/hexa v0.0.0-20200617163027-77037784d150
 	github.com/Kamva/hexa-echo v0.0.0-20200612190709-03a5564b5ab9
 	github.com/Kamva/hexa-event v0.0.0-20200521123451-049968848854
-	github.com/Kamva/hexa-job v0.0.0-20200401115611-361cab934429
+	github.com/Kamva/hexa-job v0.0.0-20200406211551-007a7a0b75fb
 	github.com/Kamva/hexa-rpc v0.0.0-20200430215327-0d730ae2bdd6
 	github.com/Kamva/tracer v0.0.0-20200410105359-fd5aa0f880a8
 	github.com/contribsys/faktory v1.2.0-1
