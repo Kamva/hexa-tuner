@@ -25,6 +25,8 @@ github.com/Kamva/hexa v0.0.0-20200428175836-8c1507eacf26 h1:b+aXsWH7P5tDAjW8MHpz
 github.com/Kamva/hexa v0.0.0-20200428175836-8c1507eacf26/go.mod h1:QEZGetNIQZW9SkUXc3ev5STjd0XRTZqCtmC4Dsg9RGs=
 github.com/Kamva/hexa v0.0.0-20200617163027-77037784d150 h1:UIet5h759jv3J4FVhDBld16M9sLadNCeyuBt/Yq4rAI=
 github.com/Kamva/hexa v0.0.0-20200617163027-77037784d150/go.mod h1:Yh9waVHzexbD/0p39NlGIcV9r2dw6B6FMUQIrERR72k=
+github.com/Kamva/hexa v0.0.0-20200724195618-22a6b340b752 h1:Rc8i2kzdkt/Xtf9we8YGiVACId4+a9Tz7E8ibbcQ8lU=
+github.com/Kamva/hexa v0.0.0-20200724195618-22a6b340b752/go.mod h1:8G8oGBjGC5MBl6FAKNtk0WptahhnGcLqW+6Vsa2Hprs=
 github.com/Kamva/hexa-echo v0.0.0-20200612190709-03a5564b5ab9 h1:CkbzNjkgc5TTCbEgXVgYZvyX50b2dHvpEnqIDmmvBNA=
 github.com/Kamva/hexa-echo v0.0.0-20200612190709-03a5564b5ab9/go.mod h1:cLK+ARjfFw2+dBTNe1zTra6JHsLw8TP4cr4I/4dp+sk=
 github.com/Kamva/hexa-event v0.0.0-20200521123451-049968848854 h1:0w0yjCn6kwck16ynihM80PezLhBFsoFE1ZORI//g0RA=
@@ -39,6 +41,7 @@ github.com/Kamva/mgm-relation v0.0.0-20200324113035-730a602d7654/go.mod h1:0gVcr
 github.com/Kamva/mgm-relation v0.0.0-20200610073737-a878b1ea02f9/go.mod h1:YnRkXXmFDuWELN23OI0a2Xz36wi105XHAPi/C2zfgBI=
 github.com/Kamva/mgm/v3 v3.0.0-alpha.1/go.mod h1:73dKZ4Qvfdxve41TwmJNnVaGPZ7MUDcphjVABUalB/s=
 github.com/Kamva/mgm/v3 v3.0.0-alpha.2/go.mod h1:73dKZ4Qvfdxve41TwmJNnVaGPZ7MUDcphjVABUalB/s=
+github.com/Kamva/mgm/v3 v3.0.0/go.mod h1:73dKZ4Qvfdxve41TwmJNnVaGPZ7MUDcphjVABUalB/s=
 github.com/Kamva/tracer v0.0.0-20200227202933-3d5974771f25 h1:8+MV2TSg/Qn1lLryNLDX1A9hIRMBQhcHGdurD142TIU=
 github.com/Kamva/tracer v0.0.0-20200227202933-3d5974771f25/go.mod h1:TZysvqISbPaePrjsUJpmJKhH1IJ+feQIZMHFoTenCuc=
 github.com/Kamva/tracer v0.0.0-20200410105359-fd5aa0f880a8 h1:AzR6GENQj/dvoArvAF9QKATLswC8jgDUH6wY3NyamF0=
@@ -92,6 +95,7 @@ github.com/fsnotify/fsnotify v1.4.7 h1:IXs+QLmnXW2CcXuY+8Mzv/fWEsPGWxqefPtCP5CnV
 github.com/fsnotify/fsnotify v1.4.7/go.mod h1:jwhsz4b93w/PPRr/qN1Yymfu8t87LnFCMoQvtojpjFo=
 github.com/gavv/httpexpect v2.0.0+incompatible/go.mod h1:x+9tiU1YnrOvnB725RkpoLv1M62hOWzwo5OXotisrKc=
 github.com/getsentry/sentry-go v0.5.1/go.mod h1:B8H7x8TYDPkeWPRzGpIiFO97LZP6rL8A3hEt8lUItMw=
+github.com/getsentry/sentry-go v0.6.1/go.mod h1:0yZBuzSvbZwBnvaF9VwZIMen3kXscY8/uasKtAX1qG8=
 github.com/ghodss/yaml v1.0.0/go.mod h1:4dBDuWmgqj2HViK6kFavaiC9ZROes6MMH2rRYeMEF04=
 github.com/gin-contrib/sse v0.0.0-20190301062529-5545eab6dad3/go.mod h1:VJ0WA2NBN22VlZ2dKZQPAPnyWw5XTlK1KymzLKsr59s=
 github.com/gin-gonic/gin v1.4.0/go.mod h1:OW2EZn3DO8Ln9oIKOvM++LBO+5UPHJJDH72/q/3rZdM=

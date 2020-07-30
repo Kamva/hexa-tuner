@@ -13,7 +13,7 @@ var (
 	errNilLogger     = errors.New("logger is Nil in the pack")
 	errNilTranslator = errors.New("translator is Nil in the pack")
 	errNilJobs       = errors.New("jobs is nil in the pack")
-	errNilGate       = errors.New("gate is nil in the pack")
+	errNilEmitter    = errors.New("emitter is nil in the pack")
 )
 
 type (
@@ -23,13 +23,11 @@ type (
 		SetLogger(logger hexa.Logger)
 		SetTranslator(translator hexa.Translator)
 		SetJobs(jobs hjob.Jobs)
-		SetGate(gate hexa.Gate)
 		SetEmitter(emitter hevent.Emitter)
 		Config() hexa.Config
 		Logger() hexa.Logger
 		Translator() hexa.Translator
 		Jobs() hjob.Jobs
-		Gate() hexa.Gate
 		Emitter() hevent.Emitter
 	}
 
@@ -43,7 +41,6 @@ type (
 		log        hexa.Logger
 		translator hexa.Translator
 		jobs       hjob.Jobs
-		gate       hexa.Gate
 		emitter    hevent.Emitter
 	}
 )
@@ -66,11 +63,6 @@ func (p *baseServiceContainer) SetTranslator(translator hexa.Translator) {
 // SetJobs sets the Jobs service.
 func (p *baseServiceContainer) SetJobs(jobs hjob.Jobs) {
 	p.jobs = jobs
-}
-
-// SetGate sets the Gate service.
-func (p *baseServiceContainer) SetGate(gate hexa.Gate) {
-	p.gate = gate
 }
 
 // SetGate sets the event emitter service.
@@ -113,19 +105,10 @@ func (p *baseServiceContainer) Jobs() hjob.Jobs {
 	return p.jobs
 }
 
-// Gate returns the gate service.
-func (p *baseServiceContainer) Gate() hexa.Gate {
-	if p.must {
-		gutil.PanicNil(p.gate, errNilGate)
-	}
-
-	return p.gate
-}
-
 // Emitter returns the gate service.
 func (p *baseServiceContainer) Emitter() hevent.Emitter {
 	if p.must {
-		gutil.PanicNil(p.emitter, errNilGate)
+		gutil.PanicNil(p.emitter, errNilEmitter)
 	}
 
 	return p.emitter
