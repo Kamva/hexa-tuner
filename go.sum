@@ -27,6 +27,8 @@ github.com/Kamva/hexa v0.0.0-20200617163027-77037784d150 h1:UIet5h759jv3J4FVhDBl
 github.com/Kamva/hexa v0.0.0-20200617163027-77037784d150/go.mod h1:Yh9waVHzexbD/0p39NlGIcV9r2dw6B6FMUQIrERR72k=
 github.com/Kamva/hexa v0.0.0-20200724195618-22a6b340b752 h1:Rc8i2kzdkt/Xtf9we8YGiVACId4+a9Tz7E8ibbcQ8lU=
 github.com/Kamva/hexa v0.0.0-20200724195618-22a6b340b752/go.mod h1:8G8oGBjGC5MBl6FAKNtk0WptahhnGcLqW+6Vsa2Hprs=
+github.com/Kamva/hexa v0.0.0-20200801194001-ccd401effd71 h1:UyW0ASmDw6Mx1xx971jb4kB29PiCrYn7zi/HGHBVlSw=
+github.com/Kamva/hexa v0.0.0-20200801194001-ccd401effd71/go.mod h1:8G8oGBjGC5MBl6FAKNtk0WptahhnGcLqW+6Vsa2Hprs=
 github.com/Kamva/hexa-echo v0.0.0-20200612190709-03a5564b5ab9 h1:CkbzNjkgc5TTCbEgXVgYZvyX50b2dHvpEnqIDmmvBNA=
 github.com/Kamva/hexa-echo v0.0.0-20200612190709-03a5564b5ab9/go.mod h1:cLK+ARjfFw2+dBTNe1zTra6JHsLw8TP4cr4I/4dp+sk=
 github.com/Kamva/hexa-event v0.0.0-20200521123451-049968848854 h1:0w0yjCn6kwck16ynihM80PezLhBFsoFE1ZORI//g0RA=
