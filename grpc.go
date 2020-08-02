@@ -1,9 +1,9 @@
 package huner
 
 import (
-	"github.com/Kamva/gutil"
-	"github.com/Kamva/hexa"
-	"github.com/Kamva/hexa-rpc"
+	"github.com/kamva/gutil"
+	"github.com/kamva/hexa"
+	"github.com/kamva/hexa-rpc"
 	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
 	grpc_recovery "github.com/grpc-ecosystem/go-grpc-middleware/recovery"
 	"google.golang.org/grpc"

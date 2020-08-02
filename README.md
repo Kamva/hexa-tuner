@@ -2,7 +2,7 @@
 
 #### Install
 ```
-go get github.com/Kamva/hexa-tuner
+go get github.com/kamva/hexa-tuner
 ```
 
 #### Used config variables:

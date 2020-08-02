@@ -1,8 +1,8 @@
 package huner
 
 import (
-	"github.com/Kamva/gutil"
-	"github.com/Kamva/tracer"
+	"github.com/kamva/gutil"
+	"github.com/kamva/tracer"
 	"github.com/spf13/viper"
 )
 

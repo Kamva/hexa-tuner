@@ -2,10 +2,10 @@ package huner
 
 import (
 	"errors"
-	"github.com/Kamva/gutil"
-	"github.com/Kamva/hexa"
-	hevent "github.com/Kamva/hexa-event"
-	"github.com/Kamva/hexa-job"
+	"github.com/kamva/gutil"
+	"github.com/kamva/hexa"
+	hevent "github.com/kamva/hexa-event"
+	"github.com/kamva/hexa-job"
 )
 
 var (

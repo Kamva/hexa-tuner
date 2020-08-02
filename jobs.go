@@ -1,10 +1,10 @@
 package huner
 
 import (
-	"github.com/Kamva/hexa"
-	"github.com/Kamva/hexa-job"
-	"github.com/Kamva/hexa-job/faktory"
-	"github.com/Kamva/tracer"
+	"github.com/kamva/hexa"
+	"github.com/kamva/hexa-job"
+	"github.com/kamva/hexa-job/faktory"
+	"github.com/kamva/tracer"
 	faktory "github.com/contribsys/faktory/client"
 	faktoryworker "github.com/contribsys/faktory_worker_go"
 )

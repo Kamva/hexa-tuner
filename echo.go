@@ -1,8 +1,8 @@
 package huner
 
 import (
-	"github.com/Kamva/hexa"
-	"github.com/Kamva/hexa-echo"
+	"github.com/kamva/hexa"
+	"github.com/kamva/hexa-echo"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 )

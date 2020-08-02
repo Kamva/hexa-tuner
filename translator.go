@@ -3,8 +3,8 @@ package huner
 import (
 	"fmt"
 	"github.com/BurntSushi/toml"
-	 "github.com/Kamva/hexa"
-	"github.com/Kamva/hexa/hexatranslator"
+	 "github.com/kamva/hexa"
+	"github.com/kamva/hexa/hexatranslator"
 	"github.com/nicksnyder/go-i18n/v2/i18n"
 	"golang.org/x/text/language"
 	"strings"
