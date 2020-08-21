@@ -16,7 +16,7 @@ type ConfigFilePahtsOpts struct {
 	Project       string // e.g., senna
 	Microservice  string // e.g., order
 	ProjectRoot   string // e.g., /home/mehran/senna/order
-	ConfigFile    string // e.g., config
+	FileName      string // e.g., config
 	FileExtension string // e.g., json or yaml
 	Environment   string // (optional) e.g., staging
 }
@@ -40,7 +40,7 @@ func Environment(prefix string) string {
 // - /etc/{project_root_path}/.env
 // - /etc/{project_root_path}/.env.{environment}
 func ConfigFilePaths(o ConfigFilePahtsOpts) []string {
-	configFile := fmt.Sprintf("%s.%s", o.ConfigFile, o.FileExtension)
+	configFile := fmt.Sprintf("%s.%s", o.FileName, o.FileExtension)
 	msConfigFile := fmt.Sprintf("%s.%s", o.Microservice, o.FileExtension)
 
 	files := []string{
