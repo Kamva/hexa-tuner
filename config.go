@@ -33,13 +33,13 @@ func Environment(prefix string) string {
 	return os.Getenv(key)
 }
 
-// GenerateConfigPaths generates config path as follow:
+// GenerateConfigFilePaths generates config path as follow:
 // - /etc/{project}/{configFile}
 // - /etc/{project}/{microservice}/{configFile}
 // - /etc/{project_root_path}/{configFile}
 // - /etc/{project_root_path}/.env
 // - /etc/{project_root_path}/.env.{environment}
-func GenerateConfigPaths(o GeneratePathOpts) []string {
+func GenerateConfigFilePaths(o GeneratePathOpts) []string {
 	configFile := fmt.Sprintf("%s.%s", o.ConfigFile, o.FileExtension)
 	msConfigFile := fmt.Sprintf("%s.%s", o.Microservice, o.FileExtension)
 
