@@ -35,13 +35,13 @@ func Environment(prefix string) string {
 	return os.Getenv(key)
 }
 
-// ConfigFilePaths generates config path as follow:
+// GetConfigFilePaths generates config path as follow:
 // - /etc/{project}/{configFile}
 // - /etc/{project}/{microservice}/{configFile}
 // - /etc/{project_root_path}/{configFile}
 // - /etc/{project_root_path}/.env
-// - /etc/{project_root_path}/.env.{environment}
-func ConfigFilePaths(o ConfigFilePahtsOpts) []string {
+// - /etc/{project_root_path}/.{environment}.env
+func GetConfigFilePaths(o ConfigFilePahtsOpts) []string {
 	configFile := fmt.Sprintf("%s.%s", o.FileName, o.FileExtension)
 	msConfigFile := fmt.Sprintf("%s.%s", o.Microservice, o.FileExtension)
 
@@ -53,7 +53,7 @@ func ConfigFilePaths(o ConfigFilePahtsOpts) []string {
 	}
 
 	if o.Environment != "" {
-		files = append(files, path.Join(o.ProjectRoot, fmt.Sprintf(".env.%s", o.Environment)))
+		files = append(files, path.Join(o.ProjectRoot, fmt.Sprintf(".%s.env", o.Environment)))
 	}
 
 	var existedFiles []string
@@ -68,7 +68,7 @@ func ConfigFilePaths(o ConfigFilePahtsOpts) []string {
 		"available_paths": files,
 		"existed_paths":   existedFiles,
 		"config":          fmt.Sprintf("%+v", o),
-	})).Debug("generated config file paths")
+	})...).Debug("generated config file paths")
 
 	return existedFiles
 }
