@@ -1,11 +1,11 @@
 package huner
 
 import (
+	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
+	grpc_recovery "github.com/grpc-ecosystem/go-grpc-middleware/recovery"
 	"github.com/kamva/gutil"
 	"github.com/kamva/hexa"
 	"github.com/kamva/hexa-rpc"
-	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
-	grpc_recovery "github.com/grpc-ecosystem/go-grpc-middleware/recovery"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/grpclog"
 )
@@ -13,9 +13,14 @@ import (
 // GRPCServerTunerOptions contains options needed to tune a gRPC server
 type GRPCServerTunerOptions struct {
 	ContextEI  hexa.ContextExporterImporter
-	Config     hexa.Config
 	Logger     hexa.Logger
 	Translator hexa.Translator
+}
+
+type GRPCConfigs struct {
+	Secret       string
+	Debug        bool
+	GRPCLogLevel int `json:"log_level" yaml:"log_level"`
 }
 
 // Must returns new instance of the gRPC connection with your config to use in client
@@ -38,8 +43,8 @@ func GRPCConn(serverAddr string, cei hexa.ContextExporterImporter) (*grpc.Client
 }
 
 // TuneGRPCServer returns new instance of the tuned gRPC Server to server requests to services
-func TuneGRPCServer(o GRPCServerTunerOptions) (*grpc.Server, error) {
-	loggerOptions := hrpc.DefaultLoggerOptions(o.Config.GetBool("DEBUG"))
+func TuneGRPCServer(cfg GRPCConfigs, o GRPCServerTunerOptions) (*grpc.Server, error) {
+	loggerOptions := hrpc.DefaultLoggerOptions(cfg.Debug)
 
 	errOptions := hrpc.ErrInterceptorOptions{
 		Logger:       o.Logger,
@@ -48,7 +53,7 @@ func TuneGRPCServer(o GRPCServerTunerOptions) (*grpc.Server, error) {
 	}
 
 	// Replace gRPC logger with hexa logger
-	grpclog.SetLoggerV2(hrpc.NewLogger(o.Logger, o.Config))
+	grpclog.SetLoggerV2(hrpc.NewLogger(o.Logger, cfg.GRPCLogLevel))
 
 	intChain := grpc_middleware.ChainUnaryServer(
 		// Hexa context interceptor

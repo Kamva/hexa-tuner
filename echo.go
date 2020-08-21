@@ -15,26 +15,39 @@ type EchoTunerOptions struct {
 	CtxCreator hecho.CtxCreator
 }
 
+type EchoConfigs struct {
+	Secret       string
+	Debug        bool
+	EchoLogLevel string
+	AllowOrigins []string
+	AllowHeaders []string
+	AllowMethods []string
+}
+
 // TuneEcho tune echo framework.
-func TuneEcho(e *echo.Echo, cfg hexa.Config, options EchoTunerOptions) {
+func TuneEcho(e *echo.Echo, cfg EchoConfigs, o EchoTunerOptions) {
 
 	e.HideBanner = true
 
-	e.Logger = hecho.HexaToEchoLogger(cfg, options.Logger)
+	e.Logger = hecho.HexaToEchoLogger(o.Logger, cfg.EchoLogLevel)
 
-	e.Debug = cfg.GetBool("debug")
+	e.Debug = cfg.Debug
 	// Set the error handler.
-	e.HTTPErrorHandler = hecho.HTTPErrorHandler(options.Logger, options.Translator, e.Debug)
+	e.HTTPErrorHandler = hecho.HTTPErrorHandler(o.Logger, o.Translator, e.Debug)
 
 	var currentUserMiddleware echo.MiddlewareFunc
-	if options.UserFinder == nil {
-		currentUserMiddleware = hecho.CurrentUserWithoutFetch(options.UserSDK)
+	if o.UserFinder == nil {
+		currentUserMiddleware = hecho.CurrentUserWithoutFetch(o.UserSDK)
 	} else {
-		currentUserMiddleware = hecho.CurrentUser(options.UserFinder, options.UserSDK)
+		currentUserMiddleware = hecho.CurrentUser(o.UserFinder, o.UserSDK)
 	}
 
 	// CORS HEADERS
-	e.Use(middleware.CORSWithConfig(hecho.CorsConfig(cfg)))
+	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
+		AllowOrigins: cfg.AllowOrigins,
+		AllowMethods: cfg.AllowMethods,
+		AllowHeaders: cfg.AllowHeaders,
+	}))
 
 	// Logger each request
 	e.Use(middleware.Logger())
@@ -50,14 +63,14 @@ func TuneEcho(e *echo.Echo, cfg hexa.Config, options EchoTunerOptions) {
 
 	// Optional JWT checker : check if exists
 	// header, so verify it, otherwise skip.
-	e.Use(hecho.JWT(hexa.Secret(cfg.GetString("SECRET"))))
+	e.Use(hecho.JWT(hexa.Secret(cfg.Secret)))
 
 	// Set user in each request context.
 	e.Use(currentUserMiddleware)
 
 	// HexaContext set hexa context on each request.
-	e.Use(hecho.HexaContext(options.CtxCreator, options.Logger, options.Translator))
+	e.Use(hecho.HexaContext(o.CtxCreator, o.Logger, o.Translator))
 
 	// SetContextLogger set the echo logger on each echo's context.
-	e.Use(hecho.SetContextLogger(cfg))
+	e.Use(hecho.SetContextLogger(cfg.EchoLogLevel))
 }

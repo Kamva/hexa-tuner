@@ -3,37 +3,34 @@ package huner
 import (
 	"fmt"
 	"github.com/BurntSushi/toml"
-	 "github.com/kamva/hexa"
+	"github.com/kamva/hexa"
 	"github.com/kamva/hexa/hexatranslator"
 	"github.com/nicksnyder/go-i18n/v2/i18n"
 	"golang.org/x/text/language"
 	"strings"
 )
 
-const (
-	filesKey         = "translate.files"
-	fallbackLangsKey = "translate.fallback.langs"
-)
+type TranslateOpts struct {
+	Files         []string
+	FallbackLangs []string
+}
 
 // return new translator service.
-func NewTranslator(pathPrefix string, config hexa.Config) hexa.Translator {
-	files := config.GetList(filesKey)
-	fallbackLangs := config.GetList(fallbackLangsKey)
-
+func NewTranslator(pathPrefix string, cfg TranslateOpts) hexa.Translator {
 	defaultLang := language.English
 
-	if len(fallbackLangs) >= 1 {
-		defaultLang = language.MustParse(fallbackLangs[0])
+	if len(cfg.FallbackLangs) >= 1 {
+		defaultLang = language.MustParse(cfg.FallbackLangs[0])
 	}
 
 	bundle := i18n.NewBundle(defaultLang)
 	bundle.RegisterUnmarshalFunc("toml", toml.Unmarshal)
 
-	loadLangFiles(bundle, pathPrefix, files)
+	loadLangFiles(bundle, pathPrefix, cfg.Files)
 
-	localizer := i18n.NewLocalizer(bundle, fallbackLangs...)
+	localizer := i18n.NewLocalizer(bundle, cfg.FallbackLangs...)
 
-	return hexatranslator.NewI18nDriver(bundle, localizer, fallbackLangs)
+	return hexatranslator.NewI18nDriver(bundle, localizer, cfg.FallbackLangs)
 }
 
 func loadLangFiles(bundle *i18n.Bundle, prefix string, files []string) {

@@ -171,8 +171,15 @@ github.com/kamva/hexa v0.0.0-20200802195555-bef52a2e7393 h1:4+ME9qQlZuy6dCOvmINv
 github.com/kamva/hexa v0.0.0-20200802195555-bef52a2e7393/go.mod h1:AnYhdxq4Gr49oFv/vpKplvPfdjzn+63M3WBVfLzRsl4=
 github.com/kamva/hexa v0.0.0-20200816035644-06b7866f55fb h1:Tf5fTLw1urWGW0uYFomcCAuIiBuGjtL0of/jICaFpJM=
 github.com/kamva/hexa v0.0.0-20200816035644-06b7866f55fb/go.mod h1:AnYhdxq4Gr49oFv/vpKplvPfdjzn+63M3WBVfLzRsl4=
+github.com/kamva/hexa v0.0.0-20200821134617-a9477d552bac h1:Yo6WvjSAkhbPhXMCg7TyFqCdFGfX0qnv6LHea4A/19U=
+github.com/kamva/hexa v0.0.0-20200821134617-a9477d552bac/go.mod h1:AnYhdxq4Gr49oFv/vpKplvPfdjzn+63M3WBVfLzRsl4=
+github.com/kamva/hexa v0.0.0-20200821141735-5e137cd7cb64/go.mod h1:AnYhdxq4Gr49oFv/vpKplvPfdjzn+63M3WBVfLzRsl4=
+github.com/kamva/hexa v0.0.0-20200821143343-21ecc792c92a h1:eT0+Lp/c3+EqLUA6DlmGUyvdH5vNHML40vmc9D+ZVlc=
+github.com/kamva/hexa v0.0.0-20200821143343-21ecc792c92a/go.mod h1:AnYhdxq4Gr49oFv/vpKplvPfdjzn+63M3WBVfLzRsl4=
 github.com/kamva/hexa-echo v0.0.0-20200816044854-3addb032f1db h1:6zpt9rvtufcJZMWTW6R3AAQEdkoKIpJx+HP3cdpjQ2s=
 github.com/kamva/hexa-echo v0.0.0-20200816044854-3addb032f1db/go.mod h1:dYmfC1+on8DGQZxBzqs/muw7OAmuc7AgiRioVFqxoZk=
+github.com/kamva/hexa-echo v0.0.0-20200821143722-0cdc4307d5eb h1:VMENh6SLxMqxlMnZUuAubkLEMg9zbnx8BOJJjsJ9ge8=
+github.com/kamva/hexa-echo v0.0.0-20200821143722-0cdc4307d5eb/go.mod h1:L6YRD5coSTBqGl8B6gd011R9GOpJox+k/cSXNwzfpDY=
 github.com/kamva/hexa-event v0.0.0-20200802200508-49dece513338 h1:PUvgS51PcVWXIPoKuk1Df0eUZiJbObDCExuBBBIdBs0=
 github.com/kamva/hexa-event v0.0.0-20200802200508-49dece513338/go.mod h1:2WPmsgJ3rNwwDzzjdkGTRVWvk9fqs8kBPEUjZI3bx+s=
 github.com/kamva/hexa-event v0.0.0-20200816044036-e82c8b1e7c81 h1:DoX5zZ1ziVX8DptMjNnebg21m39Mw5dTvsejGmCB2Wk=
@@ -183,6 +190,8 @@ github.com/kamva/hexa-job v0.0.0-20200816044129-3e4093af1274 h1:e4fmWvPkzoEYkYJb
 github.com/kamva/hexa-job v0.0.0-20200816044129-3e4093af1274/go.mod h1:ZiqeVNzn57qBPQWkzLVZFlFKoy/3ij1KC5m6+6BDei0=
 github.com/kamva/hexa-rpc v0.0.0-20200816045014-4d924bc8433f h1:6/cCC3WVHjLRvxMcTdUgTixsaKLy0ru3PM4cTSoLpWM=
 github.com/kamva/hexa-rpc v0.0.0-20200816045014-4d924bc8433f/go.mod h1:/hGcaWxqGPh/h6f8A1uabXnmmm+J1y6DpXRgmCXt87U=
+github.com/kamva/hexa-rpc v0.0.0-20200821142252-f0f470487ea7 h1:PpRXxoL3dIY5yeBUZSf+AOkSfV6lbLpNl5zbRJLDvQ4=
+github.com/kamva/hexa-rpc v0.0.0-20200821142252-f0f470487ea7/go.mod h1:qjgdWwFtePoozNh1PAcIiBF+jibB5oFMuwtkm8H5qsc=
 github.com/kamva/mgm-relation v0.0.0-20200802193925-a960eb9564ab/go.mod h1:D7cPWD6YgVfVQ7Q9x0xEABbcz2tuSjYOnuMr73YVy/M=
 github.com/kamva/tracer v0.0.0-20200802193105-6c0f308b9655 h1:znkvBi/J3pUEBcZNTwjmvPZLmmYIxdrypryvOW6DlA8=
 github.com/kamva/tracer v0.0.0-20200802193105-6c0f308b9655/go.mod h1:6TmvuXxFe7FD95QvNyIVEt2ZPfYBk3QiKGhGt+UwFbQ=
