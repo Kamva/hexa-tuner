@@ -12,7 +12,7 @@ import (
 	"strings"
 )
 
-type GeneratePathOpts struct {
+type ConfigFilePahtsOpts struct {
 	Project       string // e.g., senna
 	Microservice  string // e.g., order
 	ProjectRoot   string // e.g., /home/mehran/senna/order
@@ -33,13 +33,13 @@ func Environment(prefix string) string {
 	return os.Getenv(key)
 }
 
-// GenerateConfigFilePaths generates config path as follow:
+// ConfigFilePaths generates config path as follow:
 // - /etc/{project}/{configFile}
 // - /etc/{project}/{microservice}/{configFile}
 // - /etc/{project_root_path}/{configFile}
 // - /etc/{project_root_path}/.env
 // - /etc/{project_root_path}/.env.{environment}
-func GenerateConfigFilePaths(o GeneratePathOpts) []string {
+func ConfigFilePaths(o ConfigFilePahtsOpts) []string {
 	configFile := fmt.Sprintf("%s.%s", o.ConfigFile, o.FileExtension)
 	msConfigFile := fmt.Sprintf("%s.%s", o.Microservice, o.FileExtension)
 
