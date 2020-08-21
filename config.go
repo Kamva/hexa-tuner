@@ -6,6 +6,7 @@ import (
 	"github.com/kamva/gutil"
 	"github.com/kamva/hexa"
 	"github.com/kamva/hexa/hconf"
+	"github.com/kamva/hexa/hlog"
 	"github.com/kamva/tracer"
 	"github.com/spf13/viper"
 	"os"
@@ -62,15 +63,22 @@ func ConfigFilePaths(o ConfigFilePahtsOpts) []string {
 			existedFiles = append(existedFiles, f)
 		}
 	}
+
+	hlog.WithFields(gutil.MapToKeyValue(hexa.Map{
+		"available_paths": files,
+		"existed_paths":   existedFiles,
+		"config":          fmt.Sprintf("%+v", o),
+	})).Debug("generated config file paths")
+
 	return existedFiles
 }
 
 // NewViperConfigDriver returns new instance of the viper driver for hexa config
-func NewViperConfigDriver(envPrefix string, files []string) (hexa.Config,error) {
+func NewViperConfigDriver(envPrefix string, files []string) (hexa.Config, error) {
 	v := viper.New()
 
 	if len(files) == 0 {
-		return nil,tracer.Trace(errors.New("at least one config files should be exists"))
+		return nil, tracer.Trace(errors.New("at least one config files should be exists"))
 	}
 
 	isFirst := true
@@ -80,13 +88,13 @@ func NewViperConfigDriver(envPrefix string, files []string) (hexa.Config,error) 
 		if isFirst {
 			isFirst = false
 			if err := v.ReadInConfig(); err != nil {
-				return nil,tracer.Trace(err)
+				return nil, tracer.Trace(err)
 			}
 			continue
 		}
 
 		if err := v.MergeInConfig(); err != nil {
-			return nil,tracer.Trace(err)
+			return nil, tracer.Trace(err)
 		}
 	}
 
@@ -95,5 +103,5 @@ func NewViperConfigDriver(envPrefix string, files []string) (hexa.Config,error) 
 	v.SetEnvPrefix(envPrefix)
 	v.AutomaticEnv()
 
-	return hconf.NewViperDriver(v),nil
+	return hconf.NewViperDriver(v), nil
 }

@@ -4,13 +4,15 @@ go 1.13
 
 require (
 	github.com/BurntSushi/toml v0.3.1
+	github.com/asaskevich/govalidator v0.0.0-20200108200545-475eaeb16496 // indirect
 	github.com/contribsys/faktory v1.3.0-1
 	github.com/contribsys/faktory_worker_go v1.4.0
+	github.com/go-ozzo/ozzo-validation v3.6.0+incompatible // indirect
 	github.com/grpc-ecosystem/go-grpc-middleware v1.2.0
 	github.com/kamva/gutil v0.0.0-20200807081138-daab9af8a9f1
 	github.com/kamva/hexa v0.0.0-20200821143343-21ecc792c92a
 	github.com/kamva/hexa-echo v0.0.0-20200821143722-0cdc4307d5eb
-	github.com/kamva/hexa-event v0.0.0-20200816044036-e82c8b1e7c81
+	github.com/kamva/hexa-event v0.0.0-20200820190834-446dfd372f1b
 	github.com/kamva/hexa-job v0.0.0-20200816044129-3e4093af1274
 	github.com/kamva/hexa-rpc v0.0.0-20200821142252-f0f470487ea7
 	github.com/kamva/tracer v0.0.0-20200802193105-6c0f308b9655
