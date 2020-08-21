@@ -66,11 +66,11 @@ func ConfigFilePaths(o ConfigFilePahtsOpts) []string {
 }
 
 // NewViperConfigDriver returns new instance of the viper driver for hexa config
-func NewViperConfigDriver(envPrefix string, files []string) hexa.Config {
+func NewViperConfigDriver(envPrefix string, files []string) (hexa.Config,error) {
 	v := viper.New()
 
 	if len(files) == 0 {
-		return tracer.Trace(errors.New("at least one config files should be exists"))
+		return nil,tracer.Trace(errors.New("at least one config files should be exists"))
 	}
 
 	isFirst := true
@@ -80,13 +80,13 @@ func NewViperConfigDriver(envPrefix string, files []string) hexa.Config {
 		if isFirst {
 			isFirst = false
 			if err := v.ReadInConfig(); err != nil {
-				return tracer.Trace(err)
+				return nil,tracer.Trace(err)
 			}
 			continue
 		}
 
 		if err := v.MergeInConfig(); err != nil {
-			return tracer.Trace(err)
+			return nil,tracer.Trace(err)
 		}
 	}
 
@@ -95,5 +95,5 @@ func NewViperConfigDriver(envPrefix string, files []string) hexa.Config {
 	v.SetEnvPrefix(envPrefix)
 	v.AutomaticEnv()
 
-	return hconf.NewViperDriver(v)
+	return hconf.NewViperDriver(v),nil
 }
