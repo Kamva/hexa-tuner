@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/kamva/gutil"
+	"github.com/kamva/hexa"
 	"github.com/kamva/hexa/hconf"
 	"github.com/kamva/tracer"
 	"github.com/spf13/viper"
@@ -64,7 +65,8 @@ func ConfigFilePaths(o ConfigFilePahtsOpts) []string {
 	return existedFiles
 }
 
-func NewViper(conf interface{}, envPrefix string, files []string) error {
+// NewViperConfigDriver returns new instance of the viper driver for hexa config
+func NewViperConfigDriver(envPrefix string, files []string) hexa.Config {
 	v := viper.New()
 
 	if len(files) == 0 {
@@ -93,6 +95,5 @@ func NewViper(conf interface{}, envPrefix string, files []string) error {
 	v.SetEnvPrefix(envPrefix)
 	v.AutomaticEnv()
 
-	vd := hconf.NewViperDriver(v)
-	return tracer.Trace(vd.Unmarshal(conf))
+	return hconf.NewViperDriver(v)
 }
