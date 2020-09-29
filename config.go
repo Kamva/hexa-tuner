@@ -36,9 +36,9 @@ func Environment(prefix string) string {
 }
 
 // GetConfigFilePaths generates config path as follow:
-// - /etc/{project}/{configFile}
-// - /etc/{project}/{microservice}/{configFile}
-// - /etc/{project_root_path}/{configFile}
+// - /etc/{project}/{configFile.configExtension}
+// - /etc/{project}/{microservice.configExtension}
+// - /etc/{project_root_path}/{configFile.configExtension}
 // - /etc/{project_root_path}/.env
 // - /etc/{project_root_path}/.{environment}.env
 func GetConfigFilePaths(o ConfigFilePahtsOpts) []string {

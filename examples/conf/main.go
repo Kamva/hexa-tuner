@@ -7,7 +7,8 @@ import (
 )
 
 type Config struct {
-	MyName string `json:"my_name" mapstructure:"my_name"`
+	MyName   string   `json:"my_name" mapstructure:"my_name"`
+	LogStack []string `json:"log_stack" mapstructure:"log_stack"`
 }
 
 func main() {
@@ -19,7 +20,7 @@ func main() {
 		FileExtension: "json",
 		Environment:   "example",
 	})
-	v, err := huner.NewViperConfigDriver("MM", files)
+	v, err := huner.NewViperConfigDriver(huner.EnvKeysPrefix(), files)
 	gutil.PanicErr(err)
 	cfg := &Config{}
 	gutil.PanicErr(v.Unmarshal(&cfg))

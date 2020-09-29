@@ -1,3 +1,5 @@
 {
-  "my_name": "ali"
+  "log_stack":["printer"],
+  "translate_files":["hexa.en","en","hexa.fa","fa"],
+  "fallback_languages":["en"]
 }
