@@ -1,5 +1,9 @@
 {
+  "my_name":"ali",
   "log_stack":["printer"],
   "translate_files":["hexa.en","en","hexa.fa","fa"],
-  "fallback_languages":["en"]
+  "fallback_languages":["en"],
+  "debug": true,
+  "port": "1000",
+  "enable_cache":true
 }

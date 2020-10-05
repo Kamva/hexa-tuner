@@ -16,7 +16,7 @@ type EchoTunerOptions struct {
 }
 
 type EchoConfigs struct {
-	Secret       string
+	JWTConfig    middleware.JWTConfig
 	Debug        bool
 	EchoLogLevel string
 	AllowOrigins []string
@@ -61,9 +61,8 @@ func TuneEcho(e *echo.Echo, cfg EchoConfigs, o EchoTunerOptions) {
 	// CorrelationID set X-Correlation-ID value.
 	e.Use(hecho.CorrelationID())
 
-	// Optional JWT checker : check if exists
-	// header, so verify it, otherwise skip.
-	e.Use(hecho.JWT(hexa.Secret(cfg.Secret)))
+	// Optional JWT checker checks if exists "Authorization" header, so verify it, otherwise skip.
+	e.Use(middleware.JWTWithConfig(cfg.JWTConfig))
 
 	// Set user in each request context.
 	e.Use(currentUserMiddleware)
