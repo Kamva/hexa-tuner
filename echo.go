@@ -16,12 +16,13 @@ type EchoTunerOptions struct {
 }
 
 type EchoConfigs struct {
-	JWTConfig    middleware.JWTConfig
-	Debug        bool
-	EchoLogLevel string
-	AllowOrigins []string
-	AllowHeaders []string
-	AllowMethods []string
+	JWTConfig                middleware.JWTConfig
+	JwtClaimAuthorizerConfig hecho.JwtClaimAuthorizerConfig
+	Debug                    bool
+	EchoLogLevel             string
+	AllowOrigins             []string
+	AllowHeaders             []string
+	AllowMethods             []string
 }
 
 // TuneEcho tune echo framework.
@@ -63,6 +64,9 @@ func TuneEcho(e *echo.Echo, cfg EchoConfigs, o EchoTunerOptions) {
 
 	// Optional JWT checker checks if exists "Authorization" header, so verify it, otherwise skip.
 	e.Use(middleware.JWTWithConfig(cfg.JWTConfig))
+	// JWT authorizer to authorize jwt claim
+	e.Use(hecho.JwtClaimAuthorizer(cfg.JwtClaimAuthorizerConfig)
+
 
 	// Set user in each request context.
 	e.Use(currentUserMiddleware)

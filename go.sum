@@ -186,10 +186,14 @@ github.com/kamva/hexa v0.0.0-20200816035644-06b7866f55fb/go.mod h1:AnYhdxq4Gr49o
 github.com/kamva/hexa v0.0.0-20200821141735-5e137cd7cb64/go.mod h1:AnYhdxq4Gr49oFv/vpKplvPfdjzn+63M3WBVfLzRsl4=
 github.com/kamva/hexa v0.0.0-20200821143343-21ecc792c92a h1:eT0+Lp/c3+EqLUA6DlmGUyvdH5vNHML40vmc9D+ZVlc=
 github.com/kamva/hexa v0.0.0-20200821143343-21ecc792c92a/go.mod h1:AnYhdxq4Gr49oFv/vpKplvPfdjzn+63M3WBVfLzRsl4=
+github.com/kamva/hexa v0.0.0-20201005121818-0c68f5e873fe h1:6uCDpIcpP9S0PgEeL5aEl3NjRK5pxluYTYjeaA0Jb3Y=
+github.com/kamva/hexa v0.0.0-20201005121818-0c68f5e873fe/go.mod h1:AnYhdxq4Gr49oFv/vpKplvPfdjzn+63M3WBVfLzRsl4=
 github.com/kamva/hexa-echo v0.0.0-20200821143722-0cdc4307d5eb h1:VMENh6SLxMqxlMnZUuAubkLEMg9zbnx8BOJJjsJ9ge8=
 github.com/kamva/hexa-echo v0.0.0-20200821143722-0cdc4307d5eb/go.mod h1:L6YRD5coSTBqGl8B6gd011R9GOpJox+k/cSXNwzfpDY=
 github.com/kamva/hexa-echo v0.0.0-20201005223022-aaf40b366e17 h1:glH3b8C7v6hjWev6l2n46swF/kXhLog/qNd0FCasPto=
 github.com/kamva/hexa-echo v0.0.0-20201005223022-aaf40b366e17/go.mod h1:L6YRD5coSTBqGl8B6gd011R9GOpJox+k/cSXNwzfpDY=
+github.com/kamva/hexa-echo v0.0.0-20201008102923-9732f7442f16 h1:bnh+5FqepsU7tJAyn/rs2Le20MBAA/ak9Q8ZdrFp78E=
+github.com/kamva/hexa-echo v0.0.0-20201008102923-9732f7442f16/go.mod h1:L6YRD5coSTBqGl8B6gd011R9GOpJox+k/cSXNwzfpDY=
 github.com/kamva/hexa-event v0.0.0-20200820190834-446dfd372f1b h1:XddWm5tX9rzz3ZjmjZU7xmbg8KN//lnHDZPQQbEZWec=
 github.com/kamva/hexa-event v0.0.0-20200820190834-446dfd372f1b/go.mod h1:7A42r98EjFMMHrdVUXojX4l++awxe2mYTqOsODrVcaI=
 github.com/kamva/hexa-job v0.0.0-20200816044129-3e4093af1274 h1:e4fmWvPkzoEYkYJbYKGY/h5FK216TLlyQHlm13dcW50=
