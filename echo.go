@@ -67,7 +67,6 @@ func TuneEcho(e *echo.Echo, cfg EchoConfigs, o EchoTunerOptions) {
 	// JWT authorizer to authorize jwt claim
 	e.Use(hecho.JwtClaimAuthorizer(cfg.JwtClaimAuthorizerConfig))
 
-
 	// Set user in each request context.
 	e.Use(currentUserMiddleware)
 
