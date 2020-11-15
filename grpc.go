@@ -64,5 +64,6 @@ func TuneGRPCServer(cfg GRPCConfigs, o GRPCServerTunerOptions) (*grpc.Server, er
 		hrpc.NewErrorInterceptor().UnaryServerInterceptor(errOptions),
 		grpc_recovery.UnaryServerInterceptor(grpc_recovery.WithRecoveryHandler(hrpc.RecoverHandler)),
 	)
+
 	return grpc.NewServer(grpc.UnaryInterceptor(intChain)), nil
 }
