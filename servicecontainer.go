@@ -4,6 +4,7 @@ import (
 	"errors"
 	"github.com/kamva/gutil"
 	"github.com/kamva/hexa"
+	arranger "github.com/kamva/hexa-arranger"
 	hevent "github.com/kamva/hexa-event"
 	"github.com/kamva/hexa-job"
 )
@@ -24,11 +25,14 @@ type (
 		SetTranslator(translator hexa.Translator)
 		SetJobs(jobs hjob.Jobs)
 		SetEmitter(emitter hevent.Emitter)
+		SetArranger(arranger arranger.Arranger)
+
 		Config() hexa.Config
 		Logger() hexa.Logger
 		Translator() hexa.Translator
 		Jobs() hjob.Jobs
 		Emitter() hevent.Emitter
+		Arranger() arranger.Arranger
 	}
 
 	// baseServiceContainer contains all of services in one place to manage our services.

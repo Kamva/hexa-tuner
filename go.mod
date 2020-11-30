@@ -10,6 +10,7 @@ require (
 	github.com/grpc-ecosystem/go-grpc-middleware v1.2.0
 	github.com/kamva/gutil v0.0.0-20201107041453-68a864f6f946
 	github.com/kamva/hexa v0.0.0-20201115123231-795996ab3a1a
+	github.com/kamva/hexa-arranger v0.0.0-20201115130624-6986460348ec // indirect
 	github.com/kamva/hexa-echo v0.0.0-20201115125930-0612a7679561
 	github.com/kamva/hexa-event v0.0.0-20201115043636-dc13b51f507d
 	github.com/kamva/hexa-job v0.0.0-20201115043917-82695fd10434
