@@ -9,7 +9,7 @@ require (
 	github.com/contribsys/faktory_worker_go v1.4.0
 	github.com/grpc-ecosystem/go-grpc-middleware v1.2.0
 	github.com/kamva/gutil v0.0.0-20201107041453-68a864f6f946
-	github.com/kamva/hexa v0.0.0-20201130132923-0b5fd2c248b3
+	github.com/kamva/hexa v0.0.0-20201130141853-57ddda11648d
 	github.com/kamva/hexa-arranger v0.0.0-20201130115347-2dee22bb0171
 	github.com/kamva/hexa-echo v0.0.0-20201130133406-531a9b12a499
 	github.com/kamva/hexa-event v0.0.0-20201130120139-e00bc7c72638
