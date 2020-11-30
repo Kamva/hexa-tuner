@@ -64,11 +64,11 @@ func GetConfigFilePaths(o ConfigFilePahtsOpts) []string {
 		}
 	}
 
-	hlog.WithFields(gutil.MapToKeyValue(hexa.Map{
-		"available_paths": files,
-		"existed_paths":   existedFiles,
-		"config":          fmt.Sprintf("%+v", o),
-	})...).Debug("generated config file paths")
+	hlog.Debug("generated config file paths",
+		hlog.Any("available_paths", files),
+		hlog.Any("existed_paths", existedFiles),
+		hlog.String("config", fmt.Sprintf("%+v", o)),
+	)
 
 	return existedFiles
 }

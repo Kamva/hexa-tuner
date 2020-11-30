@@ -9,12 +9,12 @@ require (
 	github.com/contribsys/faktory_worker_go v1.4.0
 	github.com/grpc-ecosystem/go-grpc-middleware v1.2.0
 	github.com/kamva/gutil v0.0.0-20201107041453-68a864f6f946
-	github.com/kamva/hexa v0.0.0-20201115123231-795996ab3a1a
-	github.com/kamva/hexa-arranger v0.0.0-20201115130624-6986460348ec // indirect
-	github.com/kamva/hexa-echo v0.0.0-20201115125930-0612a7679561
-	github.com/kamva/hexa-event v0.0.0-20201115043636-dc13b51f507d
+	github.com/kamva/hexa v0.0.0-20201130114658-d62fdb8a5040
+	github.com/kamva/hexa-arranger v0.0.0-20201130115347-2dee22bb0171
+	github.com/kamva/hexa-echo v0.0.0-20201130114842-0cd3644e2f47
+	github.com/kamva/hexa-event v0.0.0-20201130120139-e00bc7c72638
 	github.com/kamva/hexa-job v0.0.0-20201115043917-82695fd10434
-	github.com/kamva/hexa-rpc v0.0.0-20201115133006-bb7878c675dc
+	github.com/kamva/hexa-rpc v0.0.0-20201130121226-e18731c1b335
 	github.com/kamva/tracer v0.0.0-20201115122932-ea39052d56cd
 	github.com/labstack/echo/v4 v4.1.14
 	github.com/nicksnyder/go-i18n/v2 v2.0.3
