@@ -251,6 +251,8 @@ github.com/kamva/hexa-job v0.0.0-20201030071350-8963a560bf0b h1:gtFZVGszB+PoTu1I
 github.com/kamva/hexa-job v0.0.0-20201030071350-8963a560bf0b/go.mod h1:XJswfOwl0r3LF2xnD3JCP1hmc9ZQUl1sF3CMlCyoGQ8=
 github.com/kamva/hexa-job v0.0.0-20201115043917-82695fd10434 h1:rNMcyWpEBannFAxH2dENvhw/DTCmjybkWB6oEgQuZ2k=
 github.com/kamva/hexa-job v0.0.0-20201115043917-82695fd10434/go.mod h1:nVREP3tyzzt4/LMVr7vfG4+J3hpdg+9GbnTrffhXd/c=
+github.com/kamva/hexa-job v0.0.0-20201130120348-3584f49dd86b h1:KJhT2ZhKuiR+uu6M9kIQEhrIczAs6EMN46/CvLrT4/s=
+github.com/kamva/hexa-job v0.0.0-20201130120348-3584f49dd86b/go.mod h1:2CM3tPdpmwu3duhrCW7jFfzqJMINB6Zn0v0mWFM+Zc0=
 github.com/kamva/hexa-rpc v0.0.0-20201019164122-af402086bb9d h1:tnR4+VWPyDqSHXUyES+ScDm2dy1YEnTakzLVgVv/XVU=
 github.com/kamva/hexa-rpc v0.0.0-20201019164122-af402086bb9d/go.mod h1:90Z2QIL3N2/Eit7xmU7r8T5geH/YBzAmDbWoh+0yovw=
 github.com/kamva/hexa-rpc v0.0.0-20201115044143-a5d685dc4b5d h1:WWv0/9GbHPBvLafGPgfVoZlxUK93C5RIsg7cW4YXgGU=

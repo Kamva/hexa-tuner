@@ -13,7 +13,7 @@ require (
 	github.com/kamva/hexa-arranger v0.0.0-20201130115347-2dee22bb0171
 	github.com/kamva/hexa-echo v0.0.0-20201130114842-0cd3644e2f47
 	github.com/kamva/hexa-event v0.0.0-20201130120139-e00bc7c72638
-	github.com/kamva/hexa-job v0.0.0-20201115043917-82695fd10434
+	github.com/kamva/hexa-job v0.0.0-20201130120348-3584f49dd86b
 	github.com/kamva/hexa-rpc v0.0.0-20201130121226-e18731c1b335
 	github.com/kamva/tracer v0.0.0-20201115122932-ea39052d56cd
 	github.com/labstack/echo/v4 v4.1.14
