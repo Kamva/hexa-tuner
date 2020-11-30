@@ -269,6 +269,8 @@ github.com/kamva/hexa-rpc v0.0.0-20201115133006-bb7878c675dc h1:zHaB7lLfUYOhFl0M
 github.com/kamva/hexa-rpc v0.0.0-20201115133006-bb7878c675dc/go.mod h1:L8SC6ZAYwCz0+mpGZ1di6nlDnyLQXG8FjWUjAhOGOP0=
 github.com/kamva/hexa-rpc v0.0.0-20201130121226-e18731c1b335 h1:Z7syz77RMyQuM1i2tSrw6XYsr5/p479fhCehhRJy4vY=
 github.com/kamva/hexa-rpc v0.0.0-20201130121226-e18731c1b335/go.mod h1:gbgeWkkor8HLAWJ4+489Jch9URopENmgBG4CodLJV0Y=
+github.com/kamva/hexa-rpc v0.0.0-20201130135452-1567f279cdbd h1:MTSM8Bc4wTgDKNgQyVY4yNtZg456xUIXC7pq9DRBVHk=
+github.com/kamva/hexa-rpc v0.0.0-20201130135452-1567f279cdbd/go.mod h1:9Xu8HuA7pLSMy+2dC8b7k4zSO98kPuE5f70fxTnIy7A=
 github.com/kamva/mgm-relation v0.0.0-20200802193925-a960eb9564ab/go.mod h1:D7cPWD6YgVfVQ7Q9x0xEABbcz2tuSjYOnuMr73YVy/M=
 github.com/kamva/mgm-relation v0.0.0-20201115040639-5cb356991a32/go.mod h1:QVaDH58cFiG5lxo0PCrmXTwoIRQ7zDXjchAiWFKbwYs=
 github.com/kamva/mgm/v3 v3.1.0/go.mod h1:WeTKvDky1Qps7+7UL9ls6OOAfCMLAsIbNFsvtnwctj8=

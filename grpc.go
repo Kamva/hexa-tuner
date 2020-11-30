@@ -20,7 +20,7 @@ type GRPCServerTunerOptions struct {
 type GRPCConfigs struct {
 	Secret       string
 	Debug        bool
-	GRPCLogLevel int `json:"log_level" yaml:"log_level"`
+	LogVerbosity int `json:"log_verbosity" yaml:"log_verbosity"`
 }
 
 // Must returns new instance of the gRPC connection with your config to use in client
@@ -53,7 +53,7 @@ func TuneGRPCServer(cfg GRPCConfigs, o GRPCServerTunerOptions) (*grpc.Server, er
 	}
 
 	// Replace gRPC logger with hexa logger
-	grpclog.SetLoggerV2(hrpc.NewLogger(o.Logger, cfg.GRPCLogLevel))
+	grpclog.SetLoggerV2(hrpc.NewLogger(o.Logger, cfg.LogVerbosity))
 
 	intChain := grpc_middleware.ChainUnaryServer(
 		// Hexa context interceptor

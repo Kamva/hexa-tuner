@@ -14,7 +14,7 @@ require (
 	github.com/kamva/hexa-echo v0.0.0-20201130133406-531a9b12a499
 	github.com/kamva/hexa-event v0.0.0-20201130120139-e00bc7c72638
 	github.com/kamva/hexa-job v0.0.0-20201130120348-3584f49dd86b
-	github.com/kamva/hexa-rpc v0.0.0-20201130121226-e18731c1b335
+	github.com/kamva/hexa-rpc v0.0.0-20201130135452-1567f279cdbd
 	github.com/kamva/tracer v0.0.0-20201115122932-ea39052d56cd
 	github.com/labstack/echo/v4 v4.1.14
 	github.com/nicksnyder/go-i18n/v2 v2.0.3
