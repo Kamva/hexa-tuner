@@ -10,11 +10,12 @@ import (
 )
 
 var (
-	errNilConfig     = errors.New("config is Nil in the pack")
-	errNilLogger     = errors.New("logger is Nil in the pack")
-	errNilTranslator = errors.New("translator is Nil in the pack")
-	errNilJobs       = errors.New("jobs is nil in the pack")
-	errNilEmitter    = errors.New("emitter is nil in the pack")
+	errNilConfig     = errors.New("config is Nil in the service container")
+	errNilLogger     = errors.New("logger is Nil in the service container")
+	errNilTranslator = errors.New("translator is Nil in the service container")
+	errNilJobs       = errors.New("jobs is nil in the service container")
+	errNilEmitter    = errors.New("emitter is nil in the service container")
+	errNilArranger   = errors.New("arranger is nil in the service container")
 )
 
 type (
@@ -46,6 +47,7 @@ type (
 		translator hexa.Translator
 		jobs       hjob.Jobs
 		emitter    hevent.Emitter
+		arranger   arranger.Arranger
 	}
 )
 
@@ -69,9 +71,14 @@ func (p *baseServiceContainer) SetJobs(jobs hjob.Jobs) {
 	p.jobs = jobs
 }
 
-// SetGate sets the event emitter service.
+// SetEmitter sets the event emitter service.
 func (p *baseServiceContainer) SetEmitter(emitter hevent.Emitter) {
 	p.emitter = emitter
+}
+
+// SetArranger sets the arranger service.
+func (p *baseServiceContainer) SetArranger(arranger arranger.Arranger) {
+	p.arranger = arranger
 }
 
 // Config returns the config service.
@@ -116,6 +123,15 @@ func (p *baseServiceContainer) Emitter() hevent.Emitter {
 	}
 
 	return p.emitter
+}
+
+// Arranger returns the gate service.
+func (p *baseServiceContainer) Arranger() arranger.Arranger {
+	if p.must {
+		gutil.PanicNil(p.arranger, errNilArranger)
+	}
+
+	return p.arranger
 }
 
 // NewBaseServiceContainer returns new instance of the BaseServiceContainer.
