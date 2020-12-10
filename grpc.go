@@ -12,7 +12,7 @@ import (
 
 // GRPCServerTunerOptions contains options needed to tune a gRPC server
 type GRPCServerTunerOptions struct {
-	ContextEI  hexa.ContextExporterImporter
+	ContextPropagator  hexa.ContextPropagator
 	Logger     hexa.Logger
 	Translator hexa.Translator
 }
@@ -25,17 +25,17 @@ type GRPCConfigs struct {
 
 // Must returns new instance of the gRPC connection with your config to use in client
 // it will panic any error.
-func MustGRPCConn(serverAddr string, cei hexa.ContextExporterImporter) *grpc.ClientConn {
-	return gutil.Must(GRPCConn(serverAddr, cei)).(*grpc.ClientConn)
+func MustGRPCConn(serverAddr string, p hexa.ContextPropagator) *grpc.ClientConn {
+	return gutil.Must(GRPCConn(serverAddr, p)).(*grpc.ClientConn)
 }
 
 // GRPCConn returns new instance of the gRPC connection with your config to use in client
-func GRPCConn(serverAddr string, cei hexa.ContextExporterImporter) (*grpc.ClientConn, error) {
+func GRPCConn(serverAddr string, p hexa.ContextPropagator) (*grpc.ClientConn, error) {
 	unaryInt := grpc.WithChainUnaryInterceptor(
 		// Hexa error interceptor (convert gRPC status to hexa error)
 		hrpc.NewErrorInterceptor().UnaryClientInterceptor(),
 		// Hexa context interceptor
-		hrpc.NewHexaContextInterceptor(cei).UnaryClientInterceptor,
+		hrpc.NewHexaContextInterceptor(p).UnaryClientInterceptor,
 	)
 	// TODO: Init metric API and distributed tracing here.
 
@@ -57,7 +57,7 @@ func TuneGRPCServer(cfg GRPCConfigs, o GRPCServerTunerOptions) (*grpc.Server, er
 
 	intChain := grpc_middleware.ChainUnaryServer(
 		// Hexa context interceptor
-		hrpc.NewHexaContextInterceptor(o.ContextEI).UnaryServerInterceptor,
+		hrpc.NewHexaContextInterceptor(o.ContextPropagator).UnaryServerInterceptor,
 		// Request logger
 		hrpc.NewRequestLogger(o.Logger).UnaryServerInterceptor(loggerOptions),
 		// Hexa error interceptor

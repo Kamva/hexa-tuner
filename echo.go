@@ -11,8 +11,6 @@ type EchoTunerOptions struct {
 	Logger     hexa.Logger
 	Translator hexa.Translator
 	UserFinder hecho.UserFinderBySub
-	UserSDK    hexa.UserSDK
-	CtxCreator hecho.CtxCreator
 }
 
 type EchoConfigs struct {
@@ -38,9 +36,9 @@ func TuneEcho(e *echo.Echo, cfg EchoConfigs, o EchoTunerOptions) {
 
 	var currentUserMiddleware echo.MiddlewareFunc
 	if o.UserFinder == nil {
-		currentUserMiddleware = hecho.CurrentUserWithoutFetch(o.UserSDK)
+		currentUserMiddleware = hecho.CurrentUserWithoutFetch()
 	} else {
-		currentUserMiddleware = hecho.CurrentUser(o.UserFinder, o.UserSDK)
+		currentUserMiddleware = hecho.CurrentUser(o.UserFinder)
 	}
 
 	// CORS HEADERS
@@ -71,7 +69,7 @@ func TuneEcho(e *echo.Echo, cfg EchoConfigs, o EchoTunerOptions) {
 	e.Use(currentUserMiddleware)
 
 	// HexaContext set hexa context on each request.
-	e.Use(hecho.HexaContext(o.CtxCreator, o.Logger, o.Translator))
+	e.Use(hecho.HexaContext(o.Logger, o.Translator))
 
 	// SetContextLogger set the echo logger on each echo's context.
 	e.Use(hecho.SetContextLogger(cfg.EchoLogLevel))
