@@ -2,6 +2,7 @@ package huner
 
 import (
 	"errors"
+
 	"github.com/kamva/gutil"
 	"github.com/kamva/hexa"
 	arranger "github.com/kamva/hexa-arranger"
@@ -10,12 +11,13 @@ import (
 )
 
 var (
-	errNilConfig     = errors.New("config is Nil in the service container")
-	errNilLogger     = errors.New("logger is Nil in the service container")
-	errNilTranslator = errors.New("translator is Nil in the service container")
-	errNilJobs       = errors.New("jobs is nil in the service container")
-	errNilEmitter    = errors.New("emitter is nil in the service container")
-	errNilArranger   = errors.New("arranger is nil in the service container")
+	errNilConfig        = errors.New("config is Nil in the service container")
+	errNilLogger        = errors.New("logger is Nil in the service container")
+	errNilTranslator    = errors.New("translator is Nil in the service container")
+	errNilHealthChecker = errors.New("healthChecker is nil in the service container")
+	errNilJobs          = errors.New("jobs is nil in the service container")
+	errNilEmitter       = errors.New("emitter is nil in the service container")
+	errNilArranger      = errors.New("arranger is nil in the service container")
 )
 
 type (
@@ -24,6 +26,7 @@ type (
 		SetConfig(config hexa.Config)
 		SetLogger(logger hexa.Logger)
 		SetTranslator(translator hexa.Translator)
+		SetHealthChecker(checker hexa.HealthChecker)
 		SetJobs(jobs hjob.Jobs)
 		SetEmitter(emitter hevent.Emitter)
 		SetArranger(arranger arranger.Arranger)
@@ -31,6 +34,7 @@ type (
 		Config() hexa.Config
 		Logger() hexa.Logger
 		Translator() hexa.Translator
+		HealthChecker() hexa.HealthChecker
 		Jobs() hjob.Jobs
 		Emitter() hevent.Emitter
 		Arranger() arranger.Arranger
@@ -42,12 +46,13 @@ type (
 		// to get a nil service or just return nil value.
 		must bool
 
-		config     hexa.Config
-		log        hexa.Logger
-		translator hexa.Translator
-		jobs       hjob.Jobs
-		emitter    hevent.Emitter
-		arranger   arranger.Arranger
+		config        hexa.Config
+		log           hexa.Logger
+		translator    hexa.Translator
+		healthChecker hexa.HealthChecker
+		jobs          hjob.Jobs
+		emitter       hevent.Emitter
+		arranger      arranger.Arranger
 	}
 )
 
@@ -64,6 +69,11 @@ func (p *baseServiceContainer) SetLogger(logger hexa.Logger) {
 // SetTranslator sets the translator service.
 func (p *baseServiceContainer) SetTranslator(translator hexa.Translator) {
 	p.translator = translator
+}
+
+// SetHealthChecker sets the healthChecker service.
+func (p *baseServiceContainer) SetHealthChecker(checker hexa.HealthChecker) {
+	p.healthChecker = checker
 }
 
 // SetJobs sets the Jobs service.
@@ -105,6 +115,14 @@ func (p *baseServiceContainer) Translator() hexa.Translator {
 		gutil.PanicNil(p.translator, errNilTranslator)
 	}
 	return p.translator
+}
+
+// HealthChecker returns the healthChecker service.
+func (p *baseServiceContainer) HealthChecker() hexa.HealthChecker {
+	if p.must {
+		gutil.PanicNil(p.healthChecker, errNilTranslator)
+	}
+	return p.healthChecker
 }
 
 // Jobs returns the jobs service.

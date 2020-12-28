@@ -8,8 +8,8 @@ require (
 	github.com/contribsys/faktory v1.3.0-1
 	github.com/contribsys/faktory_worker_go v1.4.0
 	github.com/grpc-ecosystem/go-grpc-middleware v1.2.0
-	github.com/kamva/gutil v0.0.0-20201117080033-8568e68b386e
-	github.com/kamva/hexa v0.0.0-20201210123552-58be39a23ee4
+	github.com/kamva/gutil v0.0.0-20201228200354-f965254d674b
+	github.com/kamva/hexa v0.0.0-20201228232746-fb3cd1f4eac3
 	github.com/kamva/hexa-arranger v0.0.0-20201210124912-a257459af177
 	github.com/kamva/hexa-echo v0.0.0-20201210123726-fbd3fb69a712
 	github.com/kamva/hexa-event v0.0.0-20201211073128-5b7c4fa4c20c
