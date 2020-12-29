@@ -11,13 +11,13 @@ import (
 )
 
 var (
-	errNilConfig        = errors.New("config is Nil in the service container")
-	errNilLogger        = errors.New("logger is Nil in the service container")
-	errNilTranslator    = errors.New("translator is Nil in the service container")
-	errNilHealthChecker = errors.New("healthReporter is nil in the service container")
-	errNilJobs          = errors.New("jobs is nil in the service container")
-	errNilEmitter       = errors.New("emitter is nil in the service container")
-	errNilArranger      = errors.New("arranger is nil in the service container")
+	errNilConfig         = errors.New("config is Nil in the service container")
+	errNilLogger         = errors.New("logger is Nil in the service container")
+	errNilTranslator     = errors.New("translator is Nil in the service container")
+	errNilHealthReporter = errors.New("healthReporter is nil in the service container")
+	errNilJobs           = errors.New("jobs is nil in the service container")
+	errNilEmitter        = errors.New("emitter is nil in the service container")
+	errNilArranger       = errors.New("arranger is nil in the service container")
 )
 
 type (
@@ -120,7 +120,7 @@ func (p *baseServiceContainer) Translator() hexa.Translator {
 // HealthReporter returns the healthReporter service.
 func (p *baseServiceContainer) HealthReporter() hexa.HealthReporter {
 	if p.must {
-		gutil.PanicNil(p.healthReporter, errNilTranslator)
+		gutil.PanicNil(p.healthReporter, errNilHealthReporter)
 	}
 	return p.healthReporter
 }
