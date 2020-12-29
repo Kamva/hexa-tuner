@@ -18,7 +18,6 @@ type GRPCServerTunerOptions struct {
 }
 
 type GRPCConfigs struct {
-	Secret       string
 	Debug        bool
 	LogVerbosity int `json:"log_verbosity" yaml:"log_verbosity"`
 }

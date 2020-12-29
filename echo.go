@@ -31,6 +31,7 @@ func TuneEcho(e *echo.Echo, cfg EchoConfigs, o EchoTunerOptions) {
 	e.Logger = hecho.HexaToEchoLogger(o.Logger, cfg.EchoLogLevel)
 
 	e.Debug = cfg.Debug
+
 	// Set the error handler.
 	e.HTTPErrorHandler = hecho.HTTPErrorHandler(o.Logger, o.Translator, e.Debug)
 
