@@ -34,6 +34,7 @@ github.com/circonus-labs/circonus-gometrics v2.3.1+incompatible/go.mod h1:nmEj6D
 github.com/circonus-labs/circonusllhist v0.1.3/go.mod h1:kMXHVDlOchFAehlya5ePtbp5jckzBHf4XRpQvBOLI+I=
 github.com/client9/misspell v0.3.4/go.mod h1:qj6jICC3Q7zFZvVWo7KLAzC3yx5G7kyvSDkc90ppPyw=
 github.com/cncf/udpa/go v0.0.0-20191209042840-269d4d468f6f/go.mod h1:M8M6+tZqaGXZJjfX53e64911xZQV5JYwmTeXPW+k8Sc=
+github.com/cncf/udpa/go v0.0.0-20200629203442-efcf912fb354/go.mod h1:WmhPx2Nbnhtbo57+VJT5O0JRkEi1Wbu0z5j0R8u5Hbk=
 github.com/codahale/hdrhistogram v0.0.0-20161010025455-3a0bb77429bd h1:qMd81Ts1T2OTKmB4acZcyKaMtRnY5Y44NuXGX2GFJ1w=
 github.com/codahale/hdrhistogram v0.0.0-20161010025455-3a0bb77429bd/go.mod h1:sE/e/2PUdi/liOCUjSTXgM1o87ZssimdTWN964YiIeI=
 github.com/codegangsta/inject v0.0.0-20150114235600-33e0aa1cb7c0/go.mod h1:4Zcjuz89kmFXt9morQgcfYZAYZ5n8WHjt81YYWIwtTM=
@@ -65,6 +66,7 @@ github.com/eknkc/amber v0.0.0-20171010120322-cdade1c07385/go.mod h1:0vRUJqYpeSZi
 github.com/envoyproxy/go-control-plane v0.9.0/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=
 github.com/envoyproxy/go-control-plane v0.9.1-0.20191026205805-5f8ba28d4473/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=
 github.com/envoyproxy/go-control-plane v0.9.4/go.mod h1:6rpuAdCZL397s3pYoYcLgu1mIlRU8Am5FuJP05cCM98=
+github.com/envoyproxy/go-control-plane v0.9.7/go.mod h1:cwu0lG7PUMfa9snN8LXBig5ynNVH9qI8YYLbd1fK2po=
 github.com/envoyproxy/protoc-gen-validate v0.1.0/go.mod h1:iSmxcyjqTsJpI2R4NaDN7+kN2VEUnK/pcBlmesArF7c=
 github.com/etcd-io/bbolt v1.3.3/go.mod h1:ZF2nL25h33cCyBtcyWeZ2/I3HQOfTP+0PIEvHjkjCrw=
 github.com/facebookgo/clock v0.0.0-20150410010913-600d898af40a h1:yDWHCSQ40h88yih2JAcL6Ls/kVkSE8GFACTGVnMPruw=
@@ -233,6 +235,8 @@ github.com/kamva/hexa v0.0.0-20201228234158-ba4a20563608 h1:A5xfU3OA8RxChzlX1Cs3
 github.com/kamva/hexa v0.0.0-20201228234158-ba4a20563608/go.mod h1:GM44LhccY8Gb5J+tQb0+g+v1iomJG/55j/v9gDgv8oY=
 github.com/kamva/hexa v0.0.0-20201229084746-ff2ce058c7df h1:7/I4nsAicsC0KyNdGw8Dif6EQ4b0y1jsAMBdHRHNJUQ=
 github.com/kamva/hexa v0.0.0-20201229084746-ff2ce058c7df/go.mod h1:GM44LhccY8Gb5J+tQb0+g+v1iomJG/55j/v9gDgv8oY=
+github.com/kamva/hexa v0.0.0-20201229094246-e2ea041ecabe h1:WMGlApDSf6MHbAaxlwYmznvJJzZn/NJaHFf8x4JXF6A=
+github.com/kamva/hexa v0.0.0-20201229094246-e2ea041ecabe/go.mod h1:GM44LhccY8Gb5J+tQb0+g+v1iomJG/55j/v9gDgv8oY=
 github.com/kamva/hexa-arranger v0.0.0-20201210124912-a257459af177 h1:aZ+MX5j82CO3kq9dzW4wgbnEG9yVUxFNlx9x288CLtY=
 github.com/kamva/hexa-arranger v0.0.0-20201210124912-a257459af177/go.mod h1:Rj3VGw2x9/0tNIMvebo11nDkhd3c3jCSdYcAU/9RTks=
 github.com/kamva/hexa-echo v0.0.0-20201210123726-fbd3fb69a712 h1:A2PTOPmMMjSCqdLXxvszKYzrfRCKQFlilW9T3TcRTUQ=
@@ -241,8 +245,8 @@ github.com/kamva/hexa-event v0.0.0-20201228234749-dc1345cf270d h1:9EP4twZXerpLgT
 github.com/kamva/hexa-event v0.0.0-20201228234749-dc1345cf270d/go.mod h1:HbiGNtCj6jkju2l+UzLLLmScuPcNCV9qRNnW55Z5Tv8=
 github.com/kamva/hexa-job v0.0.0-20201210160854-95e4ad9a432f h1:5yrIFzItm8XkYr2I3Dvqvd61HoToN+VYa5yKcDlyIWc=
 github.com/kamva/hexa-job v0.0.0-20201210160854-95e4ad9a432f/go.mod h1:mLE5SrHcB5sRCZ2eOvdggxfuPrTuJOlw+U/U3o0sjoE=
-github.com/kamva/hexa-rpc v0.0.0-20201210171118-d2153bd711e3 h1:fDa6qCO03ISZ1Pe7p9V9rOLpgGyiiOVrhVtLvDijK7I=
-github.com/kamva/hexa-rpc v0.0.0-20201210171118-d2153bd711e3/go.mod h1:+XNIAIJmF54Tc+F7DacURN3+Oi/D8m0bznF4rJKPRlA=
+github.com/kamva/hexa-rpc v0.0.0-20201229091858-022835b39a96 h1:XW5aLECUAG3tdUYYuebB+1Um9aXtAY4sl6Qp17WloGY=
+github.com/kamva/hexa-rpc v0.0.0-20201229091858-022835b39a96/go.mod h1:WAzrFnGbuknHL7YbJK7jXddODBgrGQ5WbjTvJ2fl8lo=
 github.com/kamva/mgm-relation v0.0.0-20201115040639-5cb356991a32/go.mod h1:QVaDH58cFiG5lxo0PCrmXTwoIRQ7zDXjchAiWFKbwYs=
 github.com/kamva/mgm/v3 v3.1.0/go.mod h1:WeTKvDky1Qps7+7UL9ls6OOAfCMLAsIbNFsvtnwctj8=
 github.com/kamva/tracer v0.0.0-20201115122932-ea39052d56cd h1:Wa2QzkBIqaWTsWb9gVtQxijZqweUXKkakFLhXOacG5k=
@@ -662,6 +666,8 @@ google.golang.org/grpc v1.27.0 h1:rRYRFMVgRv6E0D70Skyfsr28tDXIuuPZyWGMPdMcnXg=
 google.golang.org/grpc v1.27.0/go.mod h1:qbnxyOmOxrQa7FizSgH+ReBfzJrCY1pSN7KXBS8abTk=
 google.golang.org/grpc v1.33.1 h1:DGeFlSan2f+WEtCERJ4J9GJWk15TxUi8QGagfI87Xyc=
 google.golang.org/grpc v1.33.1/go.mod h1:fr5YgcSWrqhRRxogOsw7RzIpsmvOZ6IcH4kBYTpR3n0=
+google.golang.org/grpc v1.34.0 h1:raiipEjMOIC/TO2AvyTxP25XFdLxNIBwzDh3FM3XztI=
+google.golang.org/grpc v1.34.0/go.mod h1:WotjhfgOW/POjDeRt8vscBtXq+2VjORFy659qA51WJ8=
 google.golang.org/protobuf v0.0.0-20200109180630-ec00e32a8dfd/go.mod h1:DFci5gLYBciE7Vtevhsrf46CRTquxDuWsQurQQe4oz8=
 google.golang.org/protobuf v0.0.0-20200221191635-4d8936d0db64/go.mod h1:kwYJMbMJ01Woi6D6+Kah6886xMZcty6N08ah7+eCXa0=
 google.golang.org/protobuf v0.0.0-20200228230310-ab0ca4ff8a60/go.mod h1:cfTl7dwQJ+fmap5saPgwCLgHXTUD7jkjRqWcaiX5VyM=
