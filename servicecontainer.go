@@ -14,7 +14,7 @@ var (
 	errNilConfig        = errors.New("config is Nil in the service container")
 	errNilLogger        = errors.New("logger is Nil in the service container")
 	errNilTranslator    = errors.New("translator is Nil in the service container")
-	errNilHealthChecker = errors.New("healthChecker is nil in the service container")
+	errNilHealthChecker = errors.New("healthReporter is nil in the service container")
 	errNilJobs          = errors.New("jobs is nil in the service container")
 	errNilEmitter       = errors.New("emitter is nil in the service container")
 	errNilArranger      = errors.New("arranger is nil in the service container")
@@ -26,7 +26,7 @@ type (
 		SetConfig(config hexa.Config)
 		SetLogger(logger hexa.Logger)
 		SetTranslator(translator hexa.Translator)
-		SetHealthChecker(checker hexa.HealthChecker)
+		SetHealthReporter(reporter hexa.HealthReporter)
 		SetJobs(jobs hjob.Jobs)
 		SetEmitter(emitter hevent.Emitter)
 		SetArranger(arranger arranger.Arranger)
@@ -34,7 +34,7 @@ type (
 		Config() hexa.Config
 		Logger() hexa.Logger
 		Translator() hexa.Translator
-		HealthChecker() hexa.HealthChecker
+		HealthReporter() hexa.HealthReporter
 		Jobs() hjob.Jobs
 		Emitter() hevent.Emitter
 		Arranger() arranger.Arranger
@@ -46,13 +46,13 @@ type (
 		// to get a nil service or just return nil value.
 		must bool
 
-		config        hexa.Config
-		log           hexa.Logger
-		translator    hexa.Translator
-		healthChecker hexa.HealthChecker
-		jobs          hjob.Jobs
-		emitter       hevent.Emitter
-		arranger      arranger.Arranger
+		config         hexa.Config
+		log            hexa.Logger
+		translator     hexa.Translator
+		healthReporter hexa.HealthReporter
+		jobs           hjob.Jobs
+		emitter        hevent.Emitter
+		arranger       arranger.Arranger
 	}
 )
 
@@ -71,9 +71,9 @@ func (p *baseServiceContainer) SetTranslator(translator hexa.Translator) {
 	p.translator = translator
 }
 
-// SetHealthChecker sets the healthChecker service.
-func (p *baseServiceContainer) SetHealthChecker(checker hexa.HealthChecker) {
-	p.healthChecker = checker
+// SetHealthReporter sets the healthReporter service.
+func (p *baseServiceContainer) SetHealthReporter(reporter hexa.HealthReporter) {
+	p.healthReporter = reporter
 }
 
 // SetJobs sets the Jobs service.
@@ -117,12 +117,12 @@ func (p *baseServiceContainer) Translator() hexa.Translator {
 	return p.translator
 }
 
-// HealthChecker returns the healthChecker service.
-func (p *baseServiceContainer) HealthChecker() hexa.HealthChecker {
+// HealthReporter returns the healthReporter service.
+func (p *baseServiceContainer) HealthReporter() hexa.HealthReporter {
 	if p.must {
-		gutil.PanicNil(p.healthChecker, errNilTranslator)
+		gutil.PanicNil(p.healthReporter, errNilTranslator)
 	}
-	return p.healthChecker
+	return p.healthReporter
 }
 
 // Jobs returns the jobs service.

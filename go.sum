@@ -231,6 +231,8 @@ github.com/kamva/hexa v0.0.0-20201210123552-58be39a23ee4 h1:vDsl7QRAN8Hy+R8ukZbq
 github.com/kamva/hexa v0.0.0-20201210123552-58be39a23ee4/go.mod h1:oDAHXGAS0XTBEs+VqoLzfJ7i46Kza098t6oB9h4yfwo=
 github.com/kamva/hexa v0.0.0-20201228234158-ba4a20563608 h1:A5xfU3OA8RxChzlX1Cs30h/mEqC/ya4WBZ/pcdYUiYs=
 github.com/kamva/hexa v0.0.0-20201228234158-ba4a20563608/go.mod h1:GM44LhccY8Gb5J+tQb0+g+v1iomJG/55j/v9gDgv8oY=
+github.com/kamva/hexa v0.0.0-20201229084746-ff2ce058c7df h1:7/I4nsAicsC0KyNdGw8Dif6EQ4b0y1jsAMBdHRHNJUQ=
+github.com/kamva/hexa v0.0.0-20201229084746-ff2ce058c7df/go.mod h1:GM44LhccY8Gb5J+tQb0+g+v1iomJG/55j/v9gDgv8oY=
 github.com/kamva/hexa-arranger v0.0.0-20201210124912-a257459af177 h1:aZ+MX5j82CO3kq9dzW4wgbnEG9yVUxFNlx9x288CLtY=
 github.com/kamva/hexa-arranger v0.0.0-20201210124912-a257459af177/go.mod h1:Rj3VGw2x9/0tNIMvebo11nDkhd3c3jCSdYcAU/9RTks=
 github.com/kamva/hexa-echo v0.0.0-20201210123726-fbd3fb69a712 h1:A2PTOPmMMjSCqdLXxvszKYzrfRCKQFlilW9T3TcRTUQ=
