@@ -15,9 +15,9 @@ import (
 )
 
 type ConfigFilePahtsOpts struct {
-	Project       string // e.g., senna
-	Microservice  string // e.g., order
-	ProjectRoot   string // e.g., /home/mehran/senna/order
+	AppName       string // e.g., senna
+	ServiceName   string // e.g., order
+	HomePath      string // e.g., /home/mehran/senna/order
 	FileName      string // e.g., config
 	FileExtension string // e.g., json or yaml
 	Environment   string // (optional) e.g., staging
@@ -36,24 +36,24 @@ func Environment(prefix string) string {
 }
 
 // GetConfigFilePaths generates config path as follow:
-// - /etc/{project}/{configFile.configExtension}
-// - /etc/{project}/{microservice.configExtension}
-// - /etc/{project_root_path}/{configFile.configExtension}
-// - /etc/{project_root_path}/.env
-// - /etc/{project_root_path}/.{environment}.env
+// - /etc/{appName}/{configFile.configExtension}
+// - /etc/{appName}/{serviceName.configExtension}
+// - {HomePath}/{configFile.configExtension}
+// - {HomePath}/.env
+// - {HomePath}/.{environment}.env
 func GetConfigFilePaths(o ConfigFilePahtsOpts) []string {
 	configFile := fmt.Sprintf("%s.%s", o.FileName, o.FileExtension)
-	msConfigFile := fmt.Sprintf("%s.%s", o.Microservice, o.FileExtension)
+	msConfigFile := fmt.Sprintf("%s.%s", o.ServiceName, o.FileExtension)
 
 	files := []string{
-		path.Join("/etc", o.Project, configFile),
-		path.Join("/etc", o.Project, msConfigFile),
-		path.Join(o.ProjectRoot, configFile),
-		path.Join(o.ProjectRoot, ".env"),
+		path.Join("/etc", o.AppName, configFile),
+		path.Join("/etc", o.AppName, msConfigFile),
+		path.Join(o.HomePath, configFile),
+		path.Join(o.HomePath, ".env"),
 	}
 
 	if o.Environment != "" {
-		files = append(files, path.Join(o.ProjectRoot, fmt.Sprintf(".%s.env", o.Environment)))
+		files = append(files, path.Join(o.HomePath, fmt.Sprintf(".%s.env", o.Environment)))
 	}
 
 	var existedFiles []string

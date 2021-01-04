@@ -23,9 +23,9 @@ func main() {
 	// as string or remove it from our json config files and just provide it to
 	// the .env files (this is just for .env files, not real Environment variables).
 	files := huner.GetConfigFilePaths(huner.ConfigFilePahtsOpts{
-		Project:       "example_conf",
-		Microservice:  "example_ms",
-		ProjectRoot:   gutil.SourcePath(),
+		AppName:       "example_conf",
+		ServiceName:   "example_ms",
+		HomePath:      gutil.SourcePath(),
 		FileName:      "config",
 		FileExtension: "json",
 		Environment:   "example",
