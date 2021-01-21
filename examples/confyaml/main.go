@@ -11,13 +11,13 @@ type Config struct {
 	LogStack    []string `json:"log_stack" mapstructure:"log_stack"`
 	Debug       bool     `json:"debug" mapstructure:"debug"`
 	Port        int      `json:"port" mapstructure:"port"`
-	//EnableCache bool     `json:"enable_cache" mapstructure:"enable_cache"`
+	EnableCache bool     `json:"enable_cache" mapstructure:"enable_cache"`
 }
 
 func main() {
 	// Important note: viper parse .env files using env parser, that
 	// parser parse every value as "string". viper does not accept two
-	// config key with different types (e.g., a key with bool value in config.yaml
+	// config key with different types (e.g., a key with bool value in config.json
 	// and with string value in .env file), so if we want overwrite bool, int or float
 	// values in ".env" file, we should set that value in our json config file
 	// as string or remove it from our json config files and just provide it to
@@ -27,7 +27,7 @@ func main() {
 		ServiceName:   "example_ms",
 		HomePath:      gutil.SourcePath(),
 		FileName:      "config",
-		FileExtension: "json",
+		FileExtension: "yaml",
 		Environment:   "example",
 	})
 	v, err := huner.NewViperConfigDriver(huner.EnvKeysPrefix(), files)

@@ -14,7 +14,7 @@ import (
 	"strings"
 )
 
-type ConfigFilePahtsOpts struct {
+type ConfigFilePathsOpts struct {
 	AppName       string // e.g., senna
 	ServiceName   string // e.g., order
 	HomePath      string // e.g., /home/mehran/senna/order
@@ -41,7 +41,7 @@ func Environment(prefix string) string {
 // - {HomePath}/{configFile.configExtension}
 // - {HomePath}/.env
 // - {HomePath}/.{environment}.env
-func GetConfigFilePaths(o ConfigFilePahtsOpts) []string {
+func GetConfigFilePaths(o ConfigFilePathsOpts) []string {
 	configFile := fmt.Sprintf("%s.%s", o.FileName, o.FileExtension)
 	msConfigFile := fmt.Sprintf("%s.%s", o.ServiceName, o.FileExtension)
 
