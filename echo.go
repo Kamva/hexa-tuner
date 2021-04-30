@@ -63,6 +63,7 @@ func TuneEcho(e *echo.Echo, cfg EchoConfigs, o EchoTunerOptions) {
 
 	// Optional JWT checker checks if exists "Authorization" header, so verify it, otherwise skip.
 	e.Use(middleware.JWTWithConfig(cfg.JWTConfig))
+
 	// JWT authorizer to authorize jwt claim
 	e.Use(hecho.JwtClaimAuthorizer(cfg.JwtClaimAuthorizerConfig))
 

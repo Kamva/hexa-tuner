@@ -18,6 +18,7 @@ var (
 	errNilJobs           = errors.New("jobs is nil in the service container")
 	errNilEmitter        = errors.New("emitter is nil in the service container")
 	errNilArranger       = errors.New("arranger is nil in the service container")
+	errNilDLM            = errors.New("DLM is nil in the service container")
 )
 
 type (
@@ -30,6 +31,7 @@ type (
 		SetJobs(jobs hjob.Jobs)
 		SetEmitter(emitter hevent.Emitter)
 		SetArranger(arranger arranger.Arranger)
+		SetDLM(dlm hexa.DLM)
 
 		Config() hexa.Config
 		Logger() hexa.Logger
@@ -38,6 +40,7 @@ type (
 		Jobs() hjob.Jobs
 		Emitter() hevent.Emitter
 		Arranger() arranger.Arranger
+		DLM() hexa.DLM
 	}
 
 	// baseServiceContainer contains all of services in one place to manage our services.
@@ -53,103 +56,113 @@ type (
 		jobs           hjob.Jobs
 		emitter        hevent.Emitter
 		arranger       arranger.Arranger
+		dlm            hexa.DLM
 	}
 )
 
 // SetConfig sets the config service.
-func (p *baseServiceContainer) SetConfig(config hexa.Config) {
-	p.config = config
+func (c *baseServiceContainer) SetConfig(config hexa.Config) {
+	c.config = config
 }
 
 // SetLogger sets the logger service.
-func (p *baseServiceContainer) SetLogger(logger hexa.Logger) {
-	p.log = logger
+func (c *baseServiceContainer) SetLogger(logger hexa.Logger) {
+	c.log = logger
 }
 
 // SetTranslator sets the translator service.
-func (p *baseServiceContainer) SetTranslator(translator hexa.Translator) {
-	p.translator = translator
+func (c *baseServiceContainer) SetTranslator(translator hexa.Translator) {
+	c.translator = translator
 }
 
 // SetHealthReporter sets the healthReporter service.
-func (p *baseServiceContainer) SetHealthReporter(reporter hexa.HealthReporter) {
-	p.healthReporter = reporter
+func (c *baseServiceContainer) SetHealthReporter(reporter hexa.HealthReporter) {
+	c.healthReporter = reporter
 }
 
 // SetJobs sets the Jobs service.
-func (p *baseServiceContainer) SetJobs(jobs hjob.Jobs) {
-	p.jobs = jobs
+func (c *baseServiceContainer) SetJobs(jobs hjob.Jobs) {
+	c.jobs = jobs
 }
 
 // SetEmitter sets the event emitter service.
-func (p *baseServiceContainer) SetEmitter(emitter hevent.Emitter) {
-	p.emitter = emitter
+func (c *baseServiceContainer) SetEmitter(emitter hevent.Emitter) {
+	c.emitter = emitter
 }
 
 // SetArranger sets the arranger service.
-func (p *baseServiceContainer) SetArranger(arranger arranger.Arranger) {
-	p.arranger = arranger
+func (c *baseServiceContainer) SetArranger(arranger arranger.Arranger) {
+	c.arranger = arranger
+}
+
+// SetDLM sets the dlm(distributed lock manager) service.
+func (c *baseServiceContainer) SetDLM(dlm hexa.DLM) {
+	c.dlm = dlm
 }
 
 // Config returns the config service.
-func (p *baseServiceContainer) Config() hexa.Config {
-	if p.must {
-		gutil.PanicNil(p.config, errNilConfig)
+func (c *baseServiceContainer) Config() hexa.Config {
+	if c.must {
+		gutil.PanicNil(c.config, errNilConfig)
 	}
 
-	return p.config
+	return c.config
 }
 
 // Logger returns the logger service.
-func (p *baseServiceContainer) Logger() hexa.Logger {
-	if p.must {
-		gutil.PanicNil(p.log, errNilLogger)
+func (c *baseServiceContainer) Logger() hexa.Logger {
+	if c.must {
+		gutil.PanicNil(c.log, errNilLogger)
 	}
 
-	return p.log
+	return c.log
 }
 
 // Translator returns the translator service.
-func (p *baseServiceContainer) Translator() hexa.Translator {
-	if p.must {
-		gutil.PanicNil(p.translator, errNilTranslator)
+func (c *baseServiceContainer) Translator() hexa.Translator {
+	if c.must {
+		gutil.PanicNil(c.translator, errNilTranslator)
 	}
-	return p.translator
+	return c.translator
 }
 
 // HealthReporter returns the healthReporter service.
-func (p *baseServiceContainer) HealthReporter() hexa.HealthReporter {
-	if p.must {
-		gutil.PanicNil(p.healthReporter, errNilHealthReporter)
+func (c *baseServiceContainer) HealthReporter() hexa.HealthReporter {
+	if c.must {
+		gutil.PanicNil(c.healthReporter, errNilHealthReporter)
 	}
-	return p.healthReporter
+	return c.healthReporter
 }
 
 // Jobs returns the jobs service.
-func (p *baseServiceContainer) Jobs() hjob.Jobs {
-	if p.must {
-		gutil.PanicNil(p.jobs, errNilJobs)
+func (c *baseServiceContainer) Jobs() hjob.Jobs {
+	if c.must {
+		gutil.PanicNil(c.jobs, errNilJobs)
 	}
 
-	return p.jobs
+	return c.jobs
 }
 
 // Emitter returns the gate service.
-func (p *baseServiceContainer) Emitter() hevent.Emitter {
-	if p.must {
-		gutil.PanicNil(p.emitter, errNilEmitter)
+func (c *baseServiceContainer) Emitter() hevent.Emitter {
+	if c.must {
+		gutil.PanicNil(c.emitter, errNilEmitter)
 	}
 
-	return p.emitter
+	return c.emitter
 }
 
 // Arranger returns the gate service.
-func (p *baseServiceContainer) Arranger() arranger.Arranger {
-	if p.must {
-		gutil.PanicNil(p.arranger, errNilArranger)
+func (c *baseServiceContainer) Arranger() arranger.Arranger {
+	if c.must {
+		gutil.PanicNil(c.arranger, errNilArranger)
 	}
 
-	return p.arranger
+	return c.arranger
+}
+
+func (c *baseServiceContainer) DLM() hexa.DLM {
+	return c.dlm
 }
 
 // NewBaseServiceContainer returns new instance of the BaseServiceContainer.
