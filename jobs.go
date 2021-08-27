@@ -20,11 +20,10 @@ func NewFaktoryJobsDriver(propagator hexa.ContextPropagator, poolSize int) (hjob
 	return hexafaktory.NewFaktoryJobsDriver(p, propagator), nil
 }
 
-// NewFaktoryWorkerDriver generate new faktory driver for the hexa worker.
+// NewFaktoryWorkersDriver generate new faktory driver for the hexa worker.
 func NewFaktoryWorkersDriver(p hexa.ContextPropagator, concurrency int) (hjob.Worker, error) {
 	mgr := faktoryworker.NewManager()
+	mgr.Concurrency = concurrency
 	worker := hexafaktory.NewFaktoryWorkerDriver(mgr, p)
-	err := worker.Concurrency(concurrency)
-
-	return worker, tracer.Trace(err)
+	return worker, nil
 }
