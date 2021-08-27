@@ -232,6 +232,8 @@ github.com/kamva/hexa-event v0.0.0-20201228234749-dc1345cf270d h1:9EP4twZXerpLgT
 github.com/kamva/hexa-event v0.0.0-20201228234749-dc1345cf270d/go.mod h1:HbiGNtCj6jkju2l+UzLLLmScuPcNCV9qRNnW55Z5Tv8=
 github.com/kamva/hexa-job v0.0.0-20210827200747-66e79a2ca9d3 h1:forTRlAyH9+H/SbNWYyu8X+YHzsnU4jmTlGy73EItjs=
 github.com/kamva/hexa-job v0.0.0-20210827200747-66e79a2ca9d3/go.mod h1:+/9B+OZUHPxl7WQ8eox5Wx1Pt7YZpzFF53hT0lGGwqI=
+github.com/kamva/hexa-job v0.0.0-20210827204107-d9a806440c69 h1:goFgXcxjKnomo4OwQ1QlQgLTJVP5wHE8eZOna9wa65E=
+github.com/kamva/hexa-job v0.0.0-20210827204107-d9a806440c69/go.mod h1:+/9B+OZUHPxl7WQ8eox5Wx1Pt7YZpzFF53hT0lGGwqI=
 github.com/kamva/hexa-rpc v0.0.0-20201229091858-022835b39a96 h1:XW5aLECUAG3tdUYYuebB+1Um9aXtAY4sl6Qp17WloGY=
 github.com/kamva/hexa-rpc v0.0.0-20201229091858-022835b39a96/go.mod h1:WAzrFnGbuknHL7YbJK7jXddODBgrGQ5WbjTvJ2fl8lo=
 github.com/kamva/mgm-relation v0.0.0-20201115040639-5cb356991a32/go.mod h1:QVaDH58cFiG5lxo0PCrmXTwoIRQ7zDXjchAiWFKbwYs=
