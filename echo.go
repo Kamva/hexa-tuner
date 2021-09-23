@@ -14,6 +14,7 @@ type EchoTunerOptions struct {
 }
 
 type EchoConfigs struct {
+	TracingConfig            hecho.TracingConfig
 	JWTConfig                middleware.JWTConfig
 	JwtClaimAuthorizerConfig hecho.JwtClaimAuthorizerConfig
 	Debug                    bool
@@ -27,19 +28,13 @@ type EchoConfigs struct {
 func TuneEcho(e *echo.Echo, cfg EchoConfigs, o EchoTunerOptions) {
 
 	e.HideBanner = true
-
 	e.Logger = hecho.HexaToEchoLogger(o.Logger, cfg.EchoLogLevel)
-
 	e.Debug = cfg.Debug
-
-	// Set the error handler.
 	e.HTTPErrorHandler = hecho.HTTPErrorHandler(o.Logger, o.Translator, e.Debug)
 
-	var currentUserMiddleware echo.MiddlewareFunc
+	currentUserMiddleware := hecho.CurrentUser(o.UserFinder)
 	if o.UserFinder == nil {
 		currentUserMiddleware = hecho.CurrentUserWithoutFetch()
-	} else {
-		currentUserMiddleware = hecho.CurrentUser(o.UserFinder)
 	}
 
 	// CORS HEADERS
@@ -49,10 +44,12 @@ func TuneEcho(e *echo.Echo, cfg EchoConfigs, o EchoTunerOptions) {
 		AllowHeaders: cfg.AllowHeaders,
 	}))
 
-	// Logger each request
+	// Log each request
 	e.Use(middleware.Logger())
 
-	// Recover recover each panic and pass to the cho error handler
+	e.Use(hecho.Tracing(cfg.TracingConfig))
+
+	// Recover recovers each panic and returns its to the echo error handler
 	e.Use(hecho.Recover())
 
 	// RequestID set requestID on each request that has blank request id.
@@ -75,4 +72,7 @@ func TuneEcho(e *echo.Echo, cfg EchoConfigs, o EchoTunerOptions) {
 
 	// SetContextLogger set the echo logger on each echo's context.
 	e.Use(hecho.SetContextLogger(cfg.EchoLogLevel))
+
+	// Add more data to each trace span:
+	e.Use(hecho.TracingDataFromUserContext())
 }
