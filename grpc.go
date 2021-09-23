@@ -30,6 +30,15 @@ type GrpcConnOptions struct {
 	TracingOpts []otelgrpc.Option
 }
 
+// WithAddr returns a new grpc config with the new address.
+func (o *GrpcConnOptions) WithAddr(addr string) GrpcConnOptions {
+	return GrpcConnOptions{
+		Addr:        addr,
+		Propagator:  o.Propagator,
+		TracingOpts: o.TracingOpts,
+	}
+}
+
 // MustGRPCConn returns new instance of the gRPC connection with your config to use in client
 // or will panic if occurred any error.
 func MustGRPCConn(o GrpcConnOptions) *grpc.ClientConn {

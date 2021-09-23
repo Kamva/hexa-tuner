@@ -19,7 +19,7 @@ type (
 		SetEmitter(emitter hevent.Emitter)
 		SetArranger(arranger arranger.Arranger)
 		SetDLM(dlm hexa.DLM)
-		SetOpenTelemetry(tp htel.OpenTelemetry)
+		SetOpenTelemetry(otlm htel.OpenTelemetry)
 
 		Config() hexa.Config
 		Logger() hexa.Logger
