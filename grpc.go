@@ -24,27 +24,29 @@ type GRPCConfigs struct {
 	LogVerbosity int `json:"log_verbosity" yaml:"log_verbosity"`
 }
 
-// GrpcConnectionProvider is a type that other grpc service providers could get as a param to provide their connections.
-type GrpcConnectionProvider func(addr string, p hexa.ContextPropagator, otelOpts []otelgrpc.Option) (*grpc.ClientConn, error)
+type GrpcConnOptions struct {
+	Addr        string
+	Propagator  hexa.ContextPropagator
+	TracingOpts []otelgrpc.Option
+}
 
 // MustGRPCConn returns new instance of the gRPC connection with your config to use in client
 // or will panic if occurred any error.
-func MustGRPCConn(serverAddr string, p hexa.ContextPropagator, tracingOpts []otelgrpc.Option) *grpc.ClientConn {
-	return gutil.Must(GRPCConn(serverAddr, p, tracingOpts)).(*grpc.ClientConn)
+func MustGRPCConn(o GrpcConnOptions) *grpc.ClientConn {
+	return gutil.Must(GRPCConn(o)).(*grpc.ClientConn)
 }
 
 // GRPCConn returns new instance of the gRPC connection with your config to use in client
-func GRPCConn(serverAddr string, p hexa.ContextPropagator, tracingOpts []otelgrpc.Option) (*grpc.ClientConn, error) {
+func GRPCConn(o GrpcConnOptions) (*grpc.ClientConn, error) {
 	unaryInt := grpc.WithChainUnaryInterceptor(
 		// Hexa error interceptor (convert gRPC status to hexa error)
 		hrpc.NewErrorInterceptor().UnaryClientInterceptor(),
 		// Hexa context interceptor
-		hrpc.NewHexaContextInterceptor(p).UnaryClientInterceptor,
+		hrpc.NewHexaContextInterceptor(o.Propagator).UnaryClientInterceptor,
 
-		otelgrpc.UnaryClientInterceptor(tracingOpts...),
+		otelgrpc.UnaryClientInterceptor(o.TracingOpts...),
 	)
-
-	return grpc.Dial(serverAddr, grpc.WithInsecure(), unaryInt)
+	return grpc.Dial(o.Addr, grpc.WithInsecure(), unaryInt)
 }
 
 // TuneGRPCServer returns new instance of the tuned gRPC Server to server requests to services
@@ -74,6 +76,3 @@ func TuneGRPCServer(cfg GRPCConfigs, o GRPCServerTunerOptions) (*grpc.Server, er
 
 	return grpc.NewServer(grpc.UnaryInterceptor(intChain)), nil
 }
-
-// assertion
-var _ GrpcConnectionProvider = GRPCConn
