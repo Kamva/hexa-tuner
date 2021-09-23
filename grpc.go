@@ -24,6 +24,9 @@ type GRPCConfigs struct {
 	LogVerbosity int `json:"log_verbosity" yaml:"log_verbosity"`
 }
 
+// GrpcConnectionProvider is a type that other grpc service providers could get as a param to provide their connections.
+type GrpcConnectionProvider func(addr string, p hexa.ContextPropagator, otelOpts []otelgrpc.Option) (*grpc.ClientConn, error)
+
 // MustGRPCConn returns new instance of the gRPC connection with your config to use in client
 // or will panic if occurred any error.
 func MustGRPCConn(serverAddr string, p hexa.ContextPropagator, tracingOpts []otelgrpc.Option) *grpc.ClientConn {
@@ -71,3 +74,6 @@ func TuneGRPCServer(cfg GRPCConfigs, o GRPCServerTunerOptions) (*grpc.Server, er
 
 	return grpc.NewServer(grpc.UnaryInterceptor(intChain)), nil
 }
+
+// assertion
+var _ GrpcConnectionProvider = GRPCConn
