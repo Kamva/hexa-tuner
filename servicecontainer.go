@@ -44,6 +44,7 @@ type (
 		config         hexa.Config
 		log            hexa.Logger
 		translator     hexa.Translator
+		probeServer    probe.Server
 		healthReporter hexa.HealthReporter
 		jobs           hjob.Jobs
 		emitter        hevent.Emitter
@@ -56,6 +57,7 @@ type (
 func (c *baseServiceContainer) SetConfig(config hexa.Config)             { c.config = config }
 func (c *baseServiceContainer) SetLogger(logger hexa.Logger)             { c.log = logger }
 func (c *baseServiceContainer) SetTranslator(translator hexa.Translator) { c.translator = translator }
+func (c *baseServiceContainer) SetProbeServer(server probe.Server)       { c.probeServer = server }
 func (c *baseServiceContainer) SetHealthReporter(r hexa.HealthReporter)  { c.healthReporter = r }
 func (c *baseServiceContainer) SetJobs(jobs hjob.Jobs)                   { c.jobs = jobs }
 func (c *baseServiceContainer) SetEmitter(emitter hevent.Emitter)        { c.emitter = emitter }
@@ -66,6 +68,7 @@ func (c *baseServiceContainer) SetOpenTelemetry(otlm htel.OpenTelemetry) { c.otl
 func (c *baseServiceContainer) Config() hexa.Config                 { return c.config }
 func (c *baseServiceContainer) Logger() hexa.Logger                 { return c.log }
 func (c *baseServiceContainer) Translator() hexa.Translator         { return c.translator }
+func (c *baseServiceContainer) ProbeServer() probe.Server           { return c.probeServer }
 func (c *baseServiceContainer) HealthReporter() hexa.HealthReporter { return c.healthReporter }
 func (c *baseServiceContainer) Jobs() hjob.Jobs                     { return c.jobs }
 func (c *baseServiceContainer) Emitter() hevent.Emitter             { return c.emitter }

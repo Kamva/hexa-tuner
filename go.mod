@@ -18,8 +18,7 @@ require (
 	github.com/labstack/echo/v4 v4.1.17
 	github.com/nicksnyder/go-i18n/v2 v2.0.3
 	github.com/spf13/viper v1.6.2
-	go.opentelemetry.io/contrib v0.16.0 // indirect
-	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.24.0 // indirect
+	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.24.0
 	golang.org/x/text v0.3.5
 	google.golang.org/grpc v1.40.0
 )
