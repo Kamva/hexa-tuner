@@ -6,6 +6,7 @@ import (
 	hevent "github.com/kamva/hexa-event"
 	"github.com/kamva/hexa-job"
 	"github.com/kamva/hexa/htel"
+	"github.com/kamva/hexa/probe"
 )
 
 type (
@@ -14,6 +15,7 @@ type (
 		SetConfig(config hexa.Config)
 		SetLogger(logger hexa.Logger)
 		SetTranslator(translator hexa.Translator)
+		SetProbeServer(server probe.Server)
 		SetHealthReporter(reporter hexa.HealthReporter)
 		SetJobs(jobs hjob.Jobs)
 		SetEmitter(emitter hevent.Emitter)
@@ -24,6 +26,7 @@ type (
 		Config() hexa.Config
 		Logger() hexa.Logger
 		Translator() hexa.Translator
+		ProbeServer() probe.Server
 		HealthReporter() hexa.HealthReporter
 		Jobs() hjob.Jobs
 		Emitter() hevent.Emitter
