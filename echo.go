@@ -14,6 +14,7 @@ type EchoTunerOptions struct {
 }
 
 type EchoConfigs struct {
+	MetricsConfig            hecho.MetricsConfig
 	TracingConfig            hecho.TracingConfig
 	JWTConfig                middleware.JWTConfig
 	JwtClaimAuthorizerConfig hecho.JwtClaimAuthorizerConfig
@@ -47,6 +48,7 @@ func TuneEcho(e *echo.Echo, cfg EchoConfigs, o EchoTunerOptions) {
 	// Log each request
 	e.Use(middleware.Logger())
 
+	e.Use(hecho.Metrics(cfg.MetricsConfig))
 	e.Use(hecho.Tracing(cfg.TracingConfig))
 
 	// Recover recovers each panic and returns its to the echo error handler

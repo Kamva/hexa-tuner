@@ -16,6 +16,7 @@ type GRPCServerTunerOptions struct {
 	ContextPropagator hexa.ContextPropagator
 	Logger            hexa.Logger
 	Translator        hexa.Translator
+	MetricsOpts       hrpc.MetricsOptions
 	TracingOpts       []otelgrpc.Option
 }
 
@@ -72,6 +73,7 @@ func TuneGRPCServer(cfg GRPCConfigs, o GRPCServerTunerOptions) (*grpc.Server, er
 	grpclog.SetLoggerV2(hrpc.NewLogger(o.Logger, cfg.LogVerbosity))
 
 	intChain := grpc_middleware.ChainUnaryServer(
+		(&hrpc.Metrics{}).UnaryServerInterceptor(o.MetricsOpts),
 		// distributed tracing
 		otelgrpc.UnaryServerInterceptor(o.TracingOpts...),
 		// Hexa context interceptor
