@@ -20,9 +20,7 @@ type EchoConfigs struct {
 	JwtClaimAuthorizerConfig hecho.JwtClaimAuthorizerConfig
 	Debug                    bool
 	EchoLogLevel             string
-	AllowOrigins             []string
-	AllowHeaders             []string
-	AllowMethods             []string
+	CORS                     middleware.CORSConfig
 }
 
 // TuneEcho tune echo framework.
@@ -39,11 +37,7 @@ func TuneEcho(e *echo.Echo, cfg EchoConfigs, o EchoTunerOptions) {
 	}
 
 	// CORS HEADERS
-	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
-		AllowOrigins: cfg.AllowOrigins,
-		AllowMethods: cfg.AllowMethods,
-		AllowHeaders: cfg.AllowHeaders,
-	}))
+	e.Use(middleware.CORSWithConfig(cfg.CORS))
 
 	// Log each request
 	e.Use(middleware.Logger())
