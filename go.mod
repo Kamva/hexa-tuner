@@ -8,11 +8,11 @@ require (
 	github.com/contribsys/faktory_worker_go v1.4.0
 	github.com/grpc-ecosystem/go-grpc-middleware v1.2.0
 	github.com/kamva/gutil v0.0.0-20210827084201-35b6a3421580
-	github.com/kamva/hexa v0.0.0-20220730171748-0bdb74fc67ca
-	github.com/kamva/hexa-arranger v0.0.0-20220730175453-66ccf0d0d823
-	github.com/kamva/hexa-event v0.0.0-20220326100854-19670de136fb
+	github.com/kamva/hexa v0.0.0-20220821213150-e401adf1fcc7
+	github.com/kamva/hexa-arranger v0.0.0-20220821205736-ff39a38747c2
+	github.com/kamva/hexa-event v0.0.0-20220821210927-91e71015f439
 	github.com/kamva/hexa-job v0.0.0-20220326101914-ccb5f26e095a
-	github.com/kamva/hexa-rpc v0.0.0-20220730175649-22d396d732e0
+	github.com/kamva/hexa-rpc v0.0.0-20220821211625-8658f817132b
 	github.com/kamva/tracer v0.0.0-20201115122932-ea39052d56cd
 	github.com/nicksnyder/go-i18n/v2 v2.0.3
 	github.com/spf13/viper v1.6.2
@@ -25,7 +25,6 @@ require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/facebookgo/clock v0.0.0-20150410010913-600d898af40a // indirect
 	github.com/fsnotify/fsnotify v1.4.7 // indirect
-	github.com/getsentry/sentry-go v0.6.1 // indirect
 	github.com/go-ozzo/ozzo-validation/v4 v4.1.0 // indirect
 	github.com/gogo/googleapis v1.4.0 // indirect
 	github.com/gogo/protobuf v1.3.1 // indirect

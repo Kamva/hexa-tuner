@@ -5,6 +5,7 @@ import (
 	arranger "github.com/kamva/hexa-arranger"
 	hevent "github.com/kamva/hexa-event"
 	"github.com/kamva/hexa-job"
+	"github.com/kamva/hexa/hlog"
 	"github.com/kamva/hexa/htel"
 	"github.com/kamva/hexa/probe"
 )
@@ -13,7 +14,7 @@ type (
 	// BaseServiceContainer is the base service container to use in each microservice.
 	BaseServiceContainer interface {
 		SetConfig(config hexa.Config)
-		SetLogger(logger hexa.Logger)
+		SetLogger(logger hlog.Logger)
 		SetTranslator(translator hexa.Translator)
 		SetProbeServer(server probe.Server)
 		SetHealthReporter(reporter hexa.HealthReporter)
@@ -24,7 +25,7 @@ type (
 		SetOpenTelemetry(otlm htel.OpenTelemetry)
 
 		Config() hexa.Config
-		Logger() hexa.Logger
+		Logger() hlog.Logger
 		Translator() hexa.Translator
 		ProbeServer() probe.Server
 		HealthReporter() hexa.HealthReporter
@@ -42,7 +43,7 @@ type (
 		must bool
 
 		config         hexa.Config
-		log            hexa.Logger
+		log            hlog.Logger
 		translator     hexa.Translator
 		probeServer    probe.Server
 		healthReporter hexa.HealthReporter
@@ -55,7 +56,7 @@ type (
 )
 
 func (c *baseServiceContainer) SetConfig(config hexa.Config)             { c.config = config }
-func (c *baseServiceContainer) SetLogger(logger hexa.Logger)             { c.log = logger }
+func (c *baseServiceContainer) SetLogger(logger hlog.Logger)             { c.log = logger }
 func (c *baseServiceContainer) SetTranslator(translator hexa.Translator) { c.translator = translator }
 func (c *baseServiceContainer) SetProbeServer(server probe.Server)       { c.probeServer = server }
 func (c *baseServiceContainer) SetHealthReporter(r hexa.HealthReporter)  { c.healthReporter = r }
@@ -66,7 +67,7 @@ func (c *baseServiceContainer) SetDLM(dlm hexa.DLM)                      { c.dlm
 func (c *baseServiceContainer) SetOpenTelemetry(otlm htel.OpenTelemetry) { c.otlm = otlm }
 
 func (c *baseServiceContainer) Config() hexa.Config                 { return c.config }
-func (c *baseServiceContainer) Logger() hexa.Logger                 { return c.log }
+func (c *baseServiceContainer) Logger() hlog.Logger                 { return c.log }
 func (c *baseServiceContainer) Translator() hexa.Translator         { return c.translator }
 func (c *baseServiceContainer) ProbeServer() probe.Server           { return c.probeServer }
 func (c *baseServiceContainer) HealthReporter() hexa.HealthReporter { return c.healthReporter }

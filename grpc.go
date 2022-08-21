@@ -6,6 +6,7 @@ import (
 	"github.com/kamva/gutil"
 	"github.com/kamva/hexa"
 	"github.com/kamva/hexa-rpc"
+	"github.com/kamva/hexa/hlog"
 	"go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/grpclog"
@@ -14,7 +15,7 @@ import (
 // GRPCServerTunerOptions contains options needed to tune a gRPC server
 type GRPCServerTunerOptions struct {
 	ContextPropagator hexa.ContextPropagator
-	Logger            hexa.Logger
+	Logger            hlog.Logger
 	Translator        hexa.Translator
 	MetricsOpts       hrpc.MetricsOptions
 	TracingOpts       []otelgrpc.Option
