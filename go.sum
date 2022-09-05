@@ -201,6 +201,8 @@ github.com/kamva/gutil v0.0.0-20210827084201-35b6a3421580/go.mod h1:+yeJ+Y3R35Pg
 github.com/kamva/hexa v0.0.0-20220326081636-83739571eaff/go.mod h1:T1oNftUOQU1V7ADt3t84CjQBkFEOjt8sLcxfgwE25CQ=
 github.com/kamva/hexa v0.0.0-20220821213150-e401adf1fcc7 h1:tk5SjTgdTUD2IHF7Wx1r0l+0tY+bkrPJUZQreQzjyLU=
 github.com/kamva/hexa v0.0.0-20220821213150-e401adf1fcc7/go.mod h1:AJ/6TiObRVKfW5lHY33NF8Ms0cphMQQosiFZQCRzAm0=
+github.com/kamva/hexa v0.1.1-0.20220905213707-38c66ff5a43c h1:Bio2zMtZ5Re6ywTXkNxh5DHIhuO6RydqVFNwim1dVVM=
+github.com/kamva/hexa v0.1.1-0.20220905213707-38c66ff5a43c/go.mod h1:AJ/6TiObRVKfW5lHY33NF8Ms0cphMQQosiFZQCRzAm0=
 github.com/kamva/hexa-arranger v0.0.0-20220821205736-ff39a38747c2 h1:TDFparjhAWdsy/YicBl2RNNTrpL61nSwWrfBMbNel7k=
 github.com/kamva/hexa-arranger v0.0.0-20220821205736-ff39a38747c2/go.mod h1:C/sbsyL9IKzfqknezJJT99Fkj2zw9GJXfI1KGtTZARM=
 github.com/kamva/hexa-event v0.0.0-20220821210927-91e71015f439 h1:r8DZi4M7nBLJh6zGABNnj9tgakK6Q0knjhUWS5W+/ts=

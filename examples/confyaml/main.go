@@ -30,7 +30,7 @@ func main() {
 		FileExtension: "yaml",
 		Environment:   "example",
 	}, false)
-	v, err := huner.NewViperConfigDriver(huner.EnvKeysPrefix(), files)
+	v, err := huner.NewViperConfig(huner.EnvKeysPrefix(), files)
 	gutil.PanicErr(err)
 	cfg := &Config{}
 	gutil.PanicErr(v.Unmarshal(&cfg))

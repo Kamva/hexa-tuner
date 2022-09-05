@@ -19,7 +19,7 @@ func main() {
 	// Important note: viper parse .env files using env parser, that
 	// parser parse every value as "string". viper does not accept two
 	// config key with different types (e.g., a key with bool value in config.yaml
-	// and with string value in .env file), so if we want overwrite bool, int or float
+	// and with string value in .env file), so if we want to overwrite a bool, int or float
 	// values in ".env" file, we should set that value in our json config file
 	// as string or remove it from our json config files and just provide it to
 	// the .env files (this is just for .env files, not real Environment variables).
@@ -30,7 +30,7 @@ func main() {
 		FileExtension: "json",
 		Environment:   "example",
 	}, false)
-	v, err := huner.NewViperConfigDriver(huner.EnvKeysPrefix(), files)
+	v, err := huner.NewViperConfig(huner.EnvKeysPrefix(), files)
 	gutil.PanicErr(err)
 	cfg := &Config{}
 	gutil.PanicErr(v.Unmarshal(&cfg))
