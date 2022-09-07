@@ -33,12 +33,13 @@ func EnvKeysPrefix() string {
 	return os.Getenv("HEXA_CONF_PREFIX")
 }
 
-func Environment(prefix string) string {
+// EnvironmentKey returns the key we can use to get the run environment.
+func EnvironmentKey(prefix string) string {
 	key := "ENV"
 	if prefix != "" {
-		key = fmt.Sprintf("%s_%s", prefix, key)
+		return fmt.Sprintf("%s_%s", prefix, key)
 	}
-	return os.Getenv(key)
+	return key
 }
 
 // ConfigFilePaths generates config path as follow:
