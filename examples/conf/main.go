@@ -8,11 +8,11 @@ import (
 )
 
 type Config struct {
-	MyName   string   `json:"my_name" mapstructure:"my_name"`
-	LogStack []string `json:"log_stack" mapstructure:"log_stack"`
-	Debug    bool     `json:"debug" mapstructure:"debug"`
-	Port     int      `json:"port" mapstructure:"port"`
-	//EnableCache bool     `json:"enable_cache" mapstructure:"enable_cache"`
+	MyName   string   `json:"my_name"`
+	LogStack []string `json:"log_stack"`
+	Debug    bool     `json:"debug"`
+	Port     int      `json:"port"`
+	//EnableCache bool     `json:"enable_cache"`
 }
 
 func main() {
@@ -33,7 +33,7 @@ func main() {
 	v, err := huner.NewViperConfig(huner.EnvKeysPrefix(), files)
 	gutil.PanicErr(err)
 	cfg := &Config{}
-	gutil.PanicErr(v.Unmarshal(&cfg))
+	gutil.PanicErr(v.Unmarshal(&cfg, huner.ViperDecoderTagName("json")))
 
 	fmt.Printf("\n\nconfig:\n%+v\n", cfg)
 }
